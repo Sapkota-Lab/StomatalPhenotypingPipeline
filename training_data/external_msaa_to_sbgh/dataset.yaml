@@ -1,0 +1,6 @@
+path: /Users/lenquanhone/SapkotaLab/StomatalPhenotypingPipeline/training_data/external_msaa_to_sbgh
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: stomata

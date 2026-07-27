@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "image": "IMG_3010.JPG",
+  "width": 6000,
+  "height": 4000,
+  "status": "provisional",
+  "count": 2,
+  "boxes": [
+    {
+      "x1": 3997.37,
+      "y1": 3035.42,
+      "x2": 4136.16,
+      "y2": 3121.61
+    },
+    {
+      "x1": 4659.81,
+      "y1": 3059.69,
+      "x2": 4850.76,
+      "y2": 3142.54
+    }
+  ],
+  "notes": "Codex-provisional visual boxes: two clear pore-bearing guard-cell complexes in a low-contrast field. Other model proposals were clipped strips or lacked stomatal morphology. Requires expert review before biological validation."
+}

@@ -1,0 +1,11 @@
+numpy==1.26.4
+opencv-python==4.11.0.86
+remotezip==0.12.3
+onnxruntime==1.28.0
+torch>=2.1
+torchvision>=0.16
+git+https://github.com/facebookresearch/detectron2.git@02b5c4e295e990042a714712c21dc79b731e8833
+huggingface-hub>=0.28
+transformers>=4.46,<5
+safetensors>=0.4
+ultralytics==8.4.106

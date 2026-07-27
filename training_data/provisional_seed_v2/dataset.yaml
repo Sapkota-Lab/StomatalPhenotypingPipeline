@@ -1,0 +1,6 @@
+path: /Users/lenquanhone/SapkotaLab/StomatalPhenotypingPipeline/training_data/provisional_seed_v2
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: stoma

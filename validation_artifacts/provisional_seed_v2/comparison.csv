@@ -1,0 +1,4 @@
+filename,production_accepted,v2_yolos_accepted,production_review,v2_standalone_accepted,v2_standalone_review,codex_clear_stomata,codex_ambiguous,ground_truth_status
+IMG_3012.JPG,12,31,31,118,134,29,2,not_expert_ground_truth
+IMG_3027.JPG,23,31,23,63,112,29,2,not_expert_ground_truth
+IMG_3032.JPG,9,26,22,94,199,24,2,not_expert_ground_truth

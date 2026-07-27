@@ -1,0 +1,21 @@
+filename,priority,morphology_or_condition,selection_reason,specimen_id,leaf_id,field_id,dataset_split,annotation_status
+IMG_2990.JPG,high,pale_low_contrast_possible_zero,negative-control candidate; verify whether biological count is truly zero,,,,unassigned,not_started
+IMG_2991.JPG,critical,pale_low_contrast,obvious stomata missed by all accepted consensus detections,,,,unassigned,not_started
+IMG_2992.JPG,high,dense_high_contrast,representative dense field and pseudo-label fine-tune noise stress test,,,,unassigned,not_started
+IMG_2993.JPG,critical,blurred_low_contrast,quality-control adjudication; earlier apparent stomata were not clear on reinspection,,,,unassigned,not_started
+IMG_2995.JPG,high,debris_heavy,tests separation of stomata from debris and cell-wall fragments,,,,unassigned,not_started
+IMG_2996.JPG,medium,sharp_debris_heavy,high-focus debris case with few accepted and many review proposals,,,,unassigned,not_started
+IMG_3010.JPG,critical,small_cluttered_morphology,small stomata morphology largely missed by public checkpoints,,,,unassigned,not_started
+IMG_3012.JPG,medium,typical_medium_density,previously inspected representative field,,,,unassigned,not_started
+IMG_3016.JPG,high,dense_with_round_artifacts,contains true detections plus round bubble/debris false positives,,,,unassigned,not_started
+IMG_3018.JPG,high,very_sharp_dense,high accepted and review counts; tests duplicate suppression and recall,,,,unassigned,not_started
+IMG_3024.JPG,high,medium_focus_high_review,tests precision in a field with many single-model proposals,,,,unassigned,not_started
+IMG_3025.JPG,high,zero_accepted_with_reviews,distinguishes missed stomata from uncertain artifacts,,,,unassigned,not_started
+IMG_3027.JPG,high,sharp_dense,high accepted count with substantial review tier,,,,unassigned,not_started
+IMG_3028.JPG,medium,typical_mixed,previously used as a held-out qualitative benchmark,,,,unassigned,not_started
+IMG_3034.JPG,high,very_sharp_high_review,stress test for false positives on strong cell boundaries,,,,unassigned,not_started
+IMG_3041.JPG,medium,high_contrast_low_count,tests sparse-field precision under strong contrast,,,,unassigned,not_started
+IMG_3044.JPG,high,sharp_cluttered,few accepted versus many reviews despite high focus,,,,unassigned,not_started
+IMG_3046.JPG,critical,small_low_contrast_morphology,small morphology missed by consensus,,,,unassigned,not_started
+IMG_3048.JPG,high,poor_quality_possible_zero,quality-control exclusion or true-zero decision,,,,unassigned,not_started
+IMG_3052.JPG,medium,high_contrast_medium_focus,representative later-batch field for coverage,,,,unassigned,not_started

@@ -1,0 +1,69 @@
+{
+  "calibration": {
+    "ap50": 0.57612,
+    "by_quality": {
+      "unknown": {
+        "count_bias": -0.333333,
+        "count_mae": 3.666667,
+        "f1": 0.695279,
+        "false_negative": 36,
+        "false_positive": 35,
+        "ground_truth": 117,
+        "images": 3,
+        "precision": 0.698276,
+        "predictions": 116,
+        "recall": 0.692308,
+        "true_positive": 81
+      }
+    },
+    "count_bias": -0.333333,
+    "count_mae": 3.666667,
+    "f1": 0.695279,
+    "false_negative": 36,
+    "false_positive": 35,
+    "ground_truth": 117,
+    "images": 3,
+    "precision": 0.698276,
+    "predictions": 116,
+    "recall": 0.692308,
+    "true_positive": 81
+  },
+  "gate": {
+    "absolute_bias_at_most_5_percent": false,
+    "count_mae_at_most_10_percent": false,
+    "passed": false,
+    "precision_at_least_0_90": false,
+    "recall_at_least_0_85": false
+  },
+  "selected_confidence": 0.1636182814836502,
+  "selection_rule": "maximum F1 on calibration split only",
+  "test": {
+    "ap50": 0.02025,
+    "by_quality": {
+      "unknown": {
+        "count_bias": -14.769231,
+        "count_mae": 16.769231,
+        "f1": 0.107477,
+        "false_negative": 478,
+        "false_positive": 286,
+        "ground_truth": 524,
+        "images": 13,
+        "precision": 0.138554,
+        "predictions": 332,
+        "recall": 0.087786,
+        "true_positive": 46
+      }
+    },
+    "count_bias": -14.769231,
+    "count_mae": 16.769231,
+    "f1": 0.107477,
+    "false_negative": 478,
+    "false_positive": 286,
+    "ground_truth": 524,
+    "images": 13,
+    "precision": 0.138554,
+    "predictions": 332,
+    "recall": 0.087786,
+    "true_positive": 46
+  }
+}

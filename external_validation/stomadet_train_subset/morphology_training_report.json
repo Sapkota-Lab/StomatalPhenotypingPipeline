@@ -1,0 +1,24 @@
+{
+  "feature_version": "hog_gray_structure_v1",
+  "patch_size": 64,
+  "context_scale": 1.35,
+  "score_views": [
+    "identity",
+    "rotate90",
+    "rotate180",
+    "rotate270",
+    "hflip"
+  ],
+  "source_images": 24,
+  "base_positive_crops": 1012,
+  "base_negative_crops": 2024,
+  "augmented_samples": 15180,
+  "seed": 20260726,
+  "training_metrics_resubstitution_only": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "average_precision": 1.0,
+    "roc_auc": 1.0
+  }
+}

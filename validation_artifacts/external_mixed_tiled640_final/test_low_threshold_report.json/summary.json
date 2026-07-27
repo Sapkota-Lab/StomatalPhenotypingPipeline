@@ -1,0 +1,29 @@
+{
+  "ap50": 0.240978,
+  "by_quality": {
+    "unknown": {
+      "count_bias": 1411.5,
+      "count_mae": 1411.5,
+      "f1": 0.040022,
+      "false_negative": 83,
+      "false_positive": 8552,
+      "ground_truth": 263,
+      "images": 6,
+      "precision": 0.020614,
+      "predictions": 8732,
+      "recall": 0.684411,
+      "true_positive": 180
+    }
+  },
+  "count_bias": 1411.5,
+  "count_mae": 1411.5,
+  "f1": 0.040022,
+  "false_negative": 83,
+  "false_positive": 8552,
+  "ground_truth": 263,
+  "images": 6,
+  "precision": 0.020614,
+  "predictions": 8732,
+  "recall": 0.684411,
+  "true_positive": 180
+}

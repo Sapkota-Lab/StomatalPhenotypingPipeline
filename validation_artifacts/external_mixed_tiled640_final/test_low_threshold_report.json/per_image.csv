@@ -1,0 +1,7 @@
+filename,quality_stratum,ground_truth_count,prediction_count,true_positive,false_positive,false_negative,count_error
+46-98-A0079.jpg,unknown,27,1319,19,1300,8,1292
+46-98-A0105.jpg,unknown,35,1524,29,1495,6,1489
+46-98-A0118.jpg,unknown,46,1412,31,1381,15,1366
+5612350001.jpg,unknown,53,1463,31,1432,22,1410
+5612350006.jpg,unknown,56,1586,43,1543,13,1530
+5612350008.jpg,unknown,46,1428,27,1401,19,1382

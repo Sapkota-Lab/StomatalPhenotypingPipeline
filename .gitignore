@@ -1,0 +1,11 @@
+.venv/
+.venv-yolo26/
+__pycache__/
+results/
+results_*/
+pilot_output/
+dev_annotations/
+models/*.pt
+models/external/
+slurm-*.out
+slurm-*.err

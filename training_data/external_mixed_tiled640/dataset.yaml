@@ -1,0 +1,6 @@
+path: /Users/lenquanhone/SapkotaLab/StomatalPhenotypingPipeline/training_data/external_mixed_tiled640
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: stomata

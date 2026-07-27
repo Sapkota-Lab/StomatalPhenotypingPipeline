@@ -1,0 +1,55 @@
+{
+  "ap50": 0.98925,
+  "by_quality": {
+    "default": {
+      "count_bias": 0.333333,
+      "count_mae": 0.333333,
+      "f1": 0.996599,
+      "false_negative": 0,
+      "false_positive": 2,
+      "ground_truth": 293,
+      "images": 6,
+      "precision": 0.99322,
+      "predictions": 295,
+      "recall": 1.0,
+      "true_positive": 293
+    },
+    "imperfect": {
+      "count_bias": 0.5,
+      "count_mae": 1.166667,
+      "f1": 0.974713,
+      "false_negative": 4,
+      "false_positive": 7,
+      "ground_truth": 216,
+      "images": 6,
+      "precision": 0.968037,
+      "predictions": 219,
+      "recall": 0.981481,
+      "true_positive": 212
+    },
+    "out_of_focus": {
+      "count_bias": 0,
+      "count_mae": 0,
+      "f1": 0.996094,
+      "false_negative": 1,
+      "false_positive": 1,
+      "ground_truth": 256,
+      "images": 6,
+      "precision": 0.996094,
+      "predictions": 256,
+      "recall": 0.996094,
+      "true_positive": 255
+    }
+  },
+  "count_bias": 0.277778,
+  "count_mae": 0.5,
+  "f1": 0.990228,
+  "false_negative": 5,
+  "false_positive": 10,
+  "ground_truth": 765,
+  "images": 18,
+  "precision": 0.987013,
+  "predictions": 770,
+  "recall": 0.993464,
+  "true_positive": 760
+}

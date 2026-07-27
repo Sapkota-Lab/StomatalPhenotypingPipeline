@@ -1,0 +1,27 @@
+{
+  "source_images": 6,
+  "stomata": 24,
+  "tiles": 24,
+  "positive_tiles": 24,
+  "negative_tiles": 0,
+  "splits": {
+    "train": {
+      "groups": 4,
+      "source_images": 4,
+      "stomata": 17,
+      "tiles": 17
+    },
+    "val": {
+      "groups": 1,
+      "source_images": 1,
+      "stomata": 2,
+      "tiles": 2
+    },
+    "test": {
+      "groups": 1,
+      "source_images": 1,
+      "stomata": 5,
+      "tiles": 5
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "image": "IMG_3054.JPG",
+  "width": 6000,
+  "height": 4000,
+  "status": "provisional",
+  "count": 3,
+  "boxes": [
+    {
+      "x1": 3398.08,
+      "y1": 2833.8,
+      "x2": 3493.89,
+      "y2": 2941.31
+    },
+    {
+      "x1": 3170.91,
+      "y1": 2471.26,
+      "x2": 3310.81,
+      "y2": 2609.41
+    },
+    {
+      "x1": 5203.26,
+      "y1": 712.54,
+      "x2": 5327.69,
+      "y2": 813.18
+    }
+  ],
+  "notes": "Codex-provisional visual boxes: three clear pore-bearing complexes retained. Edge strips, hair/debris, background, and uncertain blur were excluded. Requires expert review before biological validation."
+}

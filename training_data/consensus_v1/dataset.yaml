@@ -1,0 +1,5 @@
+path: /Users/lenquanhone/SapkotaLab/StomatalPhenotypingPipeline/training_data/consensus_v1
+train: images/train
+val: images/val
+names:
+  0: stoma

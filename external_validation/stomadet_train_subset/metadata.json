@@ -1,0 +1,17 @@
+{
+  "dataset_doi": "10.17632/2bfcpc6bpj.1",
+  "ground_truth_objects": 1012,
+  "images": 24,
+  "jpeg_quality": 92,
+  "local_storage_format": "JPEG",
+  "official_split": "train",
+  "per_quality": 8,
+  "quality_strata": [
+    "imperfect",
+    "default",
+    "out_of_focus"
+  ],
+  "seed": 20260726,
+  "selection": "deterministic random sample within image_type",
+  "source_url": "https://data.mendeley.com/public-files/datasets/2bfcpc6bpj/files/c70645d1-4bbf-4343-9c51-f943f4fd02bf/file_downloaded"
+}

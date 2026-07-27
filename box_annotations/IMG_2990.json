@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "image": "IMG_2990.JPG",
+  "width": 4000,
+  "height": 6000,
+  "status": "provisional",
+  "count": 5,
+  "boxes": [
+    {
+      "x1": 1000.0,
+      "y1": 3950.0,
+      "x2": 1650.0,
+      "y2": 4700.0
+    },
+    {
+      "x1": 1350.0,
+      "y1": 1400.0,
+      "x2": 2350.0,
+      "y2": 2050.0
+    },
+    {
+      "x1": 1200.0,
+      "y1": 50.0,
+      "x2": 2350.0,
+      "y2": 750.0
+    },
+    {
+      "x1": 2250.0,
+      "y1": 2700.0,
+      "x2": 3300.0,
+      "y2": 3550.0
+    },
+    {
+      "x1": 2950.0,
+      "y1": 0.0,
+      "x2": 4000.0,
+      "y2": 850.0
+    }
+  ],
+  "notes": "Codex-provisional visual boxes: four complete coffee-bean complexes plus one edge complex with more than half visible. Requires expert review before biological validation."
+}
