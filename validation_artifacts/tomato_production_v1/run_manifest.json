@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "run_id": "tomato_yolov12_full_v1",
+  "generated_at_utc": "2026-07-29T18:41:24.714534+00:00",
+  "slurm_job_id": "5380067",
+  "device": "cuda",
+  "pipeline_git_commit": "8e1bf9a2ce1c176be94b9c7eb7154d6ba964a2c0",
+  "pipeline_git_dirty": true,
+  "model": {
+    "path": "training_runs/annotated_v1/weights/best.pt",
+    "sha256": "e708c5f358d598b65bc7e7bf0caf9c302929cbc9fe42252f74129005f701d545"
+  },
+  "calibration": {
+    "path": "validation_artifacts/tomato_full_image/calibration/calibration_report.json",
+    "sha256": "c5c3d660a2e16514bf2e11b2c11aec1af0b70c414577720ed1dc91511c0861de"
+  },
+  "input_manifest": {
+    "path": "combined_study_manifest.csv",
+    "sha256": "1cdac6bff4b351f9991a31c055f50702fed73be66692eb8bd089249c0c1e9b91"
+  },
+  "inference": {
+    "tile_size": 1024,
+    "overlap": 0.2,
+    "nms_iou": 0.45,
+    "center_distance_nms": 0.25,
+    "proposal_floor": 0.001
+  },
+  "ledger": {
+    "path": "validation_artifacts/tomato_production_v1/stomata.csv",
+    "sha256": "0d2c04ea1aae1eb814a25bbe312b80541e5e557898e52d5ecc077d623dc0c14f",
+    "rows": 5633,
+    "images": 32,
+    "plants": 32,
+    "decision_status_counts": {
+      "accepted": 325,
+      "rejected": 3813,
+      "review": 1495
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3032:0025",
+  "image": "IMG_3032.JPG",
+  "expert_box_index": 25,
+  "box": {
+    "x1": 1866.06,
+    "y1": 2878.08,
+    "x2": 2064.82,
+    "y2": 3025.3
+  },
+  "plant_unit_id": "TOM26-V08-D",
+  "genotype_id": "V08",
+  "variety": "Cherokee Purple",
+  "water_status": "drought_stressed",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 8.944664,
+  "local_focus_score": 117.971359,
+  "local_contrast_5_95": 168.0,
+  "local_clipped_fraction": 0.011406,
+  "edge_margin_px": 974.7,
+  "quality_rank_within_image": 2,
+  "quality_candidates_in_image": 26,
+  "status": "complete",
+  "polygon": [
+    [
+      1882.85,
+      2943.52
+    ],
+    [
+      1896.45,
+      2913.17
+    ],
+    [
+      1918.43,
+      2892.76
+    ],
+    [
+      1935.7,
+      2882.3
+    ],
+    [
+      1952.44,
+      2895.38
+    ],
+    [
+      1982.79,
+      2895.9
+    ],
+    [
+      2003.72,
+      2904.27
+    ],
+    [
+      2017.85,
+      2929.39
+    ],
+    [
+      2018.37,
+      2961.83
+    ],
+    [
+      1990.12,
+      2997.94
+    ],
+    [
+      1966.05,
+      3006.31
+    ],
+    [
+      1944.07,
+      3002.13
+    ],
+    [
+      1914.77,
+      2994.28
+    ],
+    [
+      1889.65,
+      2983.81
+    ],
+    [
+      1878.66,
+      2955.56
+    ]
+  ],
+  "complex_area_px2": 12498.672499999404,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:20:44.252126+00:00",
+  "starting_proposal_available": false,
+  "annotation_blinded_to_proposal": true
+}

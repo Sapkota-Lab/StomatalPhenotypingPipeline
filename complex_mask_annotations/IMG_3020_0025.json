@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3020:0025",
+  "image": "IMG_3020.JPG",
+  "expert_box_index": 25,
+  "box": {
+    "x1": 2707.86,
+    "y1": 4054.01,
+    "x2": 2932.82,
+    "y2": 4237.69
+  },
+  "plant_unit_id": "TOM26-V10-W",
+  "genotype_id": "V10",
+  "variety": "Mountain Gem",
+  "water_status": "watered",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 8.60241,
+  "local_focus_score": 85.892845,
+  "local_contrast_5_95": 167.0,
+  "local_clipped_fraction": 0.012422,
+  "edge_margin_px": 1067.18,
+  "quality_rank_within_image": 2,
+  "quality_candidates_in_image": 26,
+  "status": "complete",
+  "polygon": [
+    [
+      2770.27,
+      4133.44
+    ],
+    [
+      2787.23,
+      4103.44
+    ],
+    [
+      2824.41,
+      4094.96
+    ],
+    [
+      2860.29,
+      4100.17
+    ],
+    [
+      2882.47,
+      4113.22
+    ],
+    [
+      2904.0,
+      4139.31
+    ],
+    [
+      2903.34,
+      4175.19
+    ],
+    [
+      2881.82,
+      4203.89
+    ],
+    [
+      2838.11,
+      4222.16
+    ],
+    [
+      2803.54,
+      4212.37
+    ],
+    [
+      2781.36,
+      4195.41
+    ],
+    [
+      2766.36,
+      4173.23
+    ]
+  ],
+  "complex_area_px2": 13409.78879999835,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:19:06.962119+00:00",
+  "starting_proposal_available": false,
+  "annotation_blinded_to_proposal": true
+}

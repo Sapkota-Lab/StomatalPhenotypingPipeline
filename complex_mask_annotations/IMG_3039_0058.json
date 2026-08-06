@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3039:0058",
+  "image": "IMG_3039.JPG",
+  "expert_box_index": 58,
+  "box": {
+    "x1": 1432.05,
+    "y1": 4594.6,
+    "x2": 1560.66,
+    "y2": 4737.42
+  },
+  "plant_unit_id": "TOM26-V05-D",
+  "genotype_id": "V05",
+  "variety": "26-018",
+  "water_status": "drought_stressed",
+  "status": "skipped",
+  "polygon": [],
+  "complex_area_px2": null,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T19:44:43.355759+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

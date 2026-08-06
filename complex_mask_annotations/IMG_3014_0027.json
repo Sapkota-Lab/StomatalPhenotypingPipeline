@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3014:0027",
+  "image": "IMG_3014.JPG",
+  "expert_box_index": 27,
+  "box": {
+    "x1": 2192.48,
+    "y1": 2823.7,
+    "x2": 2321.31,
+    "y2": 2955.02
+  },
+  "plant_unit_id": "TOM26-V04-W",
+  "genotype_id": "V04",
+  "variety": "26-016",
+  "water_status": "watered",
+  "status": "skipped",
+  "polygon": [],
+  "complex_area_px2": null,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T19:39:19.562490+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

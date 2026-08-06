@@ -18,6 +18,9 @@ from PIL import Image, ImageOps
 from box_annotator import validate_boxes
 
 
+EXCLUDED_METADATA_GROUP = "__excluded_from_analysis__"
+
+
 @dataclass(frozen=True)
 class AnnotatedImage:
     filename: str
@@ -120,11 +123,17 @@ def load_metadata(path: Path, group_column: str) -> dict[str, str]:
             raise ValueError("metadata CSV needs a filename column")
         if group_column not in (reader.fieldnames or []):
             raise ValueError(f"metadata CSV needs a {group_column} column")
-        return {
-            row["filename"]: row.get(group_column, "").strip()
-            for row in reader
-            if row.get("filename")
-        }
+        result = {}
+        for row in reader:
+            filename = row.get("filename", "")
+            if not filename:
+                continue
+            mapping_status = row.get("mapping_status", "").strip()
+            if mapping_status and mapping_status != "mapped":
+                result[filename] = EXCLUDED_METADATA_GROUP
+            else:
+                result[filename] = row.get(group_column, "").strip()
+        return result
 
 
 def load_annotations(
@@ -147,6 +156,8 @@ def load_annotations(
         width, height = int(payload["width"]), int(payload["height"])
         clean = validate_boxes(payload.get("boxes", []), width, height)
         group = metadata.get(filename, "")
+        if group == EXCLUDED_METADATA_GROUP:
+            continue
         if not group:
             if not allow_image_groups:
                 missing_groups.append(filename)

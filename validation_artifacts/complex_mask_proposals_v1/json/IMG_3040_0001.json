@@ -1,0 +1,135 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3040:0001",
+  "image": "IMG_3040.JPG",
+  "expert_box_index": 1,
+  "box": {
+    "x1": 524.38,
+    "y1": 2171.21,
+    "x2": 675.62,
+    "y2": 2307.51
+  },
+  "plant_unit_id": "TOM26-V01-D",
+  "genotype_id": "V01",
+  "variety": "NC264G",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      657.0,
+      2238.0
+    ],
+    [
+      653.0,
+      2260.0
+    ],
+    [
+      650.0,
+      2270.0
+    ],
+    [
+      649.0,
+      2273.0
+    ],
+    [
+      632.0,
+      2290.0
+    ],
+    [
+      629.0,
+      2292.0
+    ],
+    [
+      596.0,
+      2309.0
+    ],
+    [
+      594.0,
+      2310.0
+    ],
+    [
+      591.0,
+      2311.0
+    ],
+    [
+      579.0,
+      2311.0
+    ],
+    [
+      569.0,
+      2307.0
+    ],
+    [
+      537.0,
+      2279.0
+    ],
+    [
+      535.0,
+      2277.0
+    ],
+    [
+      531.0,
+      2260.0
+    ],
+    [
+      530.0,
+      2248.0
+    ],
+    [
+      530.0,
+      2247.0
+    ],
+    [
+      536.0,
+      2189.0
+    ],
+    [
+      545.0,
+      2180.0
+    ],
+    [
+      579.0,
+      2177.0
+    ],
+    [
+      580.0,
+      2177.0
+    ],
+    [
+      616.0,
+      2180.0
+    ],
+    [
+      624.0,
+      2185.0
+    ],
+    [
+      640.0,
+      2198.0
+    ],
+    [
+      648.0,
+      2212.0
+    ],
+    [
+      653.0,
+      2221.0
+    ]
+  ],
+  "complex_area_px2": 13465.0,
+  "model_confidence": 0.8897701501846313,
+  "box_iou_with_expert": 0.7871291976413636,
+  "center_similarity": 0.9607741650046224,
+  "selection_rank": 0.8526504768769957,
+  "crop": {
+    "x1": 410,
+    "y1": 2068,
+    "x2": 790,
+    "y2": 2410
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

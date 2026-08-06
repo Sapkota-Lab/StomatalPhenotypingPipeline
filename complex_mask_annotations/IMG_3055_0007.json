@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3055:0007",
+  "image": "IMG_3055.JPG",
+  "expert_box_index": 7,
+  "box": {
+    "x1": 3341.83,
+    "y1": 423.13,
+    "x2": 3546.35,
+    "y2": 572.19
+  },
+  "plant_unit_id": "TOM26-V16-D",
+  "genotype_id": "V16",
+  "variety": "Mountain Heritage",
+  "water_status": "drought_stressed",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 8.135209,
+  "local_focus_score": 60.064327,
+  "local_contrast_5_95": 168.0,
+  "local_clipped_fraction": 0.058906,
+  "edge_margin_px": 423.13,
+  "quality_rank_within_image": 1,
+  "quality_candidates_in_image": 20,
+  "status": "complete",
+  "polygon": [
+    [
+      3372.59,
+      492.61
+    ],
+    [
+      3393.75,
+      465.63
+    ],
+    [
+      3417.02,
+      447.12
+    ],
+    [
+      3432.89,
+      438.13
+    ],
+    [
+      3464.63,
+      441.3
+    ],
+    [
+      3487.9,
+      448.18
+    ],
+    [
+      3511.7,
+      456.11
+    ],
+    [
+      3521.75,
+      465.63
+    ],
+    [
+      3532.86,
+      488.38
+    ],
+    [
+      3534.98,
+      500.54
+    ],
+    [
+      3523.34,
+      529.1
+    ],
+    [
+      3504.83,
+      548.15
+    ],
+    [
+      3491.6,
+      551.32
+    ],
+    [
+      3427.07,
+      550.79
+    ],
+    [
+      3392.16,
+      540.21
+    ],
+    [
+      3370.48,
+      514.29
+    ]
+  ],
+  "complex_area_px2": 14378.218899999978,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:16:56.247156+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

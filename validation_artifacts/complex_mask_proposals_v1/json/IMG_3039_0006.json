@@ -1,0 +1,115 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3039:0006",
+  "image": "IMG_3039.JPG",
+  "expert_box_index": 6,
+  "box": {
+    "x1": 2662.54,
+    "y1": 3430.67,
+    "x2": 2870.88,
+    "y2": 3622.21
+  },
+  "plant_unit_id": "TOM26-V05-D",
+  "genotype_id": "V05",
+  "variety": "26-018",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      2861.0,
+      3520.0
+    ],
+    [
+      2847.0,
+      3603.0
+    ],
+    [
+      2845.0,
+      3610.0
+    ],
+    [
+      2843.0,
+      3611.0
+    ],
+    [
+      2772.0,
+      3605.0
+    ],
+    [
+      2684.0,
+      3579.0
+    ],
+    [
+      2684.0,
+      3578.0
+    ],
+    [
+      2693.0,
+      3501.0
+    ],
+    [
+      2695.0,
+      3493.0
+    ],
+    [
+      2702.0,
+      3476.0
+    ],
+    [
+      2707.0,
+      3471.0
+    ],
+    [
+      2719.0,
+      3461.0
+    ],
+    [
+      2737.0,
+      3453.0
+    ],
+    [
+      2754.0,
+      3447.0
+    ],
+    [
+      2763.0,
+      3446.0
+    ],
+    [
+      2776.0,
+      3447.0
+    ],
+    [
+      2784.0,
+      3448.0
+    ],
+    [
+      2786.0,
+      3449.0
+    ],
+    [
+      2803.0,
+      3459.0
+    ],
+    [
+      2855.0,
+      3502.0
+    ]
+  ],
+  "complex_area_px2": 22412.5,
+  "model_confidence": 0.8843128681182861,
+  "box_iou_with_expert": 0.731855039446297,
+  "center_similarity": 0.9782848595106383,
+  "selection_rank": 0.8268783520607621,
+  "crop": {
+    "x1": 2506,
+    "y1": 3287,
+    "x2": 3028,
+    "y2": 3766
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3044:0004",
+  "image": "IMG_3044.JPG",
+  "expert_box_index": 4,
+  "box": {
+    "x1": 5778.56,
+    "y1": 1649.95,
+    "x2": 5884.8,
+    "y2": 1865.37
+  },
+  "plant_unit_id": "TOM26-V09-D",
+  "genotype_id": "V09",
+  "variety": "25-12",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      5880.0,
+      1718.0
+    ],
+    [
+      5879.0,
+      1723.0
+    ],
+    [
+      5866.0,
+      1776.0
+    ],
+    [
+      5864.0,
+      1783.0
+    ],
+    [
+      5859.0,
+      1799.0
+    ],
+    [
+      5846.0,
+      1838.0
+    ],
+    [
+      5839.0,
+      1845.0
+    ],
+    [
+      5831.0,
+      1847.0
+    ],
+    [
+      5829.0,
+      1847.0
+    ],
+    [
+      5805.0,
+      1846.0
+    ],
+    [
+      5793.0,
+      1843.0
+    ],
+    [
+      5785.0,
+      1838.0
+    ],
+    [
+      5784.0,
+      1836.0
+    ],
+    [
+      5775.0,
+      1790.0
+    ],
+    [
+      5775.0,
+      1783.0
+    ],
+    [
+      5785.0,
+      1743.0
+    ],
+    [
+      5789.0,
+      1734.0
+    ],
+    [
+      5816.0,
+      1682.0
+    ],
+    [
+      5829.0,
+      1674.0
+    ],
+    [
+      5863.0,
+      1655.0
+    ],
+    [
+      5871.0,
+      1658.0
+    ],
+    [
+      5875.0,
+      1667.0
+    ],
+    [
+      5879.0,
+      1706.0
+    ],
+    [
+      5880.0,
+      1716.0
+    ]
+  ],
+  "complex_area_px2": 13833.0,
+  "model_confidence": 0.8442910313606262,
+  "box_iou_with_expert": 0.826334076614025,
+  "center_similarity": 0.9672635098725604,
+  "selection_rank": 0.8599070496897123,
+  "crop": {
+    "x1": 5698,
+    "y1": 1488,
+    "x2": 5965,
+    "y2": 2027
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

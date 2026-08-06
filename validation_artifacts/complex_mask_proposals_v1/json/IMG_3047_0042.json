@@ -1,0 +1,147 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3047:0042",
+  "image": "IMG_3047.JPG",
+  "expert_box_index": 42,
+  "box": {
+    "x1": 456.98,
+    "y1": 663.4,
+    "x2": 600.44,
+    "y2": 806.33
+  },
+  "plant_unit_id": "TOM26-V13-D",
+  "genotype_id": "V13",
+  "variety": "Mountain Girl",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      600.0,
+      710.0
+    ],
+    [
+      599.0,
+      759.0
+    ],
+    [
+      595.0,
+      768.0
+    ],
+    [
+      563.0,
+      789.0
+    ],
+    [
+      552.0,
+      795.0
+    ],
+    [
+      543.0,
+      799.0
+    ],
+    [
+      540.0,
+      800.0
+    ],
+    [
+      532.0,
+      801.0
+    ],
+    [
+      527.0,
+      801.0
+    ],
+    [
+      520.0,
+      800.0
+    ],
+    [
+      510.0,
+      795.0
+    ],
+    [
+      504.0,
+      791.0
+    ],
+    [
+      479.0,
+      768.0
+    ],
+    [
+      478.0,
+      767.0
+    ],
+    [
+      459.0,
+      746.0
+    ],
+    [
+      458.0,
+      744.0
+    ],
+    [
+      457.0,
+      734.0
+    ],
+    [
+      457.0,
+      731.0
+    ],
+    [
+      460.0,
+      681.0
+    ],
+    [
+      466.0,
+      670.0
+    ],
+    [
+      480.0,
+      665.0
+    ],
+    [
+      555.0,
+      664.0
+    ],
+    [
+      567.0,
+      664.0
+    ],
+    [
+      584.0,
+      668.0
+    ],
+    [
+      586.0,
+      669.0
+    ],
+    [
+      595.0,
+      687.0
+    ],
+    [
+      597.0,
+      692.0
+    ],
+    [
+      600.0,
+      709.0
+    ]
+  ],
+  "complex_area_px2": 16279.0,
+  "model_confidence": 0.9034862518310547,
+  "box_iou_with_expert": 0.9554377232758364,
+  "center_similarity": 0.9882755375160494,
+  "selection_rank": 0.9464198446904445,
+  "crop": {
+    "x1": 349,
+    "y1": 556,
+    "x2": 709,
+    "y2": 914
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3037:0037",
+  "image": "IMG_3037.JPG",
+  "expert_box_index": 37,
+  "box": {
+    "x1": 682.84,
+    "y1": 1293.54,
+    "x2": 799.35,
+    "y2": 1412.43
+  },
+  "plant_unit_id": "TOM26-V02-D",
+  "genotype_id": "V02",
+  "variety": "25203G",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      792.0,
+      1335.0
+    ],
+    [
+      791.0,
+      1350.0
+    ],
+    [
+      787.0,
+      1371.0
+    ],
+    [
+      786.0,
+      1375.0
+    ],
+    [
+      785.0,
+      1378.0
+    ],
+    [
+      780.0,
+      1389.0
+    ],
+    [
+      771.0,
+      1398.0
+    ],
+    [
+      765.0,
+      1400.0
+    ],
+    [
+      708.0,
+      1410.0
+    ],
+    [
+      703.0,
+      1410.0
+    ],
+    [
+      698.0,
+      1409.0
+    ],
+    [
+      689.0,
+      1405.0
+    ],
+    [
+      685.0,
+      1402.0
+    ],
+    [
+      684.0,
+      1401.0
+    ],
+    [
+      683.0,
+      1398.0
+    ],
+    [
+      683.0,
+      1390.0
+    ],
+    [
+      684.0,
+      1368.0
+    ],
+    [
+      692.0,
+      1335.0
+    ],
+    [
+      708.0,
+      1298.0
+    ],
+    [
+      730.0,
+      1296.0
+    ],
+    [
+      770.0,
+      1296.0
+    ],
+    [
+      784.0,
+      1298.0
+    ],
+    [
+      786.0,
+      1299.0
+    ],
+    [
+      791.0,
+      1317.0
+    ],
+    [
+      792.0,
+      1322.0
+    ]
+  ],
+  "complex_area_px2": 10404.0,
+  "model_confidence": 0.8640265464782715,
+  "box_iou_with_expert": 0.8970627432581514,
+  "center_similarity": 0.9784032192925365,
+  "selection_rank": 0.9034199794310644,
+  "crop": {
+    "x1": 595,
+    "y1": 1204,
+    "x2": 887,
+    "y2": 1502
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

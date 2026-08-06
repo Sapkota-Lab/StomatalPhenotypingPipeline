@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3011:0017",
+  "image": "IMG_3011.JPG",
+  "expert_box_index": 17,
+  "box": {
+    "x1": 3047.63,
+    "y1": 1954.4,
+    "x2": 3246.32,
+    "y2": 2076.67
+  },
+  "plant_unit_id": "TOM26-V01-W",
+  "genotype_id": "V01",
+  "variety": "NC264G",
+  "water_status": "watered",
+  "selection_method": "local_image_quality_refill_v1",
+  "local_quality_score": 7.830031,
+  "local_focus_score": 50.540874,
+  "local_contrast_5_95": 161.0,
+  "local_clipped_fraction": 0.045781,
+  "edge_margin_px": 1923.33,
+  "quality_rank_within_image": 4,
+  "quality_candidates_in_image": 18,
+  "refill_target_complete_per_image": 2,
+  "status": "complete",
+  "polygon": [
+    [
+      3106.62,
+      1966.94
+    ],
+    [
+      3121.46,
+      1962.98
+    ],
+    [
+      3129.38,
+      1966.45
+    ],
+    [
+      3139.28,
+      1961.5
+    ],
+    [
+      3152.14,
+      1961.99
+    ],
+    [
+      3166.99,
+      1971.89
+    ],
+    [
+      3183.81,
+      1983.27
+    ],
+    [
+      3199.15,
+      1997.12
+    ],
+    [
+      3213.99,
+      2013.95
+    ],
+    [
+      3211.52,
+      2031.76
+    ],
+    [
+      3201.13,
+      2047.1
+    ],
+    [
+      3195.68,
+      2054.52
+    ],
+    [
+      3175.89,
+      2045.12
+    ],
+    [
+      3175.89,
+      2052.54
+    ],
+    [
+      3169.95,
+      2061.45
+    ],
+    [
+      3147.69,
+      2052.05
+    ],
+    [
+      3111.07,
+      2034.73
+    ],
+    [
+      3102.66,
+      2020.87
+    ],
+    [
+      3094.74,
+      2006.03
+    ],
+    [
+      3096.23,
+      1982.77
+    ]
+  ],
+  "complex_area_px2": 8114.023800001014,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:46:01.395118+00:00",
+  "starting_proposal_available": false,
+  "annotation_blinded_to_proposal": true
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3016:0004",
+  "image": "IMG_3016.JPG",
+  "expert_box_index": 4,
+  "box": {
+    "x1": 2206.62,
+    "y1": 845.55,
+    "x2": 2309.55,
+    "y2": 978.11
+  },
+  "plant_unit_id": "TOM26-V06-W",
+  "genotype_id": "V06",
+  "variety": "25-014",
+  "water_status": "watered",
+  "status": "complete",
+  "polygon": [
+    [
+      2213.27,
+      910.94
+    ],
+    [
+      2239.17,
+      867.16
+    ],
+    [
+      2254.7,
+      854.44
+    ],
+    [
+      2273.54,
+      853.97
+    ],
+    [
+      2285.78,
+      860.09
+    ],
+    [
+      2296.61,
+      871.86
+    ],
+    [
+      2306.02,
+      886.93
+    ],
+    [
+      2304.14,
+      904.82
+    ],
+    [
+      2291.43,
+      928.36
+    ],
+    [
+      2281.54,
+      947.19
+    ],
+    [
+      2260.35,
+      958.96
+    ],
+    [
+      2247.17,
+      967.44
+    ],
+    [
+      2231.64,
+      966.5
+    ],
+    [
+      2213.74,
+      958.96
+    ],
+    [
+      2205.27,
+      938.72
+    ],
+    [
+      2207.15,
+      921.3
+    ]
+  ],
+  "complex_area_px2": 7799.341999999946,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T19:39:37.865828+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

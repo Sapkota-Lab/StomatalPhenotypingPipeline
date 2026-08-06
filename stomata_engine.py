@@ -17,6 +17,7 @@ import cv2
 import numpy as np
 import torch
 import torch.nn.functional as torch_functional
+from PIL import Image, ImageOps
 from ultralytics import YOLO
 from ultralytics.nn.modules.block import AAttn
 
@@ -175,6 +176,7 @@ def infer_image(
     confidence: float,
     nms_iou: float,
     device: str | None,
+    center_distance_nms: float | None = 0.25,
 ) -> list[Detection]:
     height, width = image.shape[:2]
     tiles: list[np.ndarray] = []
@@ -223,7 +225,11 @@ def infer_image(
                 detections.append(Detection(
                     global_x1, global_y1, global_x2, global_y2, float(score)
                 ))
-    return global_nms(detections, nms_iou)
+    return global_nms(
+        detections,
+        nms_iou,
+        center_distance_threshold=center_distance_nms,
+    )
 
 
 def image_quality(image: np.ndarray) -> dict[str, float | str]:
@@ -281,10 +287,51 @@ def draw_overlay(
         raise OSError(f"Could not write overlay {output}")
 
 
-def image_paths(source: Path) -> list[Path]:
+def image_paths(
+    source: Path,
+    allowed_filenames: set[str] | None = None,
+) -> list[Path]:
     if source.is_file():
-        return [source]
-    return sorted(path for path in source.iterdir() if path.suffix.lower() in IMAGE_SUFFIXES)
+        paths = [source]
+    else:
+        paths = sorted(
+            path
+            for path in source.iterdir()
+            if path.suffix.lower() in IMAGE_SUFFIXES
+        )
+    if allowed_filenames is not None:
+        paths = [path for path in paths if path.name in allowed_filenames]
+        missing = allowed_filenames.difference(path.name for path in paths)
+        if missing:
+            examples = ", ".join(sorted(missing)[:5])
+            raise ValueError(f"Split images missing from input: {examples}")
+    return paths
+
+
+def split_filenames(path: Path, split: str) -> set[str]:
+    with path.open(newline="", encoding="utf-8-sig") as handle:
+        reader = csv.DictReader(handle)
+        required = {"filename", "split"}
+        if not required.issubset(reader.fieldnames or []):
+            raise ValueError(
+                f"{path} needs filename and split columns"
+            )
+        filenames = {
+            row["filename"]
+            for row in reader
+            if split == "all" or row.get("split") == split
+        }
+    if not filenames:
+        raise ValueError(f"No images found for split {split!r}")
+    return filenames
+
+
+def load_oriented_bgr(path: Path) -> np.ndarray:
+    with Image.open(path) as source:
+        rgb = np.asarray(
+            ImageOps.exif_transpose(source).convert("RGB")
+        ).copy()
+    return cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
 
 
 def main() -> None:
@@ -299,14 +346,40 @@ def main() -> None:
     parser.add_argument("--tile-size", type=int, default=1216)
     parser.add_argument("--overlap", type=float, default=0.2)
     parser.add_argument("--nms-iou", type=float, default=0.45)
+    parser.add_argument(
+        "--center-distance-nms",
+        type=float,
+        default=0.25,
+        help=(
+            "Suppress near-coincident tile duplicates using center distance "
+            "relative to object size; set below zero to disable."
+        ),
+    )
     parser.add_argument("--device", default=None, help="Examples: cpu, mps, 0")
+    parser.add_argument(
+        "--split-manifest",
+        type=Path,
+        help="CSV with filename and split columns.",
+    )
+    parser.add_argument(
+        "--split",
+        choices=("train", "val", "test", "all"),
+        help="Process only this split from --split-manifest.",
+    )
+    parser.add_argument("--no-overlays", action="store_true")
     args = parser.parse_args()
 
     if not args.model.exists():
         parser.error(f"Model not found: {args.model}")
     if not 0 <= args.review_confidence <= args.confidence <= 1:
         parser.error("Require 0 <= review-confidence <= confidence <= 1")
-    paths = image_paths(args.input)
+    if bool(args.split_manifest) != bool(args.split):
+        parser.error("--split-manifest and --split must be provided together")
+    allowed = (
+        split_filenames(args.split_manifest, args.split)
+        if args.split_manifest and args.split else None
+    )
+    paths = image_paths(args.input, allowed)
     if not paths:
         parser.error(f"No supported images found in {args.input}")
 
@@ -316,11 +389,11 @@ def main() -> None:
     count_rows = []
     detection_rows = []
     for path in paths:
-        image = cv2.imread(str(path), cv2.IMREAD_COLOR)
-        if image is None:
-            raise ValueError(f"Could not read {path}")
+        image = load_oriented_bgr(path)
         candidates = infer_image(model, image, args.tile_size, args.overlap,
-                                 args.review_confidence, args.nms_iou, args.device)
+                                 args.review_confidence, args.nms_iou, args.device,
+                                 None if args.center_distance_nms < 0
+                                 else args.center_distance_nms)
         accepted = [item for item in candidates if item.confidence >= args.confidence]
         review = [item for item in candidates if item.confidence < args.confidence]
         quality = image_quality(image)
@@ -341,7 +414,13 @@ def main() -> None:
                 "x1": round(detection.x1, 2), "y1": round(detection.y1, 2),
                 "x2": round(detection.x2, 2), "y2": round(detection.y2, 2),
             })
-        draw_overlay(image, accepted, args.output / "overlays" / f"{path.stem}_overlay.jpg", review)
+        if not args.no_overlays:
+            draw_overlay(
+                image,
+                accepted,
+                args.output / "overlays" / f"{path.stem}_overlay.jpg",
+                review,
+            )
         print(f"{path.name}: accepted={len(accepted)} review={len(review)} quality={quality['image_quality']}")
 
     with (args.output / "counts.csv").open("w", newline="") as handle:

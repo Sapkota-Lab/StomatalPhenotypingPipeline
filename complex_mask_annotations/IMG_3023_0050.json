@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3023:0050",
+  "image": "IMG_3023.JPG",
+  "expert_box_index": 50,
+  "box": {
+    "x1": 2374.7,
+    "y1": 2695.22,
+    "x2": 2471.85,
+    "y2": 2859.77
+  },
+  "plant_unit_id": "TOM26-V12-W",
+  "genotype_id": "V12",
+  "variety": "26-033",
+  "water_status": "watered",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 8.878035,
+  "local_focus_score": 62.41589,
+  "local_contrast_5_95": 190.0,
+  "local_clipped_fraction": 0.007227,
+  "edge_margin_px": 1528.15,
+  "quality_rank_within_image": 1,
+  "quality_candidates_in_image": 73,
+  "status": "complete",
+  "polygon": [
+    [
+      2455.8,
+      2835.33
+    ],
+    [
+      2462.83,
+      2800.78
+    ],
+    [
+      2453.45,
+      2762.71
+    ],
+    [
+      2439.98,
+      2754.51
+    ],
+    [
+      2398.4,
+      2763.88
+    ],
+    [
+      2397.82,
+      2785.55
+    ],
+    [
+      2396.65,
+      2813.66
+    ],
+    [
+      2424.17,
+      2825.38
+    ]
+  ],
+  "complex_area_px2": 4064.8002499989234,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:09:56.430035+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3043:0047",
+  "image": "IMG_3043.JPG",
+  "expert_box_index": 47,
+  "box": {
+    "x1": 36.65,
+    "y1": 159.45,
+    "x2": 195.24,
+    "y2": 340.92
+  },
+  "plant_unit_id": "TOM26-V15-D",
+  "genotype_id": "V15",
+  "variety": "NC261G",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      180.0,
+      242.0
+    ],
+    [
+      178.0,
+      267.0
+    ],
+    [
+      173.0,
+      282.0
+    ],
+    [
+      168.0,
+      294.0
+    ],
+    [
+      165.0,
+      298.0
+    ],
+    [
+      158.0,
+      307.0
+    ],
+    [
+      157.0,
+      308.0
+    ],
+    [
+      151.0,
+      313.0
+    ],
+    [
+      121.0,
+      333.0
+    ],
+    [
+      119.0,
+      334.0
+    ],
+    [
+      105.0,
+      338.0
+    ],
+    [
+      101.0,
+      338.0
+    ],
+    [
+      58.0,
+      333.0
+    ],
+    [
+      57.0,
+      332.0
+    ],
+    [
+      47.0,
+      312.0
+    ],
+    [
+      38.0,
+      276.0
+    ],
+    [
+      37.0,
+      239.0
+    ],
+    [
+      37.0,
+      237.0
+    ],
+    [
+      38.0,
+      226.0
+    ],
+    [
+      52.0,
+      201.0
+    ],
+    [
+      56.0,
+      198.0
+    ],
+    [
+      104.0,
+      164.0
+    ],
+    [
+      150.0,
+      163.0
+    ],
+    [
+      154.0,
+      164.0
+    ],
+    [
+      169.0,
+      186.0
+    ],
+    [
+      171.0,
+      189.0
+    ],
+    [
+      173.0,
+      195.0
+    ]
+  ],
+  "complex_area_px2": 19998.0,
+  "model_confidence": 0.8514785766601562,
+  "box_iou_with_expert": 0.8695477743150722,
+  "center_similarity": 0.9690805511089989,
+  "selection_rank": 0.8840335703773828,
+  "crop": {
+    "x1": 0,
+    "y1": 23,
+    "x2": 315,
+    "y2": 478
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

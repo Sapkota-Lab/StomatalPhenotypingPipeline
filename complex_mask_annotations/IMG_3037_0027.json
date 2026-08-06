@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3037:0027",
+  "image": "IMG_3037.JPG",
+  "expert_box_index": 27,
+  "box": {
+    "x1": 2492.56,
+    "y1": 3325.78,
+    "x2": 2607.42,
+    "y2": 3428.3
+  },
+  "plant_unit_id": "TOM26-V02-D",
+  "genotype_id": "V02",
+  "variety": "25203G",
+  "water_status": "drought_stressed",
+  "status": "complete",
+  "polygon": [
+    [
+      2501.34,
+      3348.01
+    ],
+    [
+      2542.32,
+      3326.79
+    ],
+    [
+      2565.0,
+      3327.88
+    ],
+    [
+      2582.93,
+      3337.76
+    ],
+    [
+      2585.85,
+      3351.3
+    ],
+    [
+      2595.73,
+      3355.69
+    ],
+    [
+      2583.29,
+      3380.93
+    ],
+    [
+      2560.24,
+      3406.18
+    ],
+    [
+      2525.85,
+      3411.3
+    ],
+    [
+      2506.1,
+      3401.06
+    ],
+    [
+      2494.02,
+      3378.01
+    ],
+    [
+      2493.66,
+      3359.35
+    ]
+  ],
+  "complex_area_px2": 6137.25734999869,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T19:44:41.453886+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

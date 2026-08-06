@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3027:0028",
+  "image": "IMG_3027.JPG",
+  "expert_box_index": 28,
+  "box": {
+    "x1": 744.85,
+    "y1": 1494.75,
+    "x2": 868.24,
+    "y2": 1629.05
+  },
+  "plant_unit_id": "TOM26-V15-W",
+  "genotype_id": "V15",
+  "variety": "NC261G",
+  "water_status": "watered",
+  "status": "complete",
+  "polygon": [
+    [
+      787.92,
+      1507.56
+    ],
+    [
+      755.99,
+      1533.77
+    ],
+    [
+      759.33,
+      1559.02
+    ],
+    [
+      761.71,
+      1585.23
+    ],
+    [
+      776.48,
+      1610.0
+    ],
+    [
+      811.74,
+      1620.96
+    ],
+    [
+      827.94,
+      1611.91
+    ],
+    [
+      845.09,
+      1577.6
+    ],
+    [
+      849.86,
+      1549.97
+    ],
+    [
+      839.38,
+      1521.86
+    ],
+    [
+      813.17,
+      1503.27
+    ]
+  ],
+  "complex_area_px2": 8153.4847999999765,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T19:42:51.606363+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

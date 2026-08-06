@@ -1,0 +1,131 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3032:0014",
+  "image": "IMG_3032.JPG",
+  "expert_box_index": 14,
+  "box": {
+    "x1": 5283.07,
+    "y1": 1646.66,
+    "x2": 5452.03,
+    "y2": 1781.45
+  },
+  "plant_unit_id": "TOM26-V08-D",
+  "genotype_id": "V08",
+  "variety": "Cherokee Purple",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      5431.0,
+      1717.0
+    ],
+    [
+      5412.0,
+      1747.0
+    ],
+    [
+      5410.0,
+      1750.0
+    ],
+    [
+      5401.0,
+      1759.0
+    ],
+    [
+      5380.0,
+      1774.0
+    ],
+    [
+      5378.0,
+      1775.0
+    ],
+    [
+      5355.0,
+      1780.0
+    ],
+    [
+      5341.0,
+      1780.0
+    ],
+    [
+      5333.0,
+      1779.0
+    ],
+    [
+      5297.0,
+      1753.0
+    ],
+    [
+      5293.0,
+      1749.0
+    ],
+    [
+      5290.0,
+      1745.0
+    ],
+    [
+      5289.0,
+      1705.0
+    ],
+    [
+      5289.0,
+      1704.0
+    ],
+    [
+      5294.0,
+      1686.0
+    ],
+    [
+      5295.0,
+      1684.0
+    ],
+    [
+      5314.0,
+      1665.0
+    ],
+    [
+      5322.0,
+      1659.0
+    ],
+    [
+      5336.0,
+      1653.0
+    ],
+    [
+      5369.0,
+      1653.0
+    ],
+    [
+      5390.0,
+      1659.0
+    ],
+    [
+      5405.0,
+      1668.0
+    ],
+    [
+      5411.0,
+      1672.0
+    ],
+    [
+      5431.0,
+      1713.0
+    ]
+  ],
+  "complex_area_px2": 13822.5,
+  "model_confidence": 0.9162232279777527,
+  "box_iou_with_expert": 0.7918638027279247,
+  "center_similarity": 0.9632826673955363,
+  "selection_rank": 0.8634554032363955,
+  "crop": {
+    "x1": 5156,
+    "y1": 1545,
+    "x2": 5579,
+    "y2": 1883
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

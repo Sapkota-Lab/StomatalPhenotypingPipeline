@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3031:0009",
+  "image": "IMG_3031.JPG",
+  "expert_box_index": 9,
+  "box": {
+    "x1": 3233.84,
+    "y1": 670.26,
+    "x2": 3549.58,
+    "y2": 971.43
+  },
+  "plant_unit_id": "TOM26-V10-D",
+  "genotype_id": "V10",
+  "variety": "Mountain Gem",
+  "water_status": "drought_stressed",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 8.739093,
+  "local_focus_score": 94.627441,
+  "local_contrast_5_95": 179.0,
+  "local_clipped_fraction": 0.098789,
+  "edge_margin_px": 670.26,
+  "quality_rank_within_image": 1,
+  "quality_candidates_in_image": 15,
+  "status": "skipped",
+  "polygon": [],
+  "complex_area_px2": null,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:12:15.691637+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

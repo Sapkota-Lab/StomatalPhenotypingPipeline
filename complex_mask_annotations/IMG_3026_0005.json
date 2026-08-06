@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3026:0005",
+  "image": "IMG_3026.JPG",
+  "expert_box_index": 5,
+  "box": {
+    "x1": 1237.4,
+    "y1": 654.41,
+    "x2": 1504.39,
+    "y2": 904.21
+  },
+  "plant_unit_id": "TOM26-V14-W",
+  "genotype_id": "V14",
+  "variety": "Ailsa Craig",
+  "water_status": "watered",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 7.935882,
+  "local_focus_score": 83.912773,
+  "local_contrast_5_95": 140.0,
+  "local_clipped_fraction": 0.001914,
+  "edge_margin_px": 654.41,
+  "quality_rank_within_image": 3,
+  "quality_candidates_in_image": 19,
+  "status": "skipped",
+  "polygon": [],
+  "complex_area_px2": null,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:26:28.165134+00:00",
+  "starting_proposal_available": false,
+  "annotation_blinded_to_proposal": true
+}

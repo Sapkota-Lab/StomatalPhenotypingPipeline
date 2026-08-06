@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3021:0008",
+  "image": "IMG_3021.JPG",
+  "expert_box_index": 8,
+  "box": {
+    "x1": 980.04,
+    "y1": 2081.05,
+    "x2": 1136.47,
+    "y2": 2255.83
+  },
+  "plant_unit_id": "TOM26-V11-W",
+  "genotype_id": "V11",
+  "variety": "26-037",
+  "water_status": "watered",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 8.624927,
+  "local_focus_score": 58.062672,
+  "local_contrast_5_95": 184.0,
+  "local_clipped_fraction": 0.017891,
+  "edge_margin_px": 980.04,
+  "quality_rank_within_image": 1,
+  "quality_candidates_in_image": 16,
+  "status": "skipped",
+  "polygon": [],
+  "complex_area_px2": null,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:09:38.447638+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

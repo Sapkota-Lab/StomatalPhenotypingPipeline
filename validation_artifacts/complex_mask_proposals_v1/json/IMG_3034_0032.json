@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3034:0032",
+  "image": "IMG_3034.JPG",
+  "expert_box_index": 32,
+  "box": {
+    "x1": 4840.55,
+    "y1": 3068.28,
+    "x2": 5039.87,
+    "y2": 3247.96
+  },
+  "plant_unit_id": "TOM26-V12-D",
+  "genotype_id": "V12",
+  "variety": "26-033",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      5027.0,
+      3193.0
+    ],
+    [
+      5012.0,
+      3212.0
+    ],
+    [
+      5011.0,
+      3213.0
+    ],
+    [
+      4958.0,
+      3237.0
+    ],
+    [
+      4945.0,
+      3237.0
+    ],
+    [
+      4883.0,
+      3210.0
+    ],
+    [
+      4871.0,
+      3169.0
+    ],
+    [
+      4871.0,
+      3168.0
+    ],
+    [
+      4875.0,
+      3149.0
+    ],
+    [
+      4885.0,
+      3130.0
+    ],
+    [
+      4889.0,
+      3123.0
+    ],
+    [
+      4896.0,
+      3115.0
+    ],
+    [
+      4908.0,
+      3107.0
+    ],
+    [
+      4952.0,
+      3083.0
+    ],
+    [
+      4961.0,
+      3080.0
+    ],
+    [
+      4962.0,
+      3080.0
+    ],
+    [
+      4988.0,
+      3094.0
+    ],
+    [
+      4996.0,
+      3099.0
+    ],
+    [
+      5019.0,
+      3150.0
+    ],
+    [
+      5025.0,
+      3177.0
+    ],
+    [
+      5027.0,
+      3189.0
+    ]
+  ],
+  "complex_area_px2": 17449.0,
+  "model_confidence": 0.8608779311180115,
+  "box_iou_with_expert": 0.6838701272661885,
+  "center_similarity": 0.9672140498568381,
+  "selection_rank": 0.7936412529398653,
+  "crop": {
+    "x1": 4691,
+    "y1": 2933,
+    "x2": 5190,
+    "y2": 3383
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

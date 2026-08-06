@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3017:0012",
+  "image": "IMG_3017.JPG",
+  "expert_box_index": 12,
+  "box": {
+    "x1": 3573.46,
+    "y1": 1933.75,
+    "x2": 3772.31,
+    "y2": 2063.99
+  },
+  "plant_unit_id": "TOM26-V07-W",
+  "genotype_id": "V07",
+  "variety": "25-013",
+  "water_status": "watered",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 8.505575,
+  "local_focus_score": 115.230484,
+  "local_contrast_5_95": 150.0,
+  "local_clipped_fraction": 0.0,
+  "edge_margin_px": 1933.75,
+  "quality_rank_within_image": 1,
+  "quality_candidates_in_image": 30,
+  "status": "complete",
+  "polygon": [
+    [
+      3602.27,
+      2001.2
+    ],
+    [
+      3622.15,
+      1983.63
+    ],
+    [
+      3644.34,
+      1966.06
+    ],
+    [
+      3671.15,
+      1949.42
+    ],
+    [
+      3688.72,
+      1945.72
+    ],
+    [
+      3708.6,
+      1946.65
+    ],
+    [
+      3719.23,
+      1954.04
+    ],
+    [
+      3723.39,
+      1969.76
+    ],
+    [
+      3725.24,
+      1983.17
+    ],
+    [
+      3726.63,
+      1998.88
+    ],
+    [
+      3727.09,
+      2008.13
+    ],
+    [
+      3708.6,
+      2019.23
+    ],
+    [
+      3682.71,
+      2036.33
+    ],
+    [
+      3652.2,
+      2048.81
+    ],
+    [
+      3637.4,
+      2054.36
+    ],
+    [
+      3626.31,
+      2058.98
+    ],
+    [
+      3617.52,
+      2062.22
+    ],
+    [
+      3609.2,
+      2058.98
+    ],
+    [
+      3604.58,
+      2044.19
+    ],
+    [
+      3602.73,
+      2024.77
+    ]
+  ],
+  "complex_area_px2": 9581.594700000249,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:08:54.817769+00:00",
+  "starting_proposal_available": false,
+  "annotation_blinded_to_proposal": true
+}

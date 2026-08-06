@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3053:0006",
+  "image": "IMG_3053.JPG",
+  "expert_box_index": 6,
+  "box": {
+    "x1": 2237.48,
+    "y1": 2480.36,
+    "x2": 2389.52,
+    "y2": 2579.3
+  },
+  "plant_unit_id": "TOM26-V03-D",
+  "genotype_id": "V03",
+  "variety": "25317G",
+  "water_status": "drought_stressed",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 7.648775,
+  "local_focus_score": 65.800125,
+  "local_contrast_5_95": 150.0,
+  "local_clipped_fraction": 0.100977,
+  "edge_margin_px": 1610.48,
+  "quality_rank_within_image": 3,
+  "quality_candidates_in_image": 10,
+  "status": "complete",
+  "polygon": [
+    [
+      2261.1,
+      2528.51
+    ],
+    [
+      2256.53,
+      2542.22
+    ],
+    [
+      2261.1,
+      2557.7
+    ],
+    [
+      2278.68,
+      2574.58
+    ],
+    [
+      2292.05,
+      2574.22
+    ],
+    [
+      2309.28,
+      2572.47
+    ],
+    [
+      2322.29,
+      2576.69
+    ],
+    [
+      2335.66,
+      2569.65
+    ],
+    [
+      2353.94,
+      2550.31
+    ],
+    [
+      2371.53,
+      2539.41
+    ],
+    [
+      2373.64,
+      2524.29
+    ],
+    [
+      2367.66,
+      2508.46
+    ],
+    [
+      2350.43,
+      2485.95
+    ],
+    [
+      2332.14,
+      2477.51
+    ],
+    [
+      2308.58,
+      2485.95
+    ],
+    [
+      2281.5,
+      2501.78
+    ]
+  ],
+  "complex_area_px2": 7961.209350000136,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:29:12.502827+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

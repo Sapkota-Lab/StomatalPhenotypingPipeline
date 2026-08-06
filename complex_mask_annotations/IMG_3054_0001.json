@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3054:0001",
+  "image": "IMG_3054.JPG",
+  "expert_box_index": 1,
+  "box": {
+    "x1": 3398.08,
+    "y1": 2833.8,
+    "x2": 3493.89,
+    "y2": 2941.31
+  },
+  "plant_unit_id": "TOM26-V14-D",
+  "genotype_id": "V14",
+  "variety": "Ailsa Craig",
+  "water_status": "drought_stressed",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 8.780386,
+  "local_focus_score": 59.713547,
+  "local_contrast_5_95": 188.0,
+  "local_clipped_fraction": 0.008594,
+  "edge_margin_px": 1058.69,
+  "quality_rank_within_image": 1,
+  "quality_candidates_in_image": 19,
+  "status": "complete",
+  "polygon": [
+    [
+      3409.38,
+      2874.43
+    ],
+    [
+      3422.73,
+      2853.07
+    ],
+    [
+      3440.66,
+      2845.83
+    ],
+    [
+      3451.72,
+      2842.77
+    ],
+    [
+      3477.66,
+      2845.06
+    ],
+    [
+      3483.38,
+      2851.55
+    ],
+    [
+      3488.34,
+      2865.28
+    ],
+    [
+      3488.72,
+      2880.16
+    ],
+    [
+      3482.24,
+      2901.14
+    ],
+    [
+      3465.45,
+      2918.3
+    ],
+    [
+      3447.91,
+      2929.75
+    ],
+    [
+      3433.41,
+      2934.71
+    ],
+    [
+      3419.3,
+      2932.04
+    ],
+    [
+      3411.29,
+      2922.5
+    ],
+    [
+      3404.8,
+      2908.39
+    ],
+    [
+      3401.37,
+      2894.65
+    ],
+    [
+      3404.04,
+      2886.26
+    ]
+  ],
+  "complex_area_px2": 5890.10204999987,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:16:37.156680+00:00",
+  "starting_proposal_available": false,
+  "annotation_blinded_to_proposal": true
+}

@@ -111,6 +111,29 @@ def infer_stomadet_tiled(
     )
 
 
+def load_scope_manifest(path: Path | None) -> dict[str, str]:
+    """Load the explicit analysis scope used to protect proper runs."""
+    if path is None:
+        return {}
+    with path.open(newline="") as handle:
+        reader = csv.DictReader(handle)
+        required = {"filename", "analysis_scope"}
+        if not required.issubset(reader.fieldnames or []):
+            raise ValueError(
+                f"Manifest {path} must contain filename and analysis_scope"
+            )
+        scopes = {}
+        for row in reader:
+            filename = row["filename"].strip()
+            scope = row["analysis_scope"].strip()
+            if scope not in {"eligible", "out_of_scope"}:
+                raise ValueError(f"Invalid analysis_scope {scope!r}")
+            if filename in scopes:
+                raise ValueError(f"Duplicate manifest row for {filename}")
+            scopes[filename] = scope
+    return scopes
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, required=True)
@@ -119,6 +142,11 @@ def main() -> None:
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--confidence", type=float, default=0.05)
     parser.add_argument("--device", default="cpu")
+    parser.add_argument(
+        "--manifest",
+        type=Path,
+        help="Optional scope manifest; only rows marked eligible are processed.",
+    )
     parser.add_argument(
         "--tile-size",
         type=int,
@@ -138,6 +166,9 @@ def main() -> None:
     if not args.config.exists():
         parser.error(f"Config not found: {args.config}")
     paths = image_paths(args.input)
+    scopes = load_scope_manifest(args.manifest)
+    if scopes:
+        paths = [path for path in paths if scopes.get(path.name) == "eligible"]
     if not paths:
         parser.error(f"No supported images found in {args.input}")
 

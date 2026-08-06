@@ -1,4 +1,6 @@
 numpy==1.26.4
+scipy>=1.11,<2
+scikit-learn>=1.4,<2
 opencv-python==4.11.0.86
 remotezip==0.12.3
 onnxruntime==1.28.0
@@ -9,3 +11,4 @@ huggingface-hub>=0.28
 transformers>=4.46,<5
 safetensors>=0.4
 ultralytics==8.4.106
+py7zr==1.1.3

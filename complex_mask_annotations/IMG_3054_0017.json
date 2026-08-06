@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3054:0017",
+  "image": "IMG_3054.JPG",
+  "expert_box_index": 17,
+  "box": {
+    "x1": 2604.55,
+    "y1": 1484.99,
+    "x2": 2723.85,
+    "y2": 1622.01
+  },
+  "plant_unit_id": "TOM26-V14-D",
+  "genotype_id": "V14",
+  "variety": "Ailsa Craig",
+  "water_status": "drought_stressed",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 8.579797,
+  "local_focus_score": 79.05603,
+  "local_contrast_5_95": 171.0,
+  "local_clipped_fraction": 0.025977,
+  "edge_margin_px": 1484.99,
+  "quality_rank_within_image": 3,
+  "quality_candidates_in_image": 19,
+  "status": "complete",
+  "polygon": [
+    [
+      2630.94,
+      1505.22
+    ],
+    [
+      2652.83,
+      1497.93
+    ],
+    [
+      2681.04,
+      1495.98
+    ],
+    [
+      2700.01,
+      1508.14
+    ],
+    [
+      2711.68,
+      1531.0
+    ],
+    [
+      2714.6,
+      1561.65
+    ],
+    [
+      2709.25,
+      1586.45
+    ],
+    [
+      2684.44,
+      1607.86
+    ],
+    [
+      2654.77,
+      1612.23
+    ],
+    [
+      2635.32,
+      1591.32
+    ],
+    [
+      2626.56,
+      1562.13
+    ],
+    [
+      2625.59,
+      1531.0
+    ]
+  ],
+  "complex_area_px2": 8320.22610000032,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:29:37.873337+00:00",
+  "starting_proposal_available": false,
+  "annotation_blinded_to_proposal": true
+}

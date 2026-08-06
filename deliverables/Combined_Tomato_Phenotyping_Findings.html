@@ -1,0 +1,1490 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Combined SeedThermal and stomatal phenotyping findings for 16 tomato varieties under Regular and Control treatments.">
+  <title>Tomato Drought Study - Sapkota Horticultural Breeding and Genetics Lab</title>
+  <style>
+:root {
+  color-scheme: light dark;
+  --paper: #f2f4ef;
+  --paper-2: #e7ebe4;
+  --ink: #16231d;
+  --muted: #59665f;
+  --line: #c9d0c9;
+  --surface: #fafbf8;
+  --surface-strong: #ffffff;
+  --accent: #0033a0;
+  --accent-deep: #001f63;
+  --accent-soft: #dfe8f7;
+  --regular: #2f6d57;
+  --regular-soft: #dbe8e1;
+  --control: #ad5b35;
+  --control-soft: #f2e1d8;
+  --warning: #8b5f12;
+  --warning-soft: #f4ead4;
+  --stomata-band: #e7edf8;
+  --temperature-band: #dce7f5;
+  --projected-band: #d2dff2;
+  --stomata-band-strong: #c4d3ee;
+  --temperature-band-strong: #abc1e5;
+  --projected-band-strong: #91acda;
+  --shadow: 0 24px 60px rgba(38, 55, 45, 0.12);
+  --radius: 14px;
+  --max: 1440px;
+  --sans: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #151b18;
+    --paper-2: #1d2521;
+    --ink: #edf2ed;
+    --muted: #aab6ae;
+    --line: #39463f;
+    --surface: #1b231f;
+    --surface-strong: #232d28;
+    --accent: #72a2ff;
+    --accent-deep: #a8c5ff;
+    --accent-soft: #20345b;
+    --regular: #83bca6;
+    --regular-soft: #233c33;
+    --control: #e9a17e;
+    --control-soft: #4b3026;
+    --warning: #ecc56f;
+    --warning-soft: #44391f;
+    --stomata-band: #1d2a43;
+    --temperature-band: #213655;
+    --projected-band: #274064;
+    --stomata-band-strong: #29446f;
+    --temperature-band-strong: #31578e;
+    --projected-band-strong: #3969ad;
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+  transform: translateY(-160%);
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 68px;
+  padding: 0 3vw;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 76%, transparent);
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  backdrop-filter: blur(16px);
+}
+
+nav {
+  display: flex;
+  gap: 1.4rem;
+  white-space: nowrap;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--accent);
+}
+
+.hero {
+  display: flex;
+  min-height: min(760px, calc(100dvh - 68px));
+  align-items: center;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(3rem, 7vh, 5.5rem) 4vw;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+}
+
+.lab-lockup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.lab-lockup img {
+  width: 92px;
+  height: auto;
+}
+
+.eyebrow {
+  margin: 0 0 1.2rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 24ch;
+  margin-bottom: 1.3rem;
+  font-size: clamp(2.7rem, 5.1vw, 5.5rem);
+  font-weight: 650;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+}
+
+.hero-deck {
+  max-width: 42ch;
+  margin-bottom: 2rem;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+}
+
+.primary-action {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.15rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff8f9;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.primary-action:hover {
+  background: var(--accent-deep);
+}
+
+.primary-action:active {
+  transform: translateY(1px);
+}
+
+.provenance-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: var(--max);
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.provenance-strip div {
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem 2vw;
+  border-right: 1px solid var(--line);
+}
+
+.provenance-strip div:last-child {
+  border-right: 0;
+}
+
+.provenance-strip strong {
+  font-family: var(--mono);
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+}
+
+.provenance-strip span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 9rem) 4vw;
+}
+
+.section-heading {
+  max-width: 770px;
+  margin-bottom: 3rem;
+}
+
+.section-heading h2,
+.method-lead h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.2rem, 4.3vw, 4.8rem);
+  font-weight: 650;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.section-heading p,
+.method-lead p {
+  max-width: 65ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.answer-ledger {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--line);
+}
+
+.answer {
+  min-height: 330px;
+  padding: clamp(2rem, 4vw, 4rem);
+  background: var(--surface);
+}
+
+.answer-primary {
+  grid-row: span 2;
+  display: flex;
+  min-height: 660px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.answer-caution {
+  background: var(--warning-soft);
+}
+
+.answer-number {
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: clamp(2.4rem, 5vw, 5.3rem);
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+
+.answer h3 {
+  max-width: 19ch;
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2.3vw, 2.5rem);
+  line-height: 1.05;
+}
+
+.answer > p:not(.answer-number, .caution-note) {
+  max-width: 55ch;
+  color: var(--muted);
+}
+
+.answer dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 2rem;
+  margin: 2rem 0 0;
+}
+
+.answer dl div {
+  min-width: 0;
+}
+
+.answer dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.answer dd {
+  margin: 0.2rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.variety-selector {
+  display: flex;
+  gap: 0.55rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.7rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.variety-selector button,
+.metric-switch button {
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: 0.58rem 0.88rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: transform 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.variety-selector button:hover,
+.metric-switch button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.variety-selector button:active,
+.metric-switch button:active {
+  transform: translateY(1px);
+}
+
+.variety-selector button.active,
+.metric-switch button.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff8f9;
+}
+
+.pair-title {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.pair-title h3 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: -0.05em;
+}
+
+.pair-title p {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.76rem;
+}
+
+#pair-qc {
+  max-width: 30ch;
+  text-align: right;
+}
+
+.paired-plants {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.plant-column {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.plant-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.4rem;
+}
+
+.regular-column .plant-head {
+  background: var(--regular-soft);
+}
+
+.control-column .plant-head {
+  background: var(--control-soft);
+}
+
+.plant-head h4 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.plant-head p {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+}
+
+.plant-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+.plant-meta > div {
+  min-height: 92px;
+  padding: 1rem 1.15rem;
+  background: var(--surface);
+}
+
+.plant-meta .span-2 {
+  grid-column: span 2;
+}
+
+.plant-meta span,
+.metric-group dt {
+  display: block;
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.25;
+}
+
+.plant-meta strong {
+  display: block;
+  margin-top: 0.35rem;
+  overflow-wrap: anywhere;
+  font-family: var(--mono);
+  font-size: 0.93rem;
+}
+
+.metric-group {
+  padding: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.metric-group h5 {
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+}
+
+.metric-group dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.metric-group dd {
+  margin: 0.25rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.qc-pass,
+.qc-fail {
+  display: inline-flex;
+  margin-top: 0.4rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.qc-pass {
+  background: var(--regular-soft);
+  color: var(--regular);
+}
+
+.qc-fail {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.pair-interpretation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pair-interpretation div {
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  background: var(--paper-2);
+}
+
+.pair-interpretation span {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.pair-interpretation strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--mono);
+}
+
+.metric-switch {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.chart-intro {
+  max-width: 760px;
+  margin-bottom: 2rem;
+  color: var(--muted);
+}
+
+.variety-chart {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: minmax(128px, 190px) 1fr minmax(80px, 120px);
+  align-items: center;
+  gap: 1rem;
+  min-height: 42px;
+}
+
+.chart-row-label {
+  overflow: hidden;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bar-zone {
+  position: relative;
+  height: 25px;
+  border-left: 1px solid var(--line);
+}
+
+.bar-zone::after {
+  position: absolute;
+  inset: auto 0 -8px;
+  height: 1px;
+  background: var(--line);
+  content: "";
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  height: 10px;
+  min-width: 2px;
+  border-radius: 0 5px 5px 0;
+}
+
+.bar.regular {
+  top: 1px;
+  background: var(--regular);
+}
+
+.bar.control {
+  bottom: 1px;
+  background: var(--control);
+}
+
+.chart-values {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.chart-values .regular-text {
+  color: var(--regular);
+}
+
+.chart-values .control-text {
+  color: var(--control);
+}
+
+.chart-note {
+  max-width: 78ch;
+  margin: 2rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.treatment-item {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.treatment-item h3 {
+  min-height: 2.6em;
+  margin-bottom: 1.6rem;
+  font-size: 1.1rem;
+}
+
+.comparison-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.comparison-numbers div {
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.comparison-numbers .regular-value {
+  background: var(--regular-soft);
+}
+
+.comparison-numbers .control-value {
+  background: var(--control-soft);
+}
+
+.comparison-numbers span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.comparison-numbers strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--mono);
+  font-size: 1.05rem;
+}
+
+.treatment-item > p {
+  margin: 1.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  min-width: 1120px;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  padding: 0.8rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  white-space: nowrap;
+}
+
+th:first-child,
+td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--surface);
+  text-align: left;
+}
+
+thead th {
+  background: var(--paper-2);
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.group-heading {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--ink);
+  font-size: 0.76rem;
+  text-align: center;
+}
+
+.group-stomata,
+.cell-stomata {
+  background: var(--stomata-band);
+}
+
+.group-temperature,
+.cell-temperature {
+  background: var(--temperature-band);
+}
+
+.group-projected,
+.cell-projected {
+  background: var(--projected-band);
+}
+
+.group-heading.group-stomata {
+  background: var(--stomata-band-strong);
+}
+
+.group-heading.group-temperature {
+  background: var(--temperature-band-strong);
+}
+
+.group-heading.group-projected {
+  background: var(--projected-band-strong);
+}
+
+.group-start {
+  border-left: 7px solid var(--paper);
+}
+
+thead th:first-child {
+  background: var(--paper-2);
+}
+
+tbody td {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+}
+
+tbody td:first-child {
+  font-family: var(--sans);
+  font-weight: 700;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.qc-cell-fail {
+  color: var(--warning);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 65%, transparent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
+  .answer-ledger {
+    grid-template-columns: 1fr;
+  }
+
+  .answer-primary {
+    grid-row: auto;
+    min-height: 440px;
+  }
+
+  .treatment-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    min-height: 62px;
+  }
+
+  nav {
+    gap: 0.85rem;
+  }
+
+  nav a {
+    font-size: 0.74rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 3.5rem 1.1rem 5rem;
+  }
+
+  h1 {
+    font-size: clamp(2.7rem, 13vw, 4.6rem);
+  }
+
+  .provenance-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .provenance-strip div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .provenance-strip div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .section {
+    padding: 5rem 1.1rem;
+  }
+
+  .paired-plants,
+  .pair-interpretation {
+    grid-template-columns: 1fr;
+  }
+
+  .pair-title {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  #pair-qc {
+    text-align: left;
+  }
+
+  .metric-group dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chart-row {
+    grid-template-columns: 110px 1fr;
+  }
+
+  .chart-values {
+    grid-column: 2;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to findings</a>
+  <header class="topbar">
+    <nav aria-label="Report sections">
+      <a href="#answers">Answers</a>
+      <a href="#plants">Plants</a>
+      <a href="#varieties">Varieties</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="lab-lockup">
+          <img src="data:image/png;base64,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" alt="University of Kentucky logo">
+        </div>
+        <h1>Tomato Drought Study - Sapkota Horticultural Breeding and Genetics Lab</h1>
+        <p class="hero-deck">Integrated thermal and stomatal findings from 32 plants and 16 tomato varieties.</p>
+        <a class="primary-action" href="#plants">Inspect every plant</a>
+      </div>
+    </section>
+
+    <section class="provenance-strip" aria-label="Dataset scope">
+      <div><strong id="count-plants"></strong><span>plant units</span></div>
+      <div><strong id="count-varieties"></strong><span>paired varieties</span></div>
+      <div><strong id="count-masks"></strong><span>manual stomatal masks</span></div>
+      <div><strong id="count-joins"></strong><span>exact composite joins</span></div>
+    </section>
+
+    <section class="section answers" id="answers">
+      <div class="section-heading">
+        <h2>The answers, with uncertainty intact</h2>
+        <p>Control means 0 mL and drought-stressed. Regular means 100 mL and watered.</p>
+      </div>
+      <div class="answer-ledger">
+        <article class="answer answer-primary">
+          <p class="answer-number" id="stomata-delta"></p>
+          <h3>No clear treatment difference in mean stomatal-complex area</h3>
+          <p id="stomata-summary"></p>
+          <dl id="stomata-stats"></dl>
+        </article>
+        <article class="answer">
+          <p class="answer-number" id="temp-delta"></p>
+          <h3>No clear treatment difference in canopy temperature</h3>
+          <p id="temp-summary"></p>
+          <dl id="temp-stats"></dl>
+        </article>
+        <article class="answer answer-caution">
+          <p class="answer-number" id="projected-delta"></p>
+          <h3>A difference in selected thermal-mask area</h3>
+          <p id="projected-summary"></p>
+          <dl id="projected-stats"></dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section plant-explorer" id="plants">
+      <div class="section-heading">
+        <h2>Both projects, plant by plant</h2>
+        <p>Select a variety to compare its exact Regular and Control records. No serial-number inference or fuzzy join is used.</p>
+      </div>
+      <div class="variety-selector" id="variety-selector" role="list" aria-label="Choose a variety"></div>
+      <div class="pair-title">
+        <div>
+          <p id="pair-genotype"></p>
+          <h3 id="pair-variety"></h3>
+        </div>
+        <p id="pair-qc"></p>
+      </div>
+      <div class="paired-plants">
+        <article class="plant-column regular-column" id="regular-card"></article>
+        <article class="plant-column control-column" id="control-card"></article>
+      </div>
+      <div class="pair-interpretation" id="pair-interpretation"></div>
+    </section>
+
+    <section class="section variety-analysis" id="varieties">
+      <div class="section-heading">
+        <h2>Average area among all 16 varieties</h2>
+        <p>Use the metric switch to separate stomatal-complex area from SeedThermal projected selected area.</p>
+      </div>
+      <div class="metric-switch" role="group" aria-label="Choose area metric">
+        <button type="button" class="active" data-metric="stomatal">Stomatal-complex area</button>
+        <button type="button" data-metric="projected">Projected selected area</button>
+      </div>
+      <div class="chart-intro" id="chart-intro"></div>
+      <div class="variety-chart" id="variety-chart" aria-label="Area comparison across 16 tomato varieties"></div>
+      <p class="chart-note" id="chart-note"></p>
+    </section>
+
+    <section class="section treatment-comparison">
+      <div class="section-heading">
+        <h2>Watered compared with drought-stressed</h2>
+        <p>Paired differences are Control minus Regular. Confidence intervals and tests use variety as the paired unit.</p>
+      </div>
+      <div class="treatment-grid" id="treatment-grid"></div>
+    </section>
+
+    <section class="section evidence-table-section">
+      <div class="section-heading">
+        <h2>Complete paired evidence table</h2>
+        <p>Every variety appears once. Failed thermal masks remain visible and are marked rather than silently removed.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <colgroup>
+            <col class="variety-col">
+            <col span="3" class="stomata-col">
+            <col span="3" class="temperature-col">
+            <col span="3" class="projected-col">
+          </colgroup>
+          <thead>
+            <tr>
+              <th rowspan="2">Variety</th>
+              <th colspan="3" class="group-heading group-stomata group-start">Stomatal-complex area, px²</th>
+              <th colspan="3" class="group-heading group-temperature group-start">Canopy mean, °C</th>
+              <th colspan="3" class="group-heading group-projected group-start">Projected selected area, px²</th>
+            </tr>
+            <tr>
+              <th class="group-stomata group-start">Regular</th><th class="group-stomata">Control</th><th class="group-stomata">Δ</th>
+              <th class="group-temperature group-start">Regular</th><th class="group-temperature">Control</th><th class="group-temperature">Δ</th>
+              <th class="group-projected group-start">Regular</th><th class="group-projected">Control</th><th class="group-projected">Δ</th>
+            </tr>
+          </thead>
+          <tbody id="evidence-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script id="report-data" type="application/json">{"generated_from":{"plants":"results/combined_quality_mask_analysis_v1/plant_phenotypes.csv","detections":"results/integrated_exact_v1/combined_detection_dataset.csv","measurements":"results/integrated_exact_v1/combined_measurement_dataset.csv"},"counts":{"plants":32,"varieties":16,"manual_stomata":85,"detector_candidates":5633,"accepted_candidates":325,"review_candidates":1495,"rejected_candidates":3813,"thermal_qc_passed":30,"exact_joins":32},"paired":{"stomatal":{"n_pairs":16,"difference":-757.0670965020786,"ci_low":-2766.3328304778142,"ci_high":1252.1986374736573,"paired_t_p":0.4344562113460833,"wilcoxon_p":0.40374755859375,"regular_mean":10968.522349239935,"control_mean":10211.455252737855,"percent_difference":-6.902179458608112,"control_greater":5},"temperature":{"n_pairs":14,"difference":-0.24093074914698523,"ci_low":-0.5279115622766363,"ci_high":0.04605006398266584,"paired_t_p":0.09286311281859165,"wilcoxon_p":0.216552734375,"regular_mean":26.051565602951637,"control_mean":25.810634853804654,"percent_difference":-0.9248225339658198,"control_greater":6},"projected_area":{"n_pairs":14,"difference":2373.785714285714,"ci_low":968.4191272468781,"ci_high":3779.1523013245505,"paired_t_p":0.002942666217469027,"wilcoxon_p":0.00761549791667243,"regular_mean":6034.785714285715,"control_mean":8408.57142857143,"percent_difference":39.33504562832151,"control_greater":11}},"pairs":[{"genotype_id":"V01","variety":"NC264G","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"NC264G","join_key_treatment":"regular","stomata_source_variety":"NC264G","stomata_source_treatment":"regular","thermal_source_variety":"NC264G","thermal_source_treatment":"Regular","genotype_id":"V01","plant_unit_id":"TOM26-V01-W","variety":"NC264G","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3011.JPG","stomata_photo_serial":3011,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P02","thermal_source_file":"S20260715_P02_NC264G_Regular.JPG","thermal_capture_time":"2026:07:15 14:00:57.470-04:00","canopy_mean_c":23.446142850544295,"canopy_median_c":23.422435335449904,"canopy_min_c":23.18225154029807,"canopy_max_c":25.993528489846423,"canopy_std_c":0.1721659974689386,"canopy_p10_c":23.351328500878083,"canopy_p90_c":23.511249539278765,"canopy_delta_t_air_c":-1.5538571494557054,"projected_plant_area_px2":158443,"projected_plant_area_fraction":0.5157649739583333,"thermal_mask_qc_passed":false,"thermal_mask_qc_flag":"auto_mask_selected_more_than_10_percent_of_frame","stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":89,"stomata_candidates_accepted":4,"stomata_candidates_review":23,"stomata_candidates_rejected":62,"stomata_expected_true_candidates":14.350672038366945,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":5641.2696517929435,"stomatal_complex_area_median":5641.2696517929435,"stomatal_complex_area_sd":3497.00092426977,"stomatal_complex_area_q25":4404.893118109554,"stomatal_complex_area_q75":6877.646185476333,"mean_length_px":97.2138786315918,"mean_width_px":69.41239547729492,"mean_aspect_ratio":1.380800345813456,"mean_eccentricity":0.6814271526541082,"mean_solidity":0.9877231670455549,"mean_circularity":0.867694601896829,"mean_orientation_deg":61.84497833251953,"detection_confidence_by_status":{"accepted":{"n":4,"mean_detector_confidence":0.737779,"mean_calibrated_probability":0.8031780687919385},"rejected":{"n":62,"mean_detector_confidence":0.009511274193548388,"mean_calibrated_probability":0.012467299444839576},"review":{"n":23,"mean_detector_confidence":0.3824228260869565,"mean_calibrated_probability":0.45065161728778846}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"NC264G","join_key_treatment":"control","stomata_source_variety":"NC264G","stomata_source_treatment":"control","thermal_source_variety":"NC264G","thermal_source_treatment":"Control","genotype_id":"V01","plant_unit_id":"TOM26-V01-D","variety":"NC264G","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3040.JPG","stomata_photo_serial":3040,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P01","thermal_source_file":"S20260715_P01_NC264G_Control.JPG","thermal_capture_time":"2026:07:15 13:59:23.679-04:00","canopy_mean_c":25.538009799131377,"canopy_median_c":25.576661071774936,"canopy_min_c":24.5447153782481,"canopy_max_c":26.564026828859767,"canopy_std_c":0.5953075292251446,"canopy_p10_c":24.720345018523744,"canopy_p90_c":26.34829342789908,"canopy_delta_t_air_c":0.5380097991313768,"projected_plant_area_px2":12039,"projected_plant_area_fraction":0.039189453125,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":143,"stomata_candidates_accepted":8,"stomata_candidates_review":30,"stomata_candidates_rejected":105,"stomata_expected_true_candidates":23.190175080074784,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":7280.02979452163,"stomatal_complex_area_median":6492.452492825687,"stomatal_complex_area_sd":2410.503886167248,"stomatal_complex_area_q25":5927.138012286276,"stomatal_complex_area_q75":8239.132925909013,"mean_length_px":116.6209487915039,"mean_width_px":79.3269780476888,"mean_aspect_ratio":1.4818228790388623,"mean_eccentricity":0.6622896012417541,"mean_solidity":0.9957569886072143,"mean_circularity":0.8880835306642504,"mean_orientation_deg":40.30760637919108,"detection_confidence_by_status":{"accepted":{"n":8,"mean_detector_confidence":0.74188025,"mean_calibrated_probability":0.8065636253722169},"rejected":{"n":105,"mean_detector_confidence":0.009591209523809523,"mean_calibrated_probability":0.01256472400776614},"review":{"n":30,"mean_detector_confidence":0.4413778333333333,"mean_calibrated_probability":0.51394566854272}}},"stomatal_area_average":6460.649723157287,"stomatal_area_difference":1638.7601427286863,"temperature_difference":2.091866948587082,"projected_area_difference":-146404.0,"thermal_pair_qc":false},{"genotype_id":"V02","variety":"25203G","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"25203G","join_key_treatment":"regular","stomata_source_variety":"25203 G","stomata_source_treatment":"regular","thermal_source_variety":"25203G","thermal_source_treatment":"Regular","genotype_id":"V02","plant_unit_id":"TOM26-V02-W","variety":"25203G","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3012.JPG","stomata_photo_serial":3012,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P04","thermal_source_file":"S20260715_P04_25203G_Regular.JPG","thermal_capture_time":"2026:07:15 14:02:50.179-04:00","canopy_mean_c":26.327707804545422,"canopy_median_c":26.46915865048692,"canopy_min_c":25.114427216609727,"canopy_max_c":27.319915475801963,"canopy_std_c":0.6216673729404143,"canopy_p10_c":25.393757052248137,"canopy_p90_c":27.054253191449448,"canopy_delta_t_air_c":1.327707804545426,"projected_plant_area_px2":4348,"projected_plant_area_fraction":0.0141536458333333,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":332,"stomata_candidates_accepted":34,"stomata_candidates_review":84,"stomata_candidates_rejected":214,"stomata_expected_true_candidates":75.30271064392898,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":13435.520220736662,"stomatal_complex_area_median":13415.39175093174,"stomatal_complex_area_sd":4462.163493185362,"stomatal_complex_area_q25":11199.423381373286,"stomatal_complex_area_q75":15661.552825197576,"mean_length_px":151.86053975423178,"mean_width_px":112.00448862711589,"mean_aspect_ratio":1.3714831743182574,"mean_eccentricity":0.6774527337243996,"mean_solidity":0.9804322727532185,"mean_circularity":0.8708618438244459,"mean_orientation_deg":80.24740346272786,"detection_confidence_by_status":{"accepted":{"n":34,"mean_detector_confidence":0.7413591764705882,"mean_calibrated_probability":0.8060890769471747},"rejected":{"n":214,"mean_detector_confidence":0.011136640186915887,"mean_calibrated_probability":0.014617584090505824},"review":{"n":84,"mean_detector_confidence":0.4628158571428571,"mean_calibrated_probability":0.5329466551471045}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"25203G","join_key_treatment":"control","stomata_source_variety":"25203 G","stomata_source_treatment":"control","thermal_source_variety":"25203G","thermal_source_treatment":"Control","genotype_id":"V02","plant_unit_id":"TOM26-V02-D","variety":"25203G","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3037.JPG","stomata_photo_serial":3037,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P03","thermal_source_file":"S20260715_P03_25203G_Control.JPG","thermal_capture_time":"2026:07:15 14:01:42.051-04:00","canopy_mean_c":25.05125721033199,"canopy_median_c":24.886917857061633,"canopy_min_c":24.051358711285616,"canopy_max_c":27.891824970401217,"canopy_std_c":0.6912435288721723,"canopy_p10_c":24.32475813967568,"canopy_p90_c":26.132116136509637,"canopy_delta_t_air_c":0.0512572103319897,"projected_plant_area_px2":5927,"projected_plant_area_fraction":0.0192936197916666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":192,"stomata_candidates_accepted":18,"stomata_candidates_review":36,"stomata_candidates_rejected":138,"stomata_expected_true_candidates":34.80265952116582,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":9400.881662572425,"stomatal_complex_area_median":11024.01488789171,"stomatal_complex_area_sd":2826.397724545826,"stomatal_complex_area_q25":8580.63448427245,"stomatal_complex_area_q75":11032.69545353204,"mean_length_px":115.33541615804036,"mean_width_px":102.02064768473308,"mean_aspect_ratio":1.1473630529418843,"mean_eccentricity":0.4278415931560924,"mean_solidity":0.9963568966452723,"mean_circularity":0.9305913630964578,"mean_orientation_deg":97.57321612040202,"detection_confidence_by_status":{"accepted":{"n":18,"mean_detector_confidence":0.7326819444444445,"mean_calibrated_probability":0.7988385722591456},"rejected":{"n":138,"mean_detector_confidence":0.006760869565217391,"mean_calibrated_probability":0.008817140146884866},"review":{"n":36,"mean_detector_confidence":0.4625825,"mean_calibrated_probability":0.5335222188953079}}},"stomatal_area_average":11418.200941654542,"stomatal_area_difference":-4034.638558164239,"temperature_difference":-1.2764505942134363,"projected_area_difference":1579.0,"thermal_pair_qc":true},{"genotype_id":"V03","variety":"25317G","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"25317G","join_key_treatment":"regular","stomata_source_variety":"25317G","stomata_source_treatment":"regular","thermal_source_variety":"25317G","thermal_source_treatment":"Regular","genotype_id":"V03","plant_unit_id":"TOM26-V03-W","variety":"25317G","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3013.JPG","stomata_photo_serial":3013,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P06","thermal_source_file":"S20260715_P06_25317G_Regular.JPG","thermal_capture_time":"2026:07:15 14:04:15.635-04:00","canopy_mean_c":26.232168738435153,"canopy_median_c":26.365568400103996,"canopy_min_c":25.02698258291861,"canopy_max_c":27.02850849193555,"canopy_std_c":0.5636792982591091,"canopy_p10_c":25.393757052248137,"canopy_p90_c":26.91000194824785,"canopy_delta_t_air_c":1.2321687384351527,"projected_plant_area_px2":5619,"projected_plant_area_fraction":0.018291015625,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":110,"stomata_candidates_accepted":3,"stomata_candidates_review":21,"stomata_candidates_rejected":86,"stomata_expected_true_candidates":11.236795947343902,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":10477.076933714328,"stomatal_complex_area_median":8925.019157201983,"stomatal_complex_area_sd":3823.7803701516655,"stomatal_complex_area_q25":8299.1858309214,"stomatal_complex_area_q75":11878.939148251084,"mean_length_px":135.2800725301107,"mean_width_px":95.88740793863933,"mean_aspect_ratio":1.4299561779518895,"mean_eccentricity":0.7052359614677542,"mean_solidity":0.9932561463881587,"mean_circularity":0.8823714109061352,"mean_orientation_deg":153.33794657389322,"detection_confidence_by_status":{"accepted":{"n":3,"mean_detector_confidence":0.7608463333333333,"mean_calibrated_probability":0.8217915627314673},"rejected":{"n":86,"mean_detector_confidence":0.007341046511627908,"mean_calibrated_probability":0.009579373668331389},"review":{"n":21,"mean_detector_confidence":0.3188493333333333,"mean_calibrated_probability":0.37845691065109505}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"25317G","join_key_treatment":"control","stomata_source_variety":"25317G","stomata_source_treatment":"control","thermal_source_variety":"25317G","thermal_source_treatment":"Control","genotype_id":"V03","plant_unit_id":"TOM26-V03-D","variety":"25317G","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3053.JPG","stomata_photo_serial":3053,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P05","thermal_source_file":"S20260715_P05_25317G_Control.JPG","thermal_capture_time":"2026:07:15 14:03:36.778-04:00","canopy_mean_c":26.18044341954544,"canopy_median_c":26.374204821297553,"canopy_min_c":25.04447739765328,"canopy_max_c":26.90828354086358,"canopy_std_c":0.500996422559515,"canopy_p10_c":25.376320874953706,"canopy_p90_c":26.676033646904106,"canopy_delta_t_air_c":1.1804434195454403,"projected_plant_area_px2":8739,"projected_plant_area_fraction":0.028447265625,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":82,"stomata_candidates_accepted":3,"stomata_candidates_review":20,"stomata_candidates_rejected":59,"stomata_expected_true_candidates":13.113865386331756,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":8927.55130942973,"stomatal_complex_area_median":9390.454603478312,"stomatal_complex_area_sd":837.13195934878,"stomatal_complex_area_q25":8675.826346226037,"stomatal_complex_area_q75":9410.727919657716,"mean_length_px":135.58002726236978,"mean_width_px":87.36192576090495,"mean_aspect_ratio":1.5759340505983197,"mean_eccentricity":0.7348089395160589,"mean_solidity":0.9854392492104284,"mean_circularity":0.8606427062052364,"mean_orientation_deg":78.680601755778,"detection_confidence_by_status":{"accepted":{"n":3,"mean_detector_confidence":0.7377776666666667,"mean_calibrated_probability":0.8031160911633398},"rejected":{"n":59,"mean_detector_confidence":0.005675677966101695,"mean_calibrated_probability":0.007381597952314941},"review":{"n":20,"mean_detector_confidence":0.44094185,"mean_calibrated_probability":0.5134501416827576}}},"stomatal_area_average":9702.314121572028,"stomatal_area_difference":-1549.525624284599,"temperature_difference":-0.0517253188897122,"projected_area_difference":3120.0,"thermal_pair_qc":true},{"genotype_id":"V04","variety":"26-016","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"26-016","join_key_treatment":"regular","stomata_source_variety":"26-016","stomata_source_treatment":"regular","thermal_source_variety":"26-016","thermal_source_treatment":"Regular","genotype_id":"V04","plant_unit_id":"TOM26-V04-W","variety":"26-016","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3014.JPG","stomata_photo_serial":3014,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P08","thermal_source_file":"S20260715_P08_26-016_Regular.JPG","thermal_capture_time":"2026:07:15 14:05:11.277-04:00","canopy_mean_c":25.370568224584765,"canopy_median_c":25.341439763825576,"canopy_min_c":24.641348548129372,"canopy_max_c":27.422573818188027,"canopy_std_c":0.4331352317518828,"canopy_p10_c":24.8255800454736,"canopy_p90_c":25.91549229669124,"canopy_delta_t_air_c":0.3705682245847654,"projected_plant_area_px2":5583,"projected_plant_area_fraction":0.018173828125,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":118,"stomata_candidates_accepted":15,"stomata_candidates_review":25,"stomata_candidates_rejected":78,"stomata_expected_true_candidates":27.36607067779081,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":12299.12746038288,"stomatal_complex_area_median":12299.12746038288,"stomatal_complex_area_sd":7076.1181917097065,"stomatal_complex_area_q25":9797.341881465169,"stomatal_complex_area_q75":14800.91303930059,"mean_length_px":150.47162628173828,"mean_width_px":100.03653335571289,"mean_aspect_ratio":1.5326494482674136,"mean_eccentricity":0.7523750908597676,"mean_solidity":0.9998409701345405,"mean_circularity":0.8917548012465083,"mean_orientation_deg":90.9249439239502,"detection_confidence_by_status":{"accepted":{"n":15,"mean_detector_confidence":0.740962,"mean_calibrated_probability":0.805788136477146},"rejected":{"n":78,"mean_detector_confidence":0.00802147435897436,"mean_calibrated_probability":0.010482112890420989},"review":{"n":25,"mean_detector_confidence":0.50314496,"mean_calibrated_probability":0.5784657530072311}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"26-016","join_key_treatment":"control","stomata_source_variety":"26-016","stomata_source_treatment":"control","thermal_source_variety":"26-016","thermal_source_treatment":"Control","genotype_id":"V04","plant_unit_id":"TOM26-V04-D","variety":"26-016","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3046.JPG","stomata_photo_serial":3046,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P07","thermal_source_file":"S20260715_P07_26-016_Control.JPG","thermal_capture_time":"2026:07:15 14:04:48.123-04:00","canopy_mean_c":25.035619074755193,"canopy_median_c":24.930708388102342,"canopy_min_c":24.139631299845576,"canopy_max_c":28.2911885992375,"canopy_std_c":0.566588742590396,"canopy_p10_c":24.491968310726804,"canopy_p90_c":25.463472605920515,"canopy_delta_t_air_c":0.0356190747551927,"projected_plant_area_px2":8257,"projected_plant_area_fraction":0.0268782552083333,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":43,"stomata_candidates_accepted":0,"stomata_candidates_review":6,"stomata_candidates_rejected":37,"stomata_expected_true_candidates":3.733844380307255,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":11187.91245639076,"stomatal_complex_area_median":10728.205570995808,"stomatal_complex_area_sd":2496.532763992647,"stomatal_complex_area_q25":9840.693356350064,"stomatal_complex_area_q75":12305.278113733975,"mean_length_px":158.43904622395834,"mean_width_px":91.69533284505208,"mean_aspect_ratio":1.7277905025495572,"mean_eccentricity":0.8154623730615554,"mean_solidity":0.9918816956084159,"mean_circularity":0.8500647145564114,"mean_orientation_deg":67.59837086995442,"detection_confidence_by_status":{"rejected":{"n":37,"mean_detector_confidence":0.005512189189189189,"mean_calibrated_probability":0.0071779157687765155},"review":{"n":6,"mean_detector_confidence":0.503846,"mean_calibrated_probability":0.5780435828104203}}},"stomatal_area_average":11743.51995838682,"stomatal_area_difference":-1111.2150039921198,"temperature_difference":-0.3349491498295727,"projected_area_difference":2674.0,"thermal_pair_qc":true},{"genotype_id":"V05","variety":"26-018","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"26-018","join_key_treatment":"regular","stomata_source_variety":"26-018","stomata_source_treatment":"regular","thermal_source_variety":"26-018","thermal_source_treatment":"Regular","genotype_id":"V05","plant_unit_id":"TOM26-V05-W","variety":"26-018","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3015.JPG","stomata_photo_serial":3015,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P10","thermal_source_file":"S20260715_P10_26-018_Regular.JPG","thermal_capture_time":"2026:07:15 14:06:50.181-04:00","canopy_mean_c":26.58268431023682,"canopy_median_c":26.75350712698588,"canopy_min_c":25.32399482716238,"canopy_max_c":28.053450000451505,"canopy_std_c":0.5613392385558125,"canopy_p10_c":25.69841922505975,"canopy_p90_c":27.13144969395063,"canopy_delta_t_air_c":1.5826843102368215,"projected_plant_area_px2":7157,"projected_plant_area_fraction":0.0232975260416666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":176,"stomata_candidates_accepted":6,"stomata_candidates_review":62,"stomata_candidates_rejected":108,"stomata_expected_true_candidates":34.153615161531796,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":11856.759673804045,"stomatal_complex_area_median":11856.759673804045,"stomatal_complex_area_sd":1739.088808714273,"stomatal_complex_area_q25":11241.898928940296,"stomatal_complex_area_q75":12471.620418667791,"mean_length_px":156.8538055419922,"mean_width_px":97.64059066772461,"mean_aspect_ratio":1.6077126098311694,"mean_eccentricity":0.7829115740610795,"mean_solidity":0.9916914858005226,"mean_circularity":0.8753479285354695,"mean_orientation_deg":42.6423716545105,"detection_confidence_by_status":{"accepted":{"n":6,"mean_detector_confidence":0.7309266666666666,"mean_calibrated_probability":0.7974982244150436},"rejected":{"n":108,"mean_detector_confidence":0.009491296296296296,"mean_calibrated_probability":0.01243271181347051},"review":{"n":62,"mean_detector_confidence":0.384895435483871,"mean_calibrated_probability":0.4520305312772051}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"26-018","join_key_treatment":"control","stomata_source_variety":"26-018","stomata_source_treatment":"control","thermal_source_variety":"26-018","thermal_source_treatment":"Control","genotype_id":"V05","plant_unit_id":"TOM26-V05-D","variety":"26-018","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3039.JPG","stomata_photo_serial":3039,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P09","thermal_source_file":"S20260715_P09_26-018_Control.JPG","thermal_capture_time":"2026:07:15 14:06:19.401-04:00","canopy_mean_c":25.710670969367825,"canopy_median_c":25.74186990759489,"canopy_min_c":24.737891611606074,"canopy_max_c":27.627592896126828,"canopy_std_c":0.5121438853511812,"canopy_p10_c":24.974480451768613,"canopy_p90_c":26.296451460550713,"canopy_delta_t_air_c":0.7106709693678219,"projected_plant_area_px2":9232,"projected_plant_area_fraction":0.0300520833333333,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":186,"stomata_candidates_accepted":24,"stomata_candidates_review":46,"stomata_candidates_rejected":116,"stomata_expected_true_candidates":48.878991923092734,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":9229.513144396244,"stomatal_complex_area_median":9229.513144396244,"stomatal_complex_area_sd":3588.5202855771495,"stomatal_complex_area_q25":7960.779630217701,"stomatal_complex_area_q75":10498.24665857479,"mean_length_px":122.11094284057617,"mean_width_px":93.29710388183594,"mean_aspect_ratio":1.3235865779326024,"mean_eccentricity":0.6477848160453985,"mean_solidity":0.9896066765530158,"mean_circularity":0.896261589914352,"mean_orientation_deg":25.736472606658936,"detection_confidence_by_status":{"accepted":{"n":24,"mean_detector_confidence":0.7382429583333333,"mean_calibrated_probability":0.8034985578261922},"rejected":{"n":116,"mean_detector_confidence":0.008031827586206896,"mean_calibrated_probability":0.010504272840878865},"review":{"n":46,"mean_detector_confidence":0.543189652173913,"mean_calibrated_probability":0.6168811062113514}}},"stomatal_area_average":10543.136409100143,"stomatal_area_difference":-2627.2465294077992,"temperature_difference":-0.8720133408689996,"projected_area_difference":2075.0,"thermal_pair_qc":true},{"genotype_id":"V06","variety":"25-014","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"25-014","join_key_treatment":"regular","stomata_source_variety":"25-014","stomata_source_treatment":"regular","thermal_source_variety":"25-014","thermal_source_treatment":"Regular","genotype_id":"V06","plant_unit_id":"TOM26-V06-W","variety":"25-014","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3016.JPG","stomata_photo_serial":3016,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P12","thermal_source_file":"S20260715_P12_25-014_Regular.JPG","thermal_capture_time":"2026:07:15 14:08:06.649-04:00","canopy_mean_c":26.38262436677839,"canopy_median_c":26.50366606812275,"canopy_min_c":25.393757052248137,"canopy_max_c":27.182882743152614,"canopy_std_c":0.507241900814502,"canopy_p10_c":25.594063789048448,"canopy_p90_c":26.97700026828693,"canopy_delta_t_air_c":1.3826243667783942,"projected_plant_area_px2":6486,"projected_plant_area_fraction":0.02111328125,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":186,"stomata_candidates_accepted":5,"stomata_candidates_review":80,"stomata_candidates_rejected":101,"stomata_expected_true_candidates":48.648628515844464,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":9363.385932063064,"stomatal_complex_area_median":9508.14016586542,"stomatal_complex_area_sd":1496.9205631949878,"stomatal_complex_area_q25":8653.743438705802,"stomatal_complex_area_q75":10145.405542321503,"mean_length_px":134.21574910481772,"mean_width_px":92.28020477294922,"mean_aspect_ratio":1.4647470369921773,"mean_eccentricity":0.7266593465811657,"mean_solidity":0.9824813780797412,"mean_circularity":0.8282188655334645,"mean_orientation_deg":55.73120721181234,"detection_confidence_by_status":{"accepted":{"n":5,"mean_detector_confidence":0.7304316,"mean_calibrated_probability":0.7970505277046425},"rejected":{"n":101,"mean_detector_confidence":0.008355178217821783,"mean_calibrated_probability":0.01093456358168848},"review":{"n":80,"mean_detector_confidence":0.46981997499999995,"mean_calibrated_probability":0.5444873119446338}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"25-014","join_key_treatment":"control","stomata_source_variety":"25-014","stomata_source_treatment":"control","thermal_source_variety":"25-014","thermal_source_treatment":"Control","genotype_id":"V06","plant_unit_id":"TOM26-V06-D","variety":"25-014","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3042.JPG","stomata_photo_serial":3042,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P11","thermal_source_file":"S20260715_P11_25-014_Control.JPG","thermal_capture_time":"2026:07:15 14:07:28.049-04:00","canopy_mean_c":26.29734167187266,"canopy_median_c":26.374204821297553,"canopy_min_c":25.131907318514664,"canopy_max_c":29.6396686567802,"canopy_std_c":0.6238777542202412,"canopy_p10_c":25.419905849327336,"canopy_p90_c":26.848119691341935,"canopy_delta_t_air_c":1.2973416718726585,"projected_plant_area_px2":9989,"projected_plant_area_fraction":0.0325162760416666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":114,"stomata_candidates_accepted":3,"stomata_candidates_review":25,"stomata_candidates_rejected":86,"stomata_expected_true_candidates":17.273476774956805,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":6655.852515805513,"stomatal_complex_area_median":7147.259346563369,"stomatal_complex_area_sd":1912.8402078904576,"stomatal_complex_area_q25":5846.254874208942,"stomatal_complex_area_q75":7711.1535727810115,"mean_length_px":112.09500630696614,"mean_width_px":74.99680201212566,"mean_aspect_ratio":1.558247347614967,"mean_eccentricity":0.7293978172978649,"mean_solidity":0.9843563541869728,"mean_circularity":0.8381612838888923,"mean_orientation_deg":69.95430723826091,"detection_confidence_by_status":{"accepted":{"n":3,"mean_detector_confidence":0.7238323333333333,"mean_calibrated_probability":0.7915778947649695},"rejected":{"n":86,"mean_detector_confidence":0.010510651162790697,"mean_calibrated_probability":0.013790724622142411},"review":{"n":25,"mean_detector_confidence":0.47422704000000004,"mean_calibrated_probability":0.5485096309263057}}},"stomatal_area_average":8009.619223934288,"stomatal_area_difference":-2707.533416257551,"temperature_difference":-0.0852826949057359,"projected_area_difference":3503.0,"thermal_pair_qc":true},{"genotype_id":"V07","variety":"25-013","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"25-013","join_key_treatment":"regular","stomata_source_variety":"25-013","stomata_source_treatment":"regular","thermal_source_variety":"25-013","thermal_source_treatment":"Regular","genotype_id":"V07","plant_unit_id":"TOM26-V07-W","variety":"25-013","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3017.JPG","stomata_photo_serial":3017,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P14","thermal_source_file":"S20260715_P14_25-013_Regular.JPG","thermal_capture_time":"2026:07:15 14:09:04.343-04:00","canopy_mean_c":26.23542703668227,"canopy_median_c":26.339654876549275,"canopy_min_c":25.14064626752554,"canopy_max_c":27.242856388340897,"canopy_std_c":0.5392961183910792,"canopy_p10_c":25.411190312580572,"canopy_p90_c":26.85671662718903,"canopy_delta_t_air_c":1.235427036682271,"projected_plant_area_px2":4859,"projected_plant_area_fraction":0.0158170572916666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":139,"stomata_candidates_accepted":11,"stomata_candidates_review":41,"stomata_candidates_rejected":87,"stomata_expected_true_candidates":31.26160338214037,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":6752.659786378655,"stomatal_complex_area_median":6181.413795129396,"stomatal_complex_area_sd":2590.9764559921628,"stomatal_complex_area_q25":5338.194099270273,"stomatal_complex_area_q75":7881.5024778624065,"mean_length_px":122.92965952555339,"mean_width_px":69.24358622233073,"mean_aspect_ratio":1.8187982722594753,"mean_eccentricity":0.8094337137654852,"mean_solidity":0.9736277314351374,"mean_circularity":0.8154222645576726,"mean_orientation_deg":74.50840791066487,"detection_confidence_by_status":{"accepted":{"n":11,"mean_detector_confidence":0.7278423636363637,"mean_calibrated_probability":0.7949040095209441},"rejected":{"n":87,"mean_detector_confidence":0.008598540229885057,"mean_calibrated_probability":0.01124486238637988},"review":{"n":41,"mean_detector_confidence":0.4552391951219512,"mean_calibrated_probability":0.5253501524340226}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"25-013","join_key_treatment":"control","stomata_source_variety":"25-013","stomata_source_treatment":"control","thermal_source_variety":"25-013","thermal_source_treatment":"Control","genotype_id":"V07","plant_unit_id":"TOM26-V07-D","variety":"25-013","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3051.JPG","stomata_photo_serial":3051,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P13","thermal_source_file":"S20260715_P13_25-013_Control.JPG","thermal_capture_time":"2026:07:15 14:08:40.829-04:00","canopy_mean_c":26.24765998689732,"canopy_median_c":26.3569312690276,"canopy_min_c":25.166858708934285,"canopy_max_c":27.122875087271268,"canopy_std_c":0.5617184117775076,"canopy_p10_c":25.411190312580572,"canopy_p90_c":26.98558671634521,"canopy_delta_t_air_c":1.2476599868973182,"projected_plant_area_px2":6934,"projected_plant_area_fraction":0.0225716145833333,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":135,"stomata_candidates_accepted":5,"stomata_candidates_review":39,"stomata_candidates_rejected":91,"stomata_expected_true_candidates":23.380997436402513,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":11382.915868914375,"stomatal_complex_area_median":12877.403205726296,"stomatal_complex_area_sd":2991.188518275817,"stomatal_complex_area_q25":10408.197107056156,"stomatal_complex_area_q75":13104.878299178556,"mean_length_px":139.34762827555338,"mean_width_px":103.99705251057942,"mean_aspect_ratio":1.3319807418675385,"mean_eccentricity":0.6001501829703767,"mean_solidity":0.999569728948896,"mean_circularity":0.9309245274087061,"mean_orientation_deg":106.33365313212077,"detection_confidence_by_status":{"accepted":{"n":5,"mean_detector_confidence":0.7341295999999999,"mean_calibrated_probability":0.7998952630536322},"rejected":{"n":91,"mean_detector_confidence":0.011367615384615386,"mean_calibrated_probability":0.014921187008095964},"review":{"n":39,"mean_detector_confidence":0.38989935897435896,"mean_calibrated_probability":0.46214597701019516}}},"stomatal_area_average":9067.787827646514,"stomatal_area_difference":4630.25608253572,"temperature_difference":0.0122329502150471,"projected_area_difference":2075.0,"thermal_pair_qc":true},{"genotype_id":"V08","variety":"Cherokee Purple","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"Cherokee Purple","join_key_treatment":"regular","stomata_source_variety":"Cherokee Purple","stomata_source_treatment":"regular","thermal_source_variety":"CherokeePurple","thermal_source_treatment":"Regular","genotype_id":"V08","plant_unit_id":"TOM26-V08-W","variety":"Cherokee Purple","variety_class":"named_cultivar","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3018.JPG","stomata_photo_serial":3018,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P16","thermal_source_file":"S20260715_P16_CherokeePurple_Regular.JPG","thermal_capture_time":"2026:07:15 14:10:18.400-04:00","canopy_mean_c":26.771506846634633,"canopy_median_c":26.925466915520985,"canopy_min_c":25.411190312580572,"canopy_max_c":27.5934505372727,"canopy_std_c":0.6628371639033707,"canopy_p10_c":25.74186990759489,"canopy_p90_c":27.52513286545627,"canopy_delta_t_air_c":1.771506846634633,"projected_plant_area_px2":10309,"projected_plant_area_fraction":0.0335579427083333,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":308,"stomata_candidates_accepted":18,"stomata_candidates_review":51,"stomata_candidates_rejected":239,"stomata_expected_true_candidates":44.03419011739333,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":14992.607986792922,"stomatal_complex_area_median":16427.592068761587,"stomatal_complex_area_sd":3049.550416733552,"stomatal_complex_area_q25":13958.930467411876,"stomatal_complex_area_q75":16743.7775471583,"mean_length_px":182.11265563964844,"mean_width_px":111.87057749430339,"mean_aspect_ratio":1.6784825123798635,"mean_eccentricity":0.7686327404433605,"mean_solidity":0.9966982404536912,"mean_circularity":0.8547992898096615,"mean_orientation_deg":72.82735697428386,"detection_confidence_by_status":{"accepted":{"n":18,"mean_detector_confidence":0.7363849444444445,"mean_calibrated_probability":0.8019546175175802},"rejected":{"n":239,"mean_detector_confidence":0.008294217573221758,"mean_calibrated_probability":0.01084802845590431},"review":{"n":51,"mean_detector_confidence":0.45955813725490197,"mean_calibrated_probability":0.5295358470807008}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"Cherokee Purple","join_key_treatment":"control","stomata_source_variety":"Cherokee Purple","stomata_source_treatment":"control","thermal_source_variety":"CherokeePurple","thermal_source_treatment":"Control","genotype_id":"V08","plant_unit_id":"TOM26-V08-D","variety":"Cherokee Purple","variety_class":"named_cultivar","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3032.JPG","stomata_photo_serial":3032,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P15","thermal_source_file":"S20260715_P15_CherokeePurple_Control.JPG","thermal_capture_time":"2026:07:15 14:09:46.847-04:00","canopy_mean_c":25.671059665781858,"canopy_median_c":25.620162426416073,"canopy_min_c":24.834344811126183,"canopy_max_c":28.129923761608097,"canopy_std_c":0.5670601984465524,"canopy_p10_c":25.000734834992784,"canopy_p90_c":26.31373495947787,"canopy_delta_t_air_c":0.6710596657818577,"projected_plant_area_px2":7754,"projected_plant_area_fraction":0.0252408854166666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":286,"stomata_candidates_accepted":8,"stomata_candidates_review":69,"stomata_candidates_rejected":209,"stomata_expected_true_candidates":37.1178021991388,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":10230.201212704182,"stomatal_complex_area_median":10230.201212704182,"stomatal_complex_area_sd":3208.108666897103,"stomatal_complex_area_q25":9095.963516131043,"stomatal_complex_area_q75":11364.43890927732,"mean_length_px":126.23585510253906,"mean_width_px":98.67452239990234,"mean_aspect_ratio":1.293379343827045,"mean_eccentricity":0.6225633470630754,"mean_solidity":0.9923525783245938,"mean_circularity":0.9198991456928588,"mean_orientation_deg":12.901518821716309,"detection_confidence_by_status":{"accepted":{"n":8,"mean_detector_confidence":0.72930975,"mean_calibrated_probability":0.7961939266197045},"rejected":{"n":209,"mean_detector_confidence":0.010736210526315789,"mean_calibrated_probability":0.014076151748693316},"review":{"n":69,"mean_detector_confidence":0.33924098550724635,"mean_calibrated_probability":0.40299036334353994}}},"stomatal_area_average":12611.404599748552,"stomatal_area_difference":-4762.40677408874,"temperature_difference":-1.1004471808527754,"projected_area_difference":-2555.0,"thermal_pair_qc":true},{"genotype_id":"V09","variety":"25-12","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"25-12","join_key_treatment":"regular","stomata_source_variety":"25-12","stomata_source_treatment":"regular","thermal_source_variety":"25-12","thermal_source_treatment":"Regular","genotype_id":"V09","plant_unit_id":"TOM26-V09-W","variety":"25-12","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3019.JPG","stomata_photo_serial":3019,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P18","thermal_source_file":"S20260715_P18_25-12_Regular.JPG","thermal_capture_time":"2026:07:15 14:12:06.438-04:00","canopy_mean_c":25.86703763229323,"canopy_median_c":25.993528489846423,"canopy_min_c":24.94821942839252,"canopy_max_c":26.42600845038623,"canopy_std_c":0.4215851479488519,"canopy_p10_c":25.227995395636924,"canopy_p90_c":26.30509356554859,"canopy_delta_t_air_c":0.8670376322932292,"projected_plant_area_px2":6003,"projected_plant_area_fraction":0.019541015625,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":232,"stomata_candidates_accepted":7,"stomata_candidates_review":87,"stomata_candidates_rejected":138,"stomata_expected_true_candidates":53.02927412109267,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":13669.80415498217,"stomatal_complex_area_median":12374.59179982543,"stomatal_complex_area_sd":2890.6110049343174,"stomatal_complex_area_q25":12013.949012205005,"stomatal_complex_area_q75":14678.053120180964,"mean_length_px":161.5605723063151,"mean_width_px":111.34835306803386,"mean_aspect_ratio":1.4805473274657979,"mean_eccentricity":0.6338171683719748,"mean_solidity":0.9910703689714944,"mean_circularity":0.8383262032016449,"mean_orientation_deg":75.09156386057536,"detection_confidence_by_status":{"accepted":{"n":7,"mean_detector_confidence":0.7278598571428571,"mean_calibrated_probability":0.794928192307556},"rejected":{"n":138,"mean_detector_confidence":0.010237884057971014,"mean_calibrated_probability":0.013426220821646705},"review":{"n":87,"mean_detector_confidence":0.45320111494252874,"mean_calibrated_probability":0.5242753827764658}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"25-12","join_key_treatment":"control","stomata_source_variety":"25-12","stomata_source_treatment":"control","thermal_source_variety":"25-12","thermal_source_treatment":"Control","genotype_id":"V09","plant_unit_id":"TOM26-V09-D","variety":"25-12","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3044.JPG","stomata_photo_serial":3044,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P17","thermal_source_file":"S20260715_P17_25-12_Control.JPG","thermal_capture_time":"2026:07:15 14:10:51.019-04:00","canopy_mean_c":25.613818976311848,"canopy_median_c":25.576661071774936,"canopy_min_c":24.764205931609126,"canopy_max_c":26.916875577784936,"canopy_std_c":0.5156250955147205,"canopy_p10_c":24.96572751534444,"canopy_p90_c":26.296451460550713,"canopy_delta_t_air_c":0.6138189763118476,"projected_plant_area_px2":10107,"projected_plant_area_fraction":0.032900390625,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":164,"stomata_candidates_accepted":0,"stomata_candidates_review":30,"stomata_candidates_rejected":134,"stomata_expected_true_candidates":15.15021035939687,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":11651.688354227692,"stomatal_complex_area_median":10006.77437070012,"stomatal_complex_area_sd":3866.975774134786,"stomatal_complex_area_q25":9442.94802751951,"stomatal_complex_area_q75":13037.97168917209,"mean_length_px":149.51587422688803,"mean_width_px":99.83553314208984,"mean_aspect_ratio":1.5000280151989338,"mean_eccentricity":0.7383706251886913,"mean_solidity":0.9979721987245626,"mean_circularity":0.8967821718398244,"mean_orientation_deg":54.207402070363365,"detection_confidence_by_status":{"rejected":{"n":134,"mean_detector_confidence":0.009482067164179105,"mean_calibrated_probability":0.012422903429224271},"review":{"n":30,"mean_detector_confidence":0.38208036666666667,"mean_calibrated_probability":0.4495180433293603}}},"stomatal_area_average":12660.746254604932,"stomatal_area_difference":-2018.1158007544784,"temperature_difference":-0.2532186559813816,"projected_area_difference":4104.0,"thermal_pair_qc":true},{"genotype_id":"V10","variety":"Mountain Gem","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"Mountain Gem","join_key_treatment":"regular","stomata_source_variety":"Mountain Gem","stomata_source_treatment":"regular","thermal_source_variety":"MountainGem","thermal_source_treatment":"Regular","genotype_id":"V10","plant_unit_id":"TOM26-V10-W","variety":"Mountain Gem","variety_class":"named_cultivar","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3020.JPG","stomata_photo_serial":3020,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P20","thermal_source_file":"S20260715_P20_MountainGem_Regular.JPG","thermal_capture_time":"2026:07:15 14:13:30.660-04:00","canopy_mean_c":25.71048394974644,"canopy_median_c":25.767931648942465,"canopy_min_c":24.72911868649419,"canopy_max_c":26.607120474336853,"canopy_std_c":0.4915512853238242,"canopy_p10_c":25.009484821317244,"canopy_p90_c":26.296451460550713,"canopy_delta_t_air_c":0.7104839497464397,"projected_plant_area_px2":6432,"projected_plant_area_fraction":0.0209375,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":218,"stomata_candidates_accepted":17,"stomata_candidates_review":60,"stomata_candidates_rejected":141,"stomata_expected_true_candidates":46.30588822045432,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":10004.817087389529,"stomatal_complex_area_median":10004.817087389529,"stomatal_complex_area_sd":4815.3786701962445,"stomatal_complex_area_q25":8302.323631551117,"stomatal_complex_area_q75":11707.31054322794,"mean_length_px":125.49517059326172,"mean_width_px":103.71748352050781,"mean_aspect_ratio":1.233855361094983,"mean_eccentricity":0.555856113692301,"mean_solidity":0.9456731957101523,"mean_circularity":0.8215502477980469,"mean_orientation_deg":79.71336126327515,"detection_confidence_by_status":{"accepted":{"n":17,"mean_detector_confidence":0.7427951176470587,"mean_calibrated_probability":0.8073313338268739},"rejected":{"n":141,"mean_detector_confidence":0.009072950354609928,"mean_calibrated_probability":0.011875899676851313},"review":{"n":60,"mean_detector_confidence":0.44488829999999996,"mean_calibrated_probability":0.5151125615160237}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"Mountain Gem","join_key_treatment":"control","stomata_source_variety":"Mountain Gem","stomata_source_treatment":"control","thermal_source_variety":"MountainGem","thermal_source_treatment":"Control","genotype_id":"V10","plant_unit_id":"TOM26-V10-D","variety":"Mountain Gem","variety_class":"named_cultivar","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3031.JPG","stomata_photo_serial":3031,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P19","thermal_source_file":"S20260715_P19_MountainGem_Control.JPG","thermal_capture_time":"2026:07:15 14:13:00.022-04:00","canopy_mean_c":26.069174707918492,"canopy_median_c":26.19269067539841,"canopy_min_c":25.009484821317244,"canopy_max_c":27.242856388340897,"canopy_std_c":0.4377795358922283,"canopy_p10_c":25.358881779284214,"canopy_p90_c":26.45190069519816,"canopy_delta_t_air_c":1.069174707918492,"projected_plant_area_px2":11522,"projected_plant_area_fraction":0.0375065104166666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":142,"stomata_candidates_accepted":4,"stomata_candidates_review":31,"stomata_candidates_rejected":107,"stomata_expected_true_candidates":18.49641847786859,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":9574.021782279016,"stomatal_complex_area_median":9574.021782279016,"stomatal_complex_area_sd":2817.485605246189,"stomatal_complex_area_q25":8577.890193596482,"stomatal_complex_area_q75":10570.153370961549,"mean_length_px":139.06991577148438,"mean_width_px":87.73149108886719,"mean_aspect_ratio":1.6022219069379555,"mean_eccentricity":0.7772757250538131,"mean_solidity":0.9964658976909526,"mean_circularity":0.8599982092478702,"mean_orientation_deg":140.58103561401367,"detection_confidence_by_status":{"accepted":{"n":4,"mean_detector_confidence":0.71951575,"mean_calibrated_probability":0.7879198166785073},"rejected":{"n":107,"mean_detector_confidence":0.008874570093457943,"mean_calibrated_probability":0.011613410444483727},"review":{"n":31,"mean_detector_confidence":0.38543045161290324,"mean_calibrated_probability":0.45490659011596124}}},"stomatal_area_average":9789.419434834272,"stomatal_area_difference":-430.79530511051416,"temperature_difference":0.3586907581720524,"projected_area_difference":5090.0,"thermal_pair_qc":true},{"genotype_id":"V11","variety":"26-037","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"26-037","join_key_treatment":"regular","stomata_source_variety":"26-037","stomata_source_treatment":"regular","thermal_source_variety":"26-037","thermal_source_treatment":"Regular","genotype_id":"V11","plant_unit_id":"TOM26-V11-W","variety":"26-037","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3021.JPG","stomata_photo_serial":3021,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P22","thermal_source_file":"S20260715_P22_26-037_Regular.JPG","thermal_capture_time":"2026:07:15 14:14:55.455-04:00","canopy_mean_c":25.773783262747813,"canopy_median_c":25.846077919360255,"canopy_min_c":25.000734834992784,"canopy_max_c":26.49504027491065,"canopy_std_c":0.4006387762581733,"canopy_p10_c":25.175594721457458,"canopy_p90_c":26.287808644314396,"canopy_delta_t_air_c":0.7737832627478127,"projected_plant_area_px2":4703,"projected_plant_area_fraction":0.0153092447916666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":169,"stomata_candidates_accepted":4,"stomata_candidates_review":47,"stomata_candidates_rejected":118,"stomata_expected_true_candidates":25.142004626440286,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":10268.51840172708,"stomatal_complex_area_median":10268.51840172708,"stomatal_complex_area_sd":2588.0344517447343,"stomatal_complex_area_q25":9353.510046340523,"stomatal_complex_area_q75":11183.526757113636,"mean_length_px":133.7999382019043,"mean_width_px":100.37218856811523,"mean_aspect_ratio":1.330589701200429,"mean_eccentricity":0.6583542234932824,"mean_solidity":0.9986731947938103,"mean_circularity":0.9201143192008743,"mean_orientation_deg":56.80071449279785,"detection_confidence_by_status":{"accepted":{"n":4,"mean_detector_confidence":0.73479725,"mean_calibrated_probability":0.8007193364076411},"rejected":{"n":118,"mean_detector_confidence":0.010001915254237288,"mean_calibrated_probability":0.013113065240875603},"review":{"n":47,"mean_detector_confidence":0.36804459574468085,"mean_calibrated_probability":0.4338677783486467}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"26-037","join_key_treatment":"control","stomata_source_variety":"26-037","stomata_source_treatment":"control","thermal_source_variety":"26-037","thermal_source_treatment":"Control","genotype_id":"V11","plant_unit_id":"TOM26-V11-D","variety":"26-037","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3050.JPG","stomata_photo_serial":3050,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P21","thermal_source_file":"S20260715_P21_26-037_Control.JPG","thermal_capture_time":"2026:07:15 14:14:20.755-04:00","canopy_mean_c":25.88676992196932,"canopy_median_c":25.837397883334745,"canopy_min_c":25.06196926695628,"canopy_max_c":30.13269402218083,"canopy_std_c":0.6241298489785029,"canopy_p10_c":25.201798357683913,"canopy_p90_c":26.50366606812275,"canopy_delta_t_air_c":0.8867699219693179,"projected_plant_area_px2":10436,"projected_plant_area_fraction":0.0339713541666666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":85,"stomata_candidates_accepted":0,"stomata_candidates_review":30,"stomata_candidates_rejected":55,"stomata_expected_true_candidates":12.828063332499736,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":17451.37713854015,"stomatal_complex_area_median":17451.37713854015,"stomatal_complex_area_sd":9202.788209220384,"stomatal_complex_area_q25":14197.70016425848,"stomatal_complex_area_q75":20705.054112821817,"mean_length_px":173.02630615234375,"mean_width_px":125.8928451538086,"mean_aspect_ratio":1.3741796766108485,"mean_eccentricity":0.685887196386965,"mean_solidity":0.9926572433193002,"mean_circularity":0.8965864365426192,"mean_orientation_deg":120.52470779418945,"detection_confidence_by_status":{"rejected":{"n":55,"mean_detector_confidence":0.006556054545454546,"mean_calibrated_probability":0.00854772618563133},"review":{"n":30,"mean_detector_confidence":0.34650723333333333,"mean_calibrated_probability":0.4119312797430003}}},"stomatal_area_average":13859.947770133616,"stomatal_area_difference":7182.858736813068,"temperature_difference":0.1129866592215051,"projected_area_difference":5733.0,"thermal_pair_qc":true},{"genotype_id":"V12","variety":"26-033","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"26-033","join_key_treatment":"regular","stomata_source_variety":"26-033","stomata_source_treatment":"regular","thermal_source_variety":"26-033","thermal_source_treatment":"Regular","genotype_id":"V12","plant_unit_id":"TOM26-V12-W","variety":"26-033","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3023.JPG","stomata_photo_serial":3023,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P24","thermal_source_file":"S20260715_P24_26-033_Regular.JPG","thermal_capture_time":"2026:07:15 14:16:09.286-04:00","canopy_mean_c":25.27136566697168,"canopy_median_c":25.201798357683913,"canopy_min_c":24.491968310726804,"canopy_max_c":28.342063783342383,"canopy_std_c":0.4582521488256985,"canopy_p10_c":24.808048291399817,"canopy_p90_c":25.599283951500404,"canopy_delta_t_air_c":0.2713656669716791,"projected_plant_area_px2":4875,"projected_plant_area_fraction":0.015869140625,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":207,"stomata_candidates_accepted":26,"stomata_candidates_review":67,"stomata_candidates_rejected":114,"stomata_expected_true_candidates":58.1776937551017,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":8891.908637970686,"stomatal_complex_area_median":9644.541153848171,"stomatal_complex_area_sd":4498.261148448415,"stomatal_complex_area_q25":6854.672892719507,"stomatal_complex_area_q75":11305.460641160607,"mean_length_px":117.14599609375,"mean_width_px":91.49595896402995,"mean_aspect_ratio":1.27622111619819,"mean_eccentricity":0.5539554912672283,"mean_solidity":0.9967380906034663,"mean_circularity":0.8890631281083469,"mean_orientation_deg":109.89320214589436,"detection_confidence_by_status":{"accepted":{"n":26,"mean_detector_confidence":0.7359901153846153,"mean_calibrated_probability":0.8016033854076277},"rejected":{"n":114,"mean_detector_confidence":0.008255956140350877,"mean_calibrated_probability":0.010803722423645235},"review":{"n":67,"mean_detector_confidence":0.4671186567164179,"mean_calibrated_probability":0.538871363853848}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"26-033","join_key_treatment":"control","stomata_source_variety":"26-033","stomata_source_treatment":"control","thermal_source_variety":"26-033","thermal_source_treatment":"Control","genotype_id":"V12","plant_unit_id":"TOM26-V12-D","variety":"26-033","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3034.JPG","stomata_photo_serial":3034,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P23","thermal_source_file":"S20260715_P23_26-033_Control.JPG","thermal_capture_time":"2026:07:15 14:15:33.287-04:00","canopy_mean_c":24.082171387903266,"canopy_median_c":24.06018937387813,"canopy_min_c":23.901121461975492,"canopy_max_c":25.73318121624726,"canopy_std_c":0.0966443283318958,"canopy_p10_c":23.989522864611388,"canopy_p90_c":24.201377166180464,"canopy_delta_t_air_c":-0.9178286120967344,"projected_plant_area_px2":234520,"projected_plant_area_fraction":0.7634114583333333,"thermal_mask_qc_passed":false,"thermal_mask_qc_flag":"auto_mask_selected_more_than_10_percent_of_frame","stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":302,"stomata_candidates_accepted":11,"stomata_candidates_review":72,"stomata_candidates_rejected":219,"stomata_expected_true_candidates":47.24641263214457,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":12848.6417675068,"stomatal_complex_area_median":13168.755061112344,"stomatal_complex_area_sd":938.6658155146504,"stomatal_complex_area_q25":12480.27319008857,"stomatal_complex_area_q75":13377.0669917278,"mean_length_px":140.9209950764974,"mean_width_px":113.58599344889323,"mean_aspect_ratio":1.241395607188663,"mean_eccentricity":0.5898389808615887,"mean_solidity":0.9992302095859243,"mean_circularity":0.9365380623125095,"mean_orientation_deg":11.932391484578451,"detection_confidence_by_status":{"accepted":{"n":11,"mean_detector_confidence":0.7337307272727273,"mean_calibrated_probability":0.7997503718335242},"rejected":{"n":219,"mean_detector_confidence":0.009667050228310502,"mean_calibrated_probability":0.012659562698546987},"review":{"n":72,"mean_detector_confidence":0.42468908333333333,"mean_calibrated_probability":0.4955099209860278}}},"stomatal_area_average":10870.275202738743,"stomatal_area_difference":3956.7331295361128,"temperature_difference":-1.1891942790684134,"projected_area_difference":229645.0,"thermal_pair_qc":false},{"genotype_id":"V13","variety":"Mountain Girl","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"Mountain Girl","join_key_treatment":"regular","stomata_source_variety":"Mountain Girl","stomata_source_treatment":"regular","thermal_source_variety":"MountainGirl","thermal_source_treatment":"Regular","genotype_id":"V13","plant_unit_id":"TOM26-V13-W","variety":"Mountain Girl","variety_class":"named_cultivar","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3024.JPG","stomata_photo_serial":3024,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P26","thermal_source_file":"S20260715_P26_MountainGirl_Regular.JPG","thermal_capture_time":"2026:07:15 14:17:23.487-04:00","canopy_mean_c":26.06619888802262,"canopy_median_c":26.132116136509637,"canopy_min_c":25.27164247577707,"canopy_max_c":26.70186446876596,"canopy_std_c":0.3719106939230585,"canopy_p10_c":25.454760710966585,"canopy_p90_c":26.50366606812275,"canopy_delta_t_air_c":1.066198888022619,"projected_plant_area_px2":5473,"projected_plant_area_fraction":0.0178157552083333,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":227,"stomata_candidates_accepted":28,"stomata_candidates_review":77,"stomata_candidates_rejected":122,"stomata_expected_true_candidates":66.29653269334266,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":11072.469651607797,"stomatal_complex_area_median":10574.155366435649,"stomatal_complex_area_sd":1550.626076608747,"stomatal_complex_area_q25":10203.20937240962,"stomatal_complex_area_q75":11692.5727882199,"mean_length_px":143.01776631673178,"mean_width_px":103.65896352132161,"mean_aspect_ratio":1.379262765949093,"mean_eccentricity":0.6801816889629771,"mean_solidity":0.988963235535739,"mean_circularity":0.8639182243168207,"mean_orientation_deg":74.21461995442708,"detection_confidence_by_status":{"accepted":{"n":28,"mean_detector_confidence":0.7386399642857143,"mean_calibrated_probability":0.8037623201773062},"rejected":{"n":122,"mean_detector_confidence":0.008876180327868853,"mean_calibrated_probability":0.011610097554879389},"review":{"n":77,"mean_detector_confidence":0.47699750649350653,"mean_calibrated_probability":0.5503215042426336}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"Mountain Girl","join_key_treatment":"control","stomata_source_variety":"Mountain Girl","stomata_source_treatment":"control","thermal_source_variety":"MountainGirl","thermal_source_treatment":"Control","genotype_id":"V13","plant_unit_id":"TOM26-V13-D","variety":"Mountain Girl","variety_class":"named_cultivar","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3047.JPG","stomata_photo_serial":3047,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P25","thermal_source_file":"S20260715_P25_MountainGirl_Control.JPG","thermal_capture_time":"2026:07:15 14:16:51.799-04:00","canopy_mean_c":26.08470802455343,"canopy_median_c":25.993528489846423,"canopy_min_c":25.227995395636924,"canopy_max_c":28.095942193562394,"canopy_std_c":0.5555866013578973,"canopy_p10_c":25.428620657363012,"canopy_p90_c":26.873908398020205,"canopy_delta_t_air_c":1.0847080245534286,"projected_plant_area_px2":5222,"projected_plant_area_fraction":0.0169986979166666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":173,"stomata_candidates_accepted":6,"stomata_candidates_review":68,"stomata_candidates_rejected":99,"stomata_expected_true_candidates":42.475021312552784,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":9860.25471154352,"stomatal_complex_area_median":10708.698265969751,"stomatal_complex_area_sd":3322.6658852373657,"stomatal_complex_area_q25":8452.163742654026,"stomatal_complex_area_q75":11692.567457646132,"mean_length_px":132.94056955973306,"mean_width_px":92.38879648844402,"mean_aspect_ratio":1.4723152153491403,"mean_eccentricity":0.674581022969496,"mean_solidity":0.9991316033366077,"mean_circularity":0.8994461299365643,"mean_orientation_deg":76.45904858907063,"detection_confidence_by_status":{"accepted":{"n":6,"mean_detector_confidence":0.7313551666666668,"mean_calibrated_probability":0.7976852982487527},"rejected":{"n":99,"mean_detector_confidence":0.00849149494949495,"mean_calibrated_probability":0.01110938993417004},"review":{"n":68,"mean_detector_confidence":0.4660901029411765,"mean_calibrated_probability":0.538074704699668}}},"stomatal_area_average":10466.36218157566,"stomatal_area_difference":-1212.2149400642757,"temperature_difference":0.0185091365308096,"projected_area_difference":-251.0,"thermal_pair_qc":true},{"genotype_id":"V14","variety":"Ailsa Craig","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"Ailsa Craig","join_key_treatment":"regular","stomata_source_variety":"Ailsa Craig","stomata_source_treatment":"regular","thermal_source_variety":"AlisaCraig","thermal_source_treatment":"Regular","genotype_id":"V14","plant_unit_id":"TOM26-V14-W","variety":"Ailsa Craig","variety_class":"unknown","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3026.JPG","stomata_photo_serial":3026,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P28","thermal_source_file":"S20260715_P28_AlisaCraig_Regular.JPG","thermal_capture_time":"2026:07:15 14:18:30.076-04:00","canopy_mean_c":26.308308604431787,"canopy_median_c":26.31373495947787,"canopy_min_c":25.463472605920515,"canopy_max_c":29.597783394421526,"canopy_std_c":0.5867256026115759,"canopy_p10_c":25.628860522626898,"canopy_p90_c":26.71047333583084,"canopy_delta_t_air_c":1.3083086044317866,"projected_plant_area_px2":6948,"projected_plant_area_fraction":0.0226171875,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":146,"stomata_candidates_accepted":0,"stomata_candidates_review":34,"stomata_candidates_rejected":112,"stomata_expected_true_candidates":13.966949392339348,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":11373.528651468456,"stomatal_complex_area_median":11373.528651468456,"stomatal_complex_area_sd":198.22951948698977,"stomatal_complex_area_q25":11303.443932738155,"stomatal_complex_area_q75":11443.613370198756,"mean_length_px":137.1673126220703,"mean_width_px":104.15128707885742,"mean_aspect_ratio":1.3291452800743966,"mean_eccentricity":0.6258842171135472,"mean_solidity":0.9981961468455086,"mean_circularity":0.92899749011216,"mean_orientation_deg":64.96579933166504,"detection_confidence_by_status":{"rejected":{"n":112,"mean_detector_confidence":0.007517642857142856,"mean_calibrated_probability":0.009812842719662623},"review":{"n":34,"mean_detector_confidence":0.31677994117647057,"mean_calibrated_probability":0.37846797081579786}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"Ailsa Craig","join_key_treatment":"control","stomata_source_variety":"Ailsa Craig","stomata_source_treatment":"control","thermal_source_variety":"AlisaCraig","thermal_source_treatment":"Control","genotype_id":"V14","plant_unit_id":"TOM26-V14-D","variety":"Ailsa Craig","variety_class":"unknown","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3054.JPG","stomata_photo_serial":3054,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P27","thermal_source_file":"S20260715_P27_AlisaCraig_Control.JPG","thermal_capture_time":"2026:07:15 14:17:58.518-04:00","canopy_mean_c":26.136908324035144,"canopy_median_c":26.158080936605018,"canopy_min_c":25.297821941810696,"canopy_max_c":27.465318805652828,"canopy_std_c":0.4468545667945941,"canopy_p10_c":25.50702116675751,"canopy_p90_c":26.70186446876596,"canopy_delta_t_air_c":1.1369083240351436,"projected_plant_area_px2":5262,"projected_plant_area_fraction":0.01712890625,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":147,"stomata_candidates_accepted":5,"stomata_candidates_review":41,"stomata_candidates_rejected":101,"stomata_expected_true_candidates":26.005332089721737,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":7561.391297111909,"stomatal_complex_area_median":8320.218030244112,"stomatal_complex_area_sd":1449.422789339851,"stomatal_complex_area_q25":7105.15624268353,"stomatal_complex_area_q75":8397.039718106389,"mean_length_px":111.88067881266277,"mean_width_px":84.61109924316406,"mean_aspect_ratio":1.319442561517408,"mean_eccentricity":0.6326371515787607,"mean_solidity":1.0,"mean_circularity":0.912598590463842,"mean_orientation_deg":132.23301696777344,"detection_confidence_by_status":{"accepted":{"n":5,"mean_detector_confidence":0.7279542,"mean_calibrated_probability":0.7949807777955165},"rejected":{"n":101,"mean_detector_confidence":0.010643584158415842,"mean_calibrated_probability":0.013960700403670648},"review":{"n":41,"mean_detector_confidence":0.4306604878048781,"mean_calibrated_probability":0.5029365234139858}}},"stomatal_area_average":9467.459974290185,"stomatal_area_difference":-3812.137354356547,"temperature_difference":-0.171400280396643,"projected_area_difference":-1686.0,"thermal_pair_qc":true},{"genotype_id":"V15","variety":"NC261G","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"NC261G","join_key_treatment":"regular","stomata_source_variety":"NC261G","stomata_source_treatment":"regular","thermal_source_variety":"NC261G","thermal_source_treatment":"Regular","genotype_id":"V15","plant_unit_id":"TOM26-V15-W","variety":"NC261G","variety_class":"breeding_line","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3027.JPG","stomata_photo_serial":3027,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P30","thermal_source_file":"S20260715_P30_NC261G_Regular.JPG","thermal_capture_time":"2026:07:15 14:20:01.564-04:00","canopy_mean_c":25.749493013431067,"canopy_median_c":25.75055787671073,"canopy_min_c":24.95697384094575,"canopy_max_c":26.43463990713218,"canopy_std_c":0.4109818758121101,"canopy_p10_c":25.193064545654067,"canopy_p90_c":26.296451460550713,"canopy_delta_t_air_c":0.7494930134310671,"projected_plant_area_px2":4430,"projected_plant_area_fraction":0.0144205729166666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":213,"stomata_candidates_accepted":20,"stomata_candidates_review":56,"stomata_candidates_rejected":137,"stomata_expected_true_candidates":46.28742398628792,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":14027.556064224493,"stomatal_complex_area_median":13578.965621232986,"stomatal_complex_area_sd":6110.730750499333,"stomatal_complex_area_q25":10866.223920444028,"stomatal_complex_area_q75":16964.592986509204,"mean_length_px":148.58370717366537,"mean_width_px":118.81070454915364,"mean_aspect_ratio":1.2481398065998228,"mean_eccentricity":0.572527347119552,"mean_solidity":0.9982537922828514,"mean_circularity":0.9401531899050499,"mean_orientation_deg":99.32026926676433,"detection_confidence_by_status":{"accepted":{"n":20,"mean_detector_confidence":0.74073055,"mean_calibrated_probability":0.8054896623559941},"rejected":{"n":137,"mean_detector_confidence":0.007367846715328467,"mean_calibrated_probability":0.009618461887132007},"review":{"n":56,"mean_detector_confidence":0.4445950535714286,"mean_calibrated_probability":0.5153553832255525}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"NC261G","join_key_treatment":"control","stomata_source_variety":"NC261G","stomata_source_treatment":"control","thermal_source_variety":"NC261G","thermal_source_treatment":"Control","genotype_id":"V15","plant_unit_id":"TOM26-V15-D","variety":"NC261G","variety_class":"breeding_line","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3043.JPG","stomata_photo_serial":3043,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P29","thermal_source_file":"S20260715_P29_NC261G_Control.JPG","thermal_capture_time":"2026:07:15 14:19:18.272-04:00","canopy_mean_c":26.006031550721943,"canopy_median_c":26.01086197229677,"canopy_min_c":25.25418584012158,"canopy_max_c":28.0449495291856,"canopy_std_c":0.4225650392138171,"canopy_p10_c":25.419905849327336,"canopy_p90_c":26.43463990713218,"canopy_delta_t_air_c":1.0060315507219464,"projected_plant_area_px2":7873,"projected_plant_area_fraction":0.0256282552083333,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":154,"stomata_candidates_accepted":12,"stomata_candidates_review":51,"stomata_candidates_rejected":91,"stomata_expected_true_candidates":39.237481776634944,"expert_stomata_objects_total":2,"stomata_objects_measured":2,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":6918.035942129791,"stomatal_complex_area_median":6918.035942129791,"stomatal_complex_area_sd":122.8347550956748,"stomatal_complex_area_q25":6874.6072979830205,"stomatal_complex_area_q75":6961.464586276561,"mean_length_px":112.61968994140626,"mean_width_px":76.21556091308594,"mean_aspect_ratio":1.4779413559641654,"mean_eccentricity":0.7360115406696459,"mean_solidity":0.9945331392148034,"mean_circularity":0.9083656178056869,"mean_orientation_deg":71.22886919975281,"detection_confidence_by_status":{"accepted":{"n":12,"mean_detector_confidence":0.7345145833333334,"mean_calibrated_probability":0.8003478744007358},"rejected":{"n":91,"mean_detector_confidence":0.008339230769230769,"mean_calibrated_probability":0.010910419052883995},"review":{"n":51,"mean_detector_confidence":0.48900768627450986,"mean_calibrated_probability":0.5615776303924248}}},"stomatal_area_average":10472.79600317714,"stomatal_area_difference":-7109.5201220947,"temperature_difference":0.2565385372908793,"projected_area_difference":3443.0,"thermal_pair_qc":true},{"genotype_id":"V16","variety":"Mountain Heritage","regular":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"Mountain Heritage","join_key_treatment":"regular","stomata_source_variety":"Mountain Heritage","stomata_source_treatment":"regular","thermal_source_variety":"MountainHeritage","thermal_source_treatment":"Regular","genotype_id":"V16","plant_unit_id":"TOM26-V16-W","variety":"Mountain Heritage","variety_class":"named_cultivar","treatment_code":"regular","water_status":"watered","water_ml":100,"stomata_image":"IMG_3028.JPG","stomata_photo_serial":3028,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P32","thermal_source_file":"S20260715_P32_MountainHeritage_Regular.JPG","thermal_capture_time":"2026:07:15 14:20:32.888-04:00","canopy_mean_c":25.34392576275256,"canopy_median_c":25.367601692004257,"canopy_min_c":24.86939646873094,"canopy_max_c":26.00219558959418,"canopy_std_c":0.2630520213231657,"canopy_p10_c":24.95697384094575,"canopy_p90_c":25.672340139707217,"canopy_delta_t_air_c":0.343925762752562,"projected_plant_area_px2":6137,"projected_plant_area_fraction":0.0199772135416666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":247,"stomata_candidates_accepted":10,"stomata_candidates_review":49,"stomata_candidates_rejected":188,"stomata_expected_true_candidates":32.37807287208544,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":11369.347292803228,"stomatal_complex_area_median":8645.465789750218,"stomatal_complex_area_sd":7281.852264935463,"stomatal_complex_area_q25":7243.789692990482,"stomatal_complex_area_q75":14132.96414108947,"mean_length_px":145.60358174641928,"mean_width_px":100.04234059651692,"mean_aspect_ratio":1.4245579495240237,"mean_eccentricity":0.6846745750659546,"mean_solidity":0.9546516455137543,"mean_circularity":0.7985287818518835,"mean_orientation_deg":58.05489985148112,"detection_confidence_by_status":{"accepted":{"n":10,"mean_detector_confidence":0.7365502,"mean_calibrated_probability":0.8021088144293973},"rejected":{"n":188,"mean_detector_confidence":0.009424537234042553,"mean_calibrated_probability":0.012341630491267979},"review":{"n":49,"mean_detector_confidence":0.3805741020408163,"mean_calibrated_probability":0.449729759090471}}},"control":{"study_id":"tomato_2026_combined","join_method":"exact_canonical_variety_and_treatment","join_key_variety":"Mountain Heritage","join_key_treatment":"control","stomata_source_variety":"Mountain Heritage","stomata_source_treatment":"control","thermal_source_variety":"MountainHeritage","thermal_source_treatment":"Control","genotype_id":"V16","plant_unit_id":"TOM26-V16-D","variety":"Mountain Heritage","variety_class":"named_cultivar","treatment_code":"control","water_status":"drought_stressed","water_ml":0,"stomata_image":"IMG_3055.JPG","stomata_photo_serial":3055,"stomata_analysis_status":"pending_validated_object_ledger","thermal_session_id":"S20260715","thermal_session_plant_id":"P31","thermal_source_file":"S20260715_P31_MountainHeritage_Control.JPG","thermal_capture_time":"2026:07:15 14:21:19.554-04:00","canopy_mean_c":25.357424449202732,"canopy_median_c":25.376320874953706,"canopy_min_c":24.764205931609126,"canopy_max_c":27.019925531562592,"canopy_std_c":0.3458533833800852,"canopy_p10_c":24.89567744174144,"canopy_p90_c":25.7853025343324,"canopy_delta_t_air_c":0.3574244492027318,"projected_plant_area_px2":10466,"projected_plant_area_fraction":0.0340690104166666,"thermal_mask_qc_passed":true,"thermal_mask_qc_flag":null,"stomata_detection_run_status":"calibrated_detection_complete","stomata_candidates_total":168,"stomata_candidates_accepted":10,"stomata_candidates_review":37,"stomata_candidates_rejected":121,"stomata_expected_true_candidates":23.323474660835007,"expert_stomata_objects_total":3,"stomata_objects_measured":3,"stomata_measurement_coverage_fraction":1.0,"stomatal_complex_area_unit":"px2","stomatal_complex_area_mean":13223.015085731944,"stomatal_complex_area_median":14378.221695706248,"stomatal_complex_area_sd":2531.2274174419213,"stomatal_complex_area_q25":12349.251094378533,"stomatal_complex_area_q75":14674.382382072508,"mean_length_px":154.07421875,"mean_width_px":112.77254231770833,"mean_aspect_ratio":1.3665298721205754,"mean_eccentricity":0.6616222894584886,"mean_solidity":0.9750495843573647,"mean_circularity":0.8214477092139282,"mean_orientation_deg":75.56711387634277,"detection_confidence_by_status":{"accepted":{"n":10,"mean_detector_confidence":0.7359384,"mean_calibrated_probability":0.8014532665089694},"rejected":{"n":121,"mean_detector_confidence":0.006925851239669422,"mean_calibrated_probability":0.009029428813163189},"review":{"n":37,"mean_detector_confidence":0.3237302702702703,"mean_calibrated_probability":0.3842265164689881}}},"stomatal_area_average":12296.181189267589,"stomatal_area_difference":1853.667792928716,"temperature_difference":0.0134986864501698,"projected_area_difference":4329.0,"thermal_pair_qc":true}]}</script>
+  <script>
+const report = JSON.parse(document.getElementById("report-data").textContent);
+
+const number = (value, digits = 0) =>
+  value == null
+    ? "Not available"
+    : Number(value).toLocaleString("en-US", {
+        minimumFractionDigits: digits,
+        maximumFractionDigits: digits,
+      });
+
+const signed = (value, digits = 1, suffix = "") => {
+  if (value == null) return "Not available";
+  const sign = value > 0 ? "+" : "";
+  return `${sign}${number(value, digits)}${suffix}`;
+};
+
+const probability = (value) =>
+  value == null ? "Not available" : `${number(value * 100, 1)}%`;
+
+const pvalue = (value) => {
+  if (value == null) return "Not available";
+  if (value < 0.001) return "<0.001";
+  return number(value, 3);
+};
+
+const setText = (id, text) => {
+  document.getElementById(id).textContent = text;
+};
+
+const definitionList = (items) =>
+  items
+    .map(
+      ([term, value]) =>
+        `<div><dt>${term}</dt><dd>${value}</dd></div>`
+    )
+    .join("");
+
+const { counts, paired } = report;
+setText("count-plants", number(counts.plants));
+setText("count-varieties", number(counts.varieties));
+setText("count-masks", number(counts.manual_stomata));
+setText("count-joins", `${number(counts.exact_joins)}/${number(counts.plants)}`);
+
+setText("stomata-delta", signed(paired.stomatal.percent_difference, 1, "%"));
+setText(
+  "stomata-summary",
+  `Control averaged ${number(
+    paired.stomatal.control_mean,
+    0
+  )} px² versus ${number(
+    paired.stomatal.regular_mean,
+    0
+  )} px² for Regular. The 95% confidence interval includes zero.`
+);
+document.getElementById("stomata-stats").innerHTML = definitionList([
+  ["Control - Regular", `${signed(paired.stomatal.difference, 0)} px²`],
+  [
+    "95% CI",
+    `${signed(paired.stomatal.ci_low, 0)} to ${signed(
+      paired.stomatal.ci_high,
+      0
+    )}`,
+  ],
+  ["Paired t-test", `p = ${pvalue(paired.stomatal.paired_t_p)}`],
+  ["Pairs", number(paired.stomatal.n_pairs)],
+]);
+
+setText("temp-delta", `${signed(paired.temperature.difference, 2)}°C`);
+setText(
+  "temp-summary",
+  `QC-filtered Control plants averaged ${number(
+    paired.temperature.control_mean,
+    2
+  )}°C versus ${number(
+    paired.temperature.regular_mean,
+    2
+  )}°C for Regular. Control was slightly cooler, but the interval includes zero.`
+);
+document.getElementById("temp-stats").innerHTML = definitionList([
+  [
+    "95% CI",
+    `${signed(paired.temperature.ci_low, 2)} to ${signed(
+      paired.temperature.ci_high,
+      2
+    )}°C`,
+  ],
+  ["Paired t-test", `p = ${pvalue(paired.temperature.paired_t_p)}`],
+  ["Wilcoxon", `p = ${pvalue(paired.temperature.wilcoxon_p)}`],
+  ["QC pairs", number(paired.temperature.n_pairs)],
+]);
+
+setText(
+  "projected-delta",
+  signed(paired.projected_area.percent_difference, 1, "%")
+);
+setText(
+  "projected-summary",
+  `QC-filtered Control masks averaged ${number(
+    paired.projected_area.control_mean,
+    0
+  )} px² versus ${number(
+    paired.projected_area.regular_mean,
+    0
+  )} px² for Regular. The paired signal is statistically detectable.`
+);
+document.getElementById("projected-stats").innerHTML = definitionList([
+  [
+    "Control - Regular",
+    `${signed(paired.projected_area.difference, 0)} px²`,
+  ],
+  [
+    "95% CI",
+    `${signed(paired.projected_area.ci_low, 0)} to ${signed(
+      paired.projected_area.ci_high,
+      0
+    )}`,
+  ],
+  ["Paired t-test", `p = ${pvalue(paired.projected_area.paired_t_p)}`],
+  ["QC pairs", number(paired.projected_area.n_pairs)],
+]);
+
+const selector = document.getElementById("variety-selector");
+report.pairs.forEach((pair, index) => {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = pair.variety;
+  button.dataset.index = index;
+  button.setAttribute("role", "listitem");
+  if (index === 0) button.classList.add("active");
+  button.addEventListener("click", () => selectPair(index));
+  selector.appendChild(button);
+});
+
+const confidenceLine = (plant, status) => {
+  const item = plant.detection_confidence_by_status[status];
+  if (!item) return "Not available";
+  return `${number(item.n)} at ${probability(
+    item.mean_calibrated_probability
+  )} mean calibrated probability`;
+};
+
+const plantCard = (plant, treatment) => {
+  const qcClass = plant.thermal_mask_qc_passed ? "qc-pass" : "qc-fail";
+  const qcText = plant.thermal_mask_qc_passed
+    ? "Thermal mask QC passed"
+    : "Thermal mask QC failed";
+  return `
+    <header class="plant-head">
+      <div>
+        <h4>${treatment}</h4>
+        <p>${plant.water_ml} mL, ${plant.water_status.replaceAll("_", " ")}</p>
+      </div>
+      <p>${plant.plant_unit_id}</p>
+    </header>
+    <div class="plant-meta">
+      <div><span>Stomata image</span><strong>${plant.stomata_image}</strong></div>
+      <div><span>Photo serial</span><strong>${plant.stomata_photo_serial}</strong></div>
+      <div class="span-2"><span>Thermal source</span><strong>${plant.thermal_source_file}</strong></div>
+    </div>
+    <section class="metric-group">
+      <h5>Expert stomatal-complex measurements</h5>
+      <dl>
+        <div><dt>Measured objects</dt><dd>${number(
+          plant.stomata_objects_measured
+        )}</dd></div>
+        <div><dt>Mean area</dt><dd>${number(
+          plant.stomatal_complex_area_mean,
+          0
+        )} px²</dd></div>
+        <div><dt>Median area</dt><dd>${number(
+          plant.stomatal_complex_area_median,
+          0
+        )} px²</dd></div>
+        <div><dt>Mean length</dt><dd>${number(
+          plant.mean_length_px,
+          1
+        )} px</dd></div>
+        <div><dt>Mean width</dt><dd>${number(
+          plant.mean_width_px,
+          1
+        )} px</dd></div>
+        <div><dt>Mean aspect ratio</dt><dd>${number(
+          plant.mean_aspect_ratio,
+          2
+        )}</dd></div>
+      </dl>
+    </section>
+    <section class="metric-group">
+      <h5>Detector candidate evidence</h5>
+      <dl>
+        <div><dt>Total candidates</dt><dd>${number(
+          plant.stomata_candidates_total
+        )}</dd></div>
+        <div><dt>Accepted</dt><dd>${number(
+          plant.stomata_candidates_accepted
+        )}</dd></div>
+        <div><dt>Needs review</dt><dd>${number(
+          plant.stomata_candidates_review
+        )}</dd></div>
+        <div class="span-2"><dt>Accepted confidence</dt><dd>${confidenceLine(
+          plant,
+          "accepted"
+        )}</dd></div>
+        <div><dt>Expected true candidates</dt><dd>${number(
+          plant.stomata_expected_true_candidates,
+          1
+        )}</dd></div>
+      </dl>
+    </section>
+    <section class="metric-group">
+      <h5>SeedThermal findings</h5>
+      <dl>
+        <div><dt>Canopy mean</dt><dd>${number(
+          plant.canopy_mean_c,
+          2
+        )}°C</dd></div>
+        <div><dt>Canopy median</dt><dd>${number(
+          plant.canopy_median_c,
+          2
+        )}°C</dd></div>
+        <div><dt>Canopy range</dt><dd>${number(
+          plant.canopy_min_c,
+          2
+        )}-${number(plant.canopy_max_c, 2)}°C</dd></div>
+        <div><dt>ΔT from 25°C</dt><dd>${signed(
+          plant.canopy_delta_t_air_c,
+          2
+        )}°C</dd></div>
+        <div><dt>Projected selected area</dt><dd>${number(
+          plant.projected_plant_area_px2,
+          0
+        )} px²</dd></div>
+        <div><dt>Mask status</dt><dd><span class="${qcClass}">${qcText}</span></dd></div>
+      </dl>
+    </section>
+  `;
+};
+
+function selectPair(index) {
+  const pair = report.pairs[index];
+  document
+    .querySelectorAll("#variety-selector button")
+    .forEach((button, i) => button.classList.toggle("active", i === index));
+  setText("pair-genotype", pair.genotype_id);
+  setText("pair-variety", pair.variety);
+  setText(
+    "pair-qc",
+    pair.thermal_pair_qc
+      ? "Complete thermal pair passes QC"
+      : "Thermal pair shown, but excluded from paired thermal inference"
+  );
+  document.getElementById("regular-card").innerHTML = plantCard(
+    pair.regular,
+    "Regular"
+  );
+  document.getElementById("control-card").innerHTML = plantCard(
+    pair.control,
+    "Control"
+  );
+  document.getElementById("pair-interpretation").innerHTML = `
+    <div><span>Stomatal area, Control - Regular</span><strong>${signed(
+      pair.stomatal_area_difference,
+      0
+    )} px²</strong></div>
+    <div><span>Canopy temperature, Control - Regular</span><strong>${signed(
+      pair.temperature_difference,
+      2
+    )}°C</strong></div>
+    <div><span>Projected selected area, Control - Regular</span><strong>${
+      pair.thermal_pair_qc
+        ? `${signed(pair.projected_area_difference, 0)} px²`
+        : "Excluded by thermal QC"
+    }</strong></div>
+  `;
+}
+
+selectPair(0);
+
+const chart = document.getElementById("variety-chart");
+const chartIntro = document.getElementById("chart-intro");
+const chartNote = document.getElementById("chart-note");
+
+function renderChart(metric) {
+  const isStomatal = metric === "stomatal";
+  const items = [...report.pairs].sort((a, b) => {
+    const aValue = isStomatal
+      ? a.stomatal_area_average
+      : (a.regular.projected_plant_area_px2 +
+          a.control.projected_plant_area_px2) /
+        2;
+    const bValue = isStomatal
+      ? b.stomatal_area_average
+      : (b.regular.projected_plant_area_px2 +
+          b.control.projected_plant_area_px2) /
+        2;
+    return bValue - aValue;
+  });
+  const values = items.flatMap((pair) =>
+    isStomatal
+      ? [
+          pair.regular.stomatal_complex_area_mean,
+          pair.control.stomatal_complex_area_mean,
+        ]
+      : [
+          pair.regular.thermal_mask_qc_passed
+            ? pair.regular.projected_plant_area_px2
+            : null,
+          pair.control.thermal_mask_qc_passed
+            ? pair.control.projected_plant_area_px2
+            : null,
+        ]
+  );
+  const max = Math.max(...values.filter((value) => value != null));
+  chart.innerHTML = items
+    .map((pair) => {
+      const regular = isStomatal
+        ? pair.regular.stomatal_complex_area_mean
+        : pair.regular.thermal_mask_qc_passed
+        ? pair.regular.projected_plant_area_px2
+        : null;
+      const control = isStomatal
+        ? pair.control.stomatal_complex_area_mean
+        : pair.control.thermal_mask_qc_passed
+        ? pair.control.projected_plant_area_px2
+        : null;
+      const regularWidth = regular == null ? 0 : (regular / max) * 100;
+      const controlWidth = control == null ? 0 : (control / max) * 100;
+      return `
+        <div class="chart-row">
+          <div class="chart-row-label" title="${pair.variety}">${pair.variety}</div>
+          <div class="bar-zone">
+            <span class="bar regular" style="width:${regularWidth}%"></span>
+            <span class="bar control" style="width:${controlWidth}%"></span>
+          </div>
+          <div class="chart-values">
+            <div class="regular-text">R ${number(regular, 0)}</div>
+            <div class="control-text">C ${number(control, 0)}</div>
+          </div>
+        </div>`;
+    })
+    .join("");
+  chartIntro.textContent = isStomatal
+    ? "Descriptively, mean stomatal-complex area across treatments ranges from 6,461 px² for NC264G to 13,860 px² for 26-037. Each treatment mean is based on only two or three selected expert masks."
+    : "Projected selected area is shown only where the thermal mask passed quality control.";
+  chartNote.textContent = isStomatal
+    ? "Regular is green and Control is orange. Ranking reflects this pilot sample only and should not be generalized as a genotype effect."
+    : "Regular is green and Control is orange. Missing bars mark failed masks. Do not compare the two failed projected-area values with QC-passing masks.";
+}
+
+document.querySelectorAll(".metric-switch button").forEach((button) => {
+  button.addEventListener("click", () => {
+    document
+      .querySelectorAll(".metric-switch button")
+      .forEach((item) => item.classList.remove("active"));
+    button.classList.add("active");
+    renderChart(button.dataset.metric);
+  });
+});
+renderChart("stomatal");
+
+const treatmentGrid = document.getElementById("treatment-grid");
+treatmentGrid.innerHTML = [
+  {
+    title: "Stomatal-complex area",
+    item: paired.stomatal,
+    digits: 0,
+    unit: "px²",
+    note: "No clear paired difference. Manual masks, 16 complete pairs.",
+  },
+  {
+    title: "Canopy mean temperature",
+    item: paired.temperature,
+    digits: 2,
+    unit: "°C",
+    note: "No clear paired difference. Thermal-QC subset, 14 complete pairs.",
+  },
+  {
+    title: "Projected selected area",
+    item: paired.projected_area,
+    digits: 0,
+    unit: "px²",
+    note: "Paired difference. Thermal-QC subset, 14 complete pairs.",
+  },
+]
+  .map(
+    ({ title, item, digits, unit, note }) => `
+      <article class="treatment-item">
+        <h3>${title}</h3>
+        <div class="comparison-numbers">
+          <div class="regular-value"><span>Regular, watered</span><strong>${number(
+            item.regular_mean,
+            digits
+          )} ${unit}</strong></div>
+          <div class="control-value"><span>Control, drought</span><strong>${number(
+            item.control_mean,
+            digits
+          )} ${unit}</strong></div>
+        </div>
+        <p>${note} Control - Regular: ${signed(
+      item.difference,
+      digits
+    )} ${unit}; 95% CI ${signed(item.ci_low, digits)} to ${signed(
+      item.ci_high,
+      digits
+    )}; paired p = ${pvalue(item.paired_t_p)}.</p>
+      </article>`
+  )
+  .join("");
+
+document.getElementById("evidence-body").innerHTML = report.pairs
+  .map((pair) => {
+    const regularFail = pair.regular.thermal_mask_qc_passed
+      ? ""
+      : "qc-cell-fail";
+    const controlFail = pair.control.thermal_mask_qc_passed
+      ? ""
+      : "qc-cell-fail";
+    const projectedDelta = pair.thermal_pair_qc
+      ? signed(pair.projected_area_difference, 0)
+      : "Excluded";
+    return `<tr>
+      <td>${pair.variety}</td>
+      <td class="cell-stomata group-start">${number(pair.regular.stomatal_complex_area_mean, 0)}</td>
+      <td class="cell-stomata">${number(pair.control.stomatal_complex_area_mean, 0)}</td>
+      <td class="cell-stomata">${signed(pair.stomatal_area_difference, 0)}</td>
+      <td class="cell-temperature group-start">${number(pair.regular.canopy_mean_c, 2)}</td>
+      <td class="cell-temperature">${number(pair.control.canopy_mean_c, 2)}</td>
+      <td class="cell-temperature">${signed(pair.temperature_difference, 2)}</td>
+      <td class="cell-projected group-start ${regularFail}" title="${
+      regularFail ? "Failed thermal mask QC" : "Passed thermal mask QC"
+    }">${number(pair.regular.projected_plant_area_px2, 0)}</td>
+      <td class="cell-projected ${controlFail}" title="${
+      controlFail ? "Failed thermal mask QC" : "Passed thermal mask QC"
+    }">${number(pair.control.projected_plant_area_px2, 0)}</td>
+      <td class="cell-projected">${projectedDelta}</td>
+    </tr>`;
+  })
+  .join("");
+
+  </script>
+</body>
+</html>

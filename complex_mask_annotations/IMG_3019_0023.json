@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3019:0023",
+  "image": "IMG_3019.JPG",
+  "expert_box_index": 23,
+  "box": {
+    "x1": 2642.88,
+    "y1": 4554.4,
+    "x2": 2826.61,
+    "y2": 4757.9
+  },
+  "plant_unit_id": "TOM26-V09-W",
+  "genotype_id": "V09",
+  "variety": "25-12",
+  "water_status": "watered",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 9.160799,
+  "local_focus_score": 88.800972,
+  "local_contrast_5_95": 188.0,
+  "local_clipped_fraction": 0.012266,
+  "edge_margin_px": 1173.39,
+  "quality_rank_within_image": 3,
+  "quality_candidates_in_image": 30,
+  "status": "complete",
+  "polygon": [
+    [
+      2709.69,
+      4596.52
+    ],
+    [
+      2687.27,
+      4610.26
+    ],
+    [
+      2671.36,
+      4650.03
+    ],
+    [
+      2672.8,
+      4702.11
+    ],
+    [
+      2687.27,
+      4722.36
+    ],
+    [
+      2722.71,
+      4718.74
+    ],
+    [
+      2755.97,
+      4705.0
+    ],
+    [
+      2776.95,
+      4683.3
+    ],
+    [
+      2774.05,
+      4666.67
+    ],
+    [
+      2783.46,
+      4654.37
+    ],
+    [
+      2774.78,
+      4605.19
+    ],
+    [
+      2758.14,
+      4588.56
+    ]
+  ],
+  "complex_area_px2": 11653.30900000222,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:24:34.221194+00:00",
+  "starting_proposal_available": false,
+  "annotation_blinded_to_proposal": true
+}

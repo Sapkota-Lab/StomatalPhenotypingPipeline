@@ -1,0 +1,139 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3047:0046",
+  "image": "IMG_3047.JPG",
+  "expert_box_index": 46,
+  "box": {
+    "x1": 1849.68,
+    "y1": 539.07,
+    "x2": 1971.04,
+    "y2": 684.7
+  },
+  "plant_unit_id": "TOM26-V13-D",
+  "genotype_id": "V13",
+  "variety": "Mountain Girl",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      1961.0,
+      576.0
+    ],
+    [
+      1957.0,
+      596.0
+    ],
+    [
+      1946.0,
+      635.0
+    ],
+    [
+      1938.0,
+      651.0
+    ],
+    [
+      1932.0,
+      661.0
+    ],
+    [
+      1916.0,
+      677.0
+    ],
+    [
+      1892.0,
+      680.0
+    ],
+    [
+      1885.0,
+      677.0
+    ],
+    [
+      1862.0,
+      666.0
+    ],
+    [
+      1862.0,
+      658.0
+    ],
+    [
+      1863.0,
+      649.0
+    ],
+    [
+      1868.0,
+      612.0
+    ],
+    [
+      1870.0,
+      601.0
+    ],
+    [
+      1871.0,
+      596.0
+    ],
+    [
+      1882.0,
+      567.0
+    ],
+    [
+      1884.0,
+      562.0
+    ],
+    [
+      1886.0,
+      559.0
+    ],
+    [
+      1905.0,
+      546.0
+    ],
+    [
+      1914.0,
+      542.0
+    ],
+    [
+      1916.0,
+      542.0
+    ],
+    [
+      1939.0,
+      545.0
+    ],
+    [
+      1943.0,
+      547.0
+    ],
+    [
+      1952.0,
+      553.0
+    ],
+    [
+      1957.0,
+      562.0
+    ],
+    [
+      1960.0,
+      568.0
+    ],
+    [
+      1961.0,
+      573.0
+    ]
+  ],
+  "complex_area_px2": 9947.5,
+  "model_confidence": 0.8125664591789246,
+  "box_iou_with_expert": 0.7730148975168518,
+  "center_similarity": 0.9923869368918121,
+  "selection_rank": 0.8287547738904657,
+  "crop": {
+    "x1": 1758,
+    "y1": 429,
+    "x2": 2063,
+    "y2": 794
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

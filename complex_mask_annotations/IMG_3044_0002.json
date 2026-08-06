@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3044:0002",
+  "image": "IMG_3044.JPG",
+  "expert_box_index": 2,
+  "box": {
+    "x1": 3109.04,
+    "y1": 1663.72,
+    "x2": 3282.74,
+    "y2": 1783.32
+  },
+  "plant_unit_id": "TOM26-V09-D",
+  "genotype_id": "V09",
+  "variety": "25-12",
+  "water_status": "drought_stressed",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 7.97595,
+  "local_focus_score": 46.059772,
+  "local_contrast_5_95": 165.0,
+  "local_clipped_fraction": 0.000156,
+  "edge_margin_px": 1663.72,
+  "quality_rank_within_image": 2,
+  "quality_candidates_in_image": 7,
+  "status": "complete",
+  "polygon": [
+    [
+      3121.98,
+      1694.96
+    ],
+    [
+      3152.18,
+      1663.91
+    ],
+    [
+      3178.56,
+      1660.08
+    ],
+    [
+      3217.7,
+      1664.76
+    ],
+    [
+      3241.95,
+      1678.37
+    ],
+    [
+      3249.18,
+      1700.07
+    ],
+    [
+      3250.88,
+      1732.4
+    ],
+    [
+      3241.09,
+      1742.19
+    ],
+    [
+      3204.08,
+      1760.48
+    ],
+    [
+      3179.83,
+      1758.35
+    ],
+    [
+      3151.76,
+      1746.44
+    ],
+    [
+      3136.02,
+      1737.08
+    ],
+    [
+      3123.68,
+      1716.24
+    ]
+  ],
+  "complex_area_px2": 10006.779350000434,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:21:58.686778+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

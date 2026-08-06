@@ -3,6 +3,7 @@
 __pycache__/
 results/
 results_*/
+training_data/annotated_v1/
 pilot_output/
 dev_annotations/
 models/*.pt

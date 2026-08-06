@@ -1,0 +1,23 @@
+{
+  "evaluation_job_id": 5380028,
+  "evaluation_status": "completed",
+  "checkpoint_sha256": "e708c5f358d598b65bc7e7bf0caf9c302929cbc9fe42252f74129005f701d545",
+  "checkpoint": "models/stomaquant_tomato_v1.pt",
+  "split": "test",
+  "untouched_variety_groups": 3,
+  "source_images": 6,
+  "tiles": 264,
+  "reported_tile_instances": 788,
+  "unique_source_annotations": 212,
+  "precision": 0.814,
+  "recall": 0.812,
+  "map50": 0.882,
+  "map50_95": 0.415,
+  "scope": "Tile-level object-detection evaluation on untouched variety groups.",
+  "limitations": [
+    "Tiled instances include repeated views of some source annotations.",
+    "Metrics do not establish full-image count accuracy.",
+    "Raw detector confidence is not a calibrated p_stoma probability.",
+    "Bounding boxes do not provide validated stomatal-complex area."
+  ]
+}

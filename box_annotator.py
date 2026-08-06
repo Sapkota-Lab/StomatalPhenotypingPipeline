@@ -406,7 +406,7 @@ def main() -> None:
     parser.add_argument(
         "--priority",
         type=Path,
-        default=Path("annotation_priority_v1.csv"),
+        default=Path("annotation_priority_target_v1.csv"),
         help="Optional CSV whose filename column controls initial image order",
     )
     parser.add_argument("--host", default="127.0.0.1")

@@ -1,0 +1,31 @@
+{
+  "manual_status_counts": {},
+  "matched_complete_masks": 0,
+  "missing_proposals": [],
+  "proposal_model_hashes": [],
+  "proposal_methods": [],
+  "proposal_geometry_methods": [],
+  "proposal_schema_versions": [],
+  "overall": {},
+  "by_treatment": {
+    "watered": {},
+    "drought_stressed": {}
+  },
+  "by_variety": {},
+  "measurement_gate": {
+    "passed": false,
+    "checks": {
+      "no_missing_proposals": true,
+      "at_least_128_masks": false,
+      "all_32_plants_represented": false,
+      "at_least_3_masks_per_plant": false,
+      "both_treatments_at_least_60": false,
+      "median_iou_at_least_0_75": false,
+      "median_dice_at_least_0_85": false,
+      "median_absolute_area_error_at_most_10_percent": false,
+      "p90_absolute_area_error_at_most_25_percent": false,
+      "absolute_mean_area_bias_at_most_5_percent": false
+    }
+  },
+  "area_definition": "Filled outer stomatal-complex contour, including the pore inside the outer boundary."
+}

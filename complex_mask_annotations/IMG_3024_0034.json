@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3024:0034",
+  "image": "IMG_3024.JPG",
+  "expert_box_index": 34,
+  "box": {
+    "x1": 1644.4,
+    "y1": 2282.71,
+    "x2": 1808.14,
+    "y2": 2469.23
+  },
+  "plant_unit_id": "TOM26-V13-W",
+  "genotype_id": "V13",
+  "variety": "Mountain Girl",
+  "water_status": "watered",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 9.70656,
+  "local_focus_score": 105.426865,
+  "local_contrast_5_95": 202.0,
+  "local_clipped_fraction": 0.003633,
+  "edge_margin_px": 1644.4,
+  "quality_rank_within_image": 1,
+  "quality_candidates_in_image": 82,
+  "status": "complete",
+  "polygon": [
+    [
+      1676.23,
+      2401.05
+    ],
+    [
+      1731.97,
+      2432.25
+    ],
+    [
+      1757.86,
+      2424.28
+    ],
+    [
+      1773.78,
+      2411.01
+    ],
+    [
+      1782.41,
+      2398.4
+    ],
+    [
+      1776.44,
+      2369.86
+    ],
+    [
+      1767.15,
+      2345.31
+    ],
+    [
+      1755.86,
+      2326.72
+    ],
+    [
+      1741.26,
+      2316.1
+    ],
+    [
+      1720.69,
+      2305.49
+    ],
+    [
+      1703.44,
+      2304.82
+    ],
+    [
+      1688.17,
+      2310.8
+    ],
+    [
+      1672.91,
+      2324.07
+    ],
+    [
+      1667.6,
+      2333.36
+    ]
+  ],
+  "complex_area_px2": 10574.157099999953,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:10:09.958436+00:00",
+  "starting_proposal_available": false,
+  "annotation_blinded_to_proposal": true
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3026:0009",
+  "image": "IMG_3026.JPG",
+  "expert_box_index": 9,
+  "box": {
+    "x1": 3793.51,
+    "y1": 2384.11,
+    "x2": 3982.5,
+    "y2": 2502.59
+  },
+  "plant_unit_id": "TOM26-V14-W",
+  "genotype_id": "V14",
+  "variety": "Ailsa Craig",
+  "water_status": "watered",
+  "status": "proposed",
+  "polygon": [
+    [
+      4001.0,
+      2464.0
+    ],
+    [
+      3999.0,
+      2494.0
+    ],
+    [
+      3998.0,
+      2507.0
+    ],
+    [
+      3997.0,
+      2508.0
+    ],
+    [
+      3990.0,
+      2514.0
+    ],
+    [
+      3797.0,
+      2514.0
+    ],
+    [
+      3785.0,
+      2509.0
+    ],
+    [
+      3777.0,
+      2501.0
+    ],
+    [
+      3774.0,
+      2481.0
+    ],
+    [
+      3774.0,
+      2392.0
+    ],
+    [
+      3777.0,
+      2379.0
+    ],
+    [
+      3778.0,
+      2377.0
+    ],
+    [
+      3784.0,
+      2372.0
+    ],
+    [
+      3983.0,
+      2372.0
+    ],
+    [
+      3990.0,
+      2373.0
+    ],
+    [
+      4001.0,
+      2377.0
+    ]
+  ],
+  "complex_area_px2": 31854.0,
+  "model_confidence": 0.7785007357597351,
+  "box_iou_with_expert": 0.6946558044301041,
+  "center_similarity": 0.9972454182296775,
+  "selection_rank": 0.7803272065889081,
+  "crop": {
+    "x1": 3651,
+    "y1": 2295,
+    "x2": 4125,
+    "y2": 2592
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

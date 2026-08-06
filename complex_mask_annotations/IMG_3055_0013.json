@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3055:0013",
+  "image": "IMG_3055.JPG",
+  "expert_box_index": 13,
+  "box": {
+    "x1": 1524.53,
+    "y1": 1545.77,
+    "x2": 1735.4,
+    "y2": 1652.07
+  },
+  "plant_unit_id": "TOM26-V16-D",
+  "genotype_id": "V16",
+  "variety": "Mountain Heritage",
+  "water_status": "drought_stressed",
+  "status": "complete",
+  "polygon": [
+    [
+      1591.52,
+      1564.96
+    ],
+    [
+      1631.13,
+      1550.62
+    ],
+    [
+      1669.61,
+      1551.75
+    ],
+    [
+      1679.41,
+      1560.05
+    ],
+    [
+      1690.35,
+      1570.62
+    ],
+    [
+      1699.03,
+      1595.13
+    ],
+    [
+      1694.13,
+      1615.5
+    ],
+    [
+      1670.74,
+      1631.35
+    ],
+    [
+      1642.45,
+      1642.66
+    ],
+    [
+      1604.73,
+      1643.04
+    ],
+    [
+      1583.6,
+      1631.35
+    ],
+    [
+      1574.55,
+      1610.98
+    ],
+    [
+      1573.8,
+      1594.76
+    ],
+    [
+      1580.21,
+      1578.54
+    ]
+  ],
+  "complex_area_px2": 9132.234199999832,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T19:55:01.247749+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

@@ -11,19 +11,32 @@ from pathlib import Path
 
 import cv2
 import numpy as np
+from PIL import Image, ImageOps
 
 
 def load_rows(
     detections_csv: Path,
     status: str | None,
     source: str | None,
+    water_status: str | None = None,
 ) -> list[dict[str, str]]:
     with detections_csv.open(newline="") as handle:
         rows = list(csv.DictReader(handle))
     if status:
-        rows = [row for row in rows if row["status"] == status]
+        rows = [
+            row for row in rows
+            if row.get("status", row.get("decision_status")) == status
+        ]
     if source:
-        rows = [row for row in rows if row["source"] == source]
+        rows = [
+            row for row in rows
+            if row.get("source", row.get("proposal_source")) == source
+        ]
+    if water_status:
+        rows = [
+            row for row in rows
+            if row.get("water_status") == water_status
+        ]
     return rows
 
 
@@ -32,8 +45,17 @@ def crop_detection(
     row: dict[str, str],
     padding: float,
 ) -> np.ndarray:
+    if {"x1", "y1", "x2", "y2"}.issubset(row):
+        coordinate_fields = ("x1", "y1", "x2", "y2")
+    else:
+        coordinate_fields = (
+            "bbox_x1_px",
+            "bbox_y1_px",
+            "bbox_x2_px",
+            "bbox_y2_px",
+        )
     x1, y1, x2, y2 = (
-        float(row[name]) for name in ("x1", "y1", "x2", "y2")
+        float(row[name]) for name in coordinate_fields
     )
     width = max(x2 - x1, 1)
     height = max(y2 - y1, 1)
@@ -44,6 +66,21 @@ def crop_detection(
     right = min(image.shape[1], math.ceil(x2 + pad_x))
     bottom = min(image.shape[0], math.ceil(y2 + pad_y))
     return image[top:bottom, left:right]
+
+
+def detection_coordinates(
+    row: dict[str, str],
+) -> tuple[float, float, float, float]:
+    if {"x1", "y1", "x2", "y2"}.issubset(row):
+        coordinate_fields = ("x1", "y1", "x2", "y2")
+    else:
+        coordinate_fields = (
+            "bbox_x1_px",
+            "bbox_y1_px",
+            "bbox_x2_px",
+            "bbox_y2_px",
+        )
+    return tuple(float(row[name]) for name in coordinate_fields)
 
 
 def make_sheet(
@@ -63,14 +100,36 @@ def make_sheet(
     )
     image_cache: dict[str, np.ndarray] = {}
     for index, row in enumerate(rows):
-        filename = row["filename"]
+        filename = row.get("filename", row.get("stomata_image", ""))
         image = image_cache.get(filename)
         if image is None:
-            image = cv2.imread(str(image_dir / filename), cv2.IMREAD_COLOR)
-            if image is None:
-                raise ValueError(f"Could not read {image_dir / filename}")
+            matches = [
+                path for path in image_dir.rglob("*")
+                if path.is_file() and path.name.lower() == filename.lower()
+            ]
+            if len(matches) != 1:
+                raise ValueError(
+                    f"Expected one image named {filename}, found {len(matches)}"
+                )
+            with Image.open(matches[0]) as source_image:
+                rgb = np.asarray(
+                    ImageOps.exif_transpose(source_image).convert("RGB")
+                )
+            image = cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
             image_cache[filename] = image
-        crop = crop_detection(image, row, padding)
+        annotated = image.copy()
+        x1, y1, x2, y2 = detection_coordinates(row)
+        status = row.get("status", row.get("decision_status", ""))
+        color = (40, 190, 40) if status == "accepted" else (0, 165, 255)
+        thickness = max(2, round(min(image.shape[:2]) / 1500))
+        cv2.rectangle(
+            annotated,
+            (round(x1), round(y1)),
+            (round(x2), round(y2)),
+            color,
+            thickness,
+        )
+        crop = crop_detection(annotated, row, padding)
         if crop.size == 0:
             continue
         scale = min(cell_size / crop.shape[1], cell_size / crop.shape[0])
@@ -92,6 +151,7 @@ def make_sheet(
             (
                 row[name]
                 for name in (
+                    "p_stoma",
                     "stomaquant_confidence",
                     "yolos_confidence",
                     "stomadet_confidence",
@@ -100,7 +160,10 @@ def make_sheet(
             ),
             "",
         )
-        label = f"{filename.removesuffix('.JPG')} #{row['detection_id']} {confidence}"
+        label = (
+            f"{Path(filename).stem} #{row['detection_id']} "
+            f"{confidence}".rstrip()
+        )
         cv2.putText(
             sheet,
             label,
@@ -126,6 +189,10 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--status", choices=("accepted", "review"))
     parser.add_argument("--source")
+    parser.add_argument(
+        "--water-status",
+        choices=("watered", "drought_stressed"),
+    )
     parser.add_argument("--limit", type=int, default=100)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--cell-size", type=int, default=220)
@@ -133,7 +200,12 @@ def main() -> None:
     parser.add_argument("--padding", type=float, default=0.5)
     args = parser.parse_args()
 
-    rows = load_rows(args.detections, args.status, args.source)
+    rows = load_rows(
+        args.detections,
+        args.status,
+        args.source,
+        args.water_status,
+    )
     random.Random(args.seed).shuffle(rows)
     rows = rows[:args.limit]
     if not rows:

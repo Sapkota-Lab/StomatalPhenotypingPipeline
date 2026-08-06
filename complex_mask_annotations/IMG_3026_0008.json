@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3026:0008",
+  "image": "IMG_3026.JPG",
+  "expert_box_index": 8,
+  "box": {
+    "x1": 1753.45,
+    "y1": 581.14,
+    "x2": 1845.95,
+    "y2": 710.65
+  },
+  "plant_unit_id": "TOM26-V14-W",
+  "genotype_id": "V14",
+  "variety": "Ailsa Craig",
+  "water_status": "watered",
+  "status": "skipped",
+  "polygon": [],
+  "complex_area_px2": null,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T19:42:40.268810+00:00",
+  "starting_proposal_available": true,
+  "annotation_blinded_to_proposal": true
+}

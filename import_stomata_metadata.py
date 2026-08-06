@@ -73,6 +73,11 @@ def build_serial_map(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
                 "specimen_id": row["plant_name"],
                 "plant_name": row["plant_name"],
                 "treatment": treatment,
+                "water_status": (
+                    "watered" if treatment == "regular"
+                    else "drought_stressed"
+                ),
+                "water_ml": "100" if treatment == "regular" else "0",
                 "source_sheet": "Sheet1",
                 "source_row": row["source_row"],
             }
@@ -82,7 +87,9 @@ def build_serial_map(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
 def image_rows(image_dir: Path, serial_map: dict[str, dict[str, str]]) -> list[dict[str, str]]:
     output: list[dict[str, str]] = []
     seen_serials: set[str] = set()
-    for image_path in sorted(image_dir.iterdir()):
+    for image_path in sorted(
+        path for path in image_dir.rglob("*") if path.is_file()
+    ):
         match = SERIAL_PATTERN.fullmatch(image_path.name)
         if not match:
             continue
@@ -97,6 +104,8 @@ def image_rows(image_dir: Path, serial_map: dict[str, dict[str, str]]) -> list[d
                 "specimen_id": metadata["specimen_id"] if metadata else "",
                 "plant_name": metadata["plant_name"] if metadata else "",
                 "treatment": metadata["treatment"] if metadata else "",
+                "water_status": metadata["water_status"] if metadata else "",
+                "water_ml": metadata["water_ml"] if metadata else "",
                 "mapping_status": "mapped" if metadata else "not_in_workbook",
                 "source_sheet": metadata["source_sheet"] if metadata else "",
                 "source_row": metadata["source_row"] if metadata else "",
@@ -118,12 +127,18 @@ def write_csv(path: Path, rows: list[dict[str, str]]) -> None:
         "specimen_id",
         "plant_name",
         "treatment",
+        "water_status",
+        "water_ml",
         "mapping_status",
         "source_sheet",
         "source_row",
     ]
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=fieldnames,
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 

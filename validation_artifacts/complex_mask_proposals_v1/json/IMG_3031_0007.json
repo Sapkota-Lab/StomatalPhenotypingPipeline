@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3031:0007",
+  "image": "IMG_3031.JPG",
+  "expert_box_index": 7,
+  "box": {
+    "x1": 2344.51,
+    "y1": 1535.7,
+    "x2": 2525.43,
+    "y2": 1702.57
+  },
+  "plant_unit_id": "TOM26-V10-D",
+  "genotype_id": "V10",
+  "variety": "Mountain Gem",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      2543.0,
+      1649.0
+    ],
+    [
+      2540.0,
+      1683.0
+    ],
+    [
+      2511.0,
+      1713.0
+    ],
+    [
+      2469.0,
+      1719.0
+    ],
+    [
+      2344.0,
+      1719.0
+    ],
+    [
+      2336.0,
+      1713.0
+    ],
+    [
+      2330.0,
+      1645.0
+    ],
+    [
+      2330.0,
+      1644.0
+    ],
+    [
+      2337.0,
+      1573.0
+    ],
+    [
+      2343.0,
+      1531.0
+    ],
+    [
+      2349.0,
+      1524.0
+    ],
+    [
+      2371.0,
+      1519.0
+    ],
+    [
+      2519.0,
+      1519.0
+    ],
+    [
+      2533.0,
+      1524.0
+    ],
+    [
+      2540.0,
+      1531.0
+    ],
+    [
+      2543.0,
+      1552.0
+    ]
+  ],
+  "complex_area_px2": 40349.5,
+  "model_confidence": 0.7645914554595947,
+  "box_iou_with_expert": 0.7086882723004675,
+  "center_similarity": 0.9937595014064802,
+  "selection_rank": 0.7824734730694083,
+  "crop": {
+    "x1": 2208,
+    "y1": 1410,
+    "x2": 2662,
+    "y2": 1828
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3032:0001",
+  "image": "IMG_3032.JPG",
+  "expert_box_index": 1,
+  "box": {
+    "x1": 1692.26,
+    "y1": 1811.35,
+    "x2": 1888.77,
+    "y2": 1982.9
+  },
+  "plant_unit_id": "TOM26-V08-D",
+  "genotype_id": "V08",
+  "variety": "Cherokee Purple",
+  "water_status": "drought_stressed",
+  "status": "proposed",
+  "polygon": [
+    [
+      1873.0,
+      1912.0
+    ],
+    [
+      1872.0,
+      1916.0
+    ],
+    [
+      1849.0,
+      1978.0
+    ],
+    [
+      1845.0,
+      1981.0
+    ],
+    [
+      1803.0,
+      1991.0
+    ],
+    [
+      1796.0,
+      1992.0
+    ],
+    [
+      1791.0,
+      1992.0
+    ],
+    [
+      1718.0,
+      1983.0
+    ],
+    [
+      1712.0,
+      1979.0
+    ],
+    [
+      1710.0,
+      1975.0
+    ],
+    [
+      1708.0,
+      1957.0
+    ],
+    [
+      1708.0,
+      1953.0
+    ],
+    [
+      1709.0,
+      1945.0
+    ],
+    [
+      1721.0,
+      1864.0
+    ],
+    [
+      1724.0,
+      1852.0
+    ],
+    [
+      1727.0,
+      1847.0
+    ],
+    [
+      1742.0,
+      1833.0
+    ],
+    [
+      1757.0,
+      1827.0
+    ],
+    [
+      1758.0,
+      1827.0
+    ],
+    [
+      1799.0,
+      1828.0
+    ],
+    [
+      1841.0,
+      1843.0
+    ],
+    [
+      1849.0,
+      1846.0
+    ],
+    [
+      1868.0,
+      1881.0
+    ],
+    [
+      1872.0,
+      1900.0
+    ],
+    [
+      1873.0,
+      1910.0
+    ]
+  ],
+  "complex_area_px2": 22334.5,
+  "model_confidence": 0.842406153678894,
+  "box_iou_with_expert": 0.7305158050453286,
+  "center_similarity": 0.9525599041048581,
+  "selection_rank": 0.8084917294473042,
+  "crop": {
+    "x1": 1544,
+    "y1": 1682,
+    "x2": 2037,
+    "y2": 2112
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

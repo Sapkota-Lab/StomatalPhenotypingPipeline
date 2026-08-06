@@ -1,0 +1,13 @@
+filename,priority,specimen_id,planned_split,selection_reason,annotation_status
+IMG_3014.JPG,critical,26-016,train,paired target field; small-to-medium morphology,not_started
+IMG_3046.JPG,critical,26-016,train,paired target field; small low-contrast morphology,not_started
+IMG_3016.JPG,critical,25-014,train,paired target field; round-artifact hard negatives,not_started
+IMG_3042.JPG,critical,25-014,train,paired target field; independent field from same plant,not_started
+IMG_3023.JPG,critical,26-033,train,paired target field; medium-density morphology,not_started
+IMG_3034.JPG,critical,26-033,train,paired target field; strong cell-boundary hard negatives,not_started
+IMG_3028.JPG,critical,Mountain Heritage,train,paired target field; representative mixed morphology,not_started
+IMG_3055.JPG,critical,Mountain Heritage,train,paired target field; independent field from same plant,not_started
+IMG_3027.JPG,critical,NC261G,val,untouched validation plant; sharp dense field,not_started
+IMG_3043.JPG,critical,NC261G,val,untouched validation plant; independent field from same plant,not_started
+IMG_3012.JPG,critical,25203 G,test,untouched test plant; representative field,not_started
+IMG_3037.JPG,critical,25203 G,test,untouched test plant; independent field from same plant,not_started

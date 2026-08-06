@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "object_id": "IMG_3055:0017",
+  "image": "IMG_3055.JPG",
+  "expert_box_index": 17,
+  "box": {
+    "x1": 561.94,
+    "y1": 3727.72,
+    "x2": 793.23,
+    "y2": 3914.08
+  },
+  "plant_unit_id": "TOM26-V16-D",
+  "genotype_id": "V16",
+  "variety": "Mountain Heritage",
+  "water_status": "drought_stressed",
+  "selection_method": "local_image_quality_v1",
+  "local_quality_score": 8.062827,
+  "local_focus_score": 42.80471,
+  "local_contrast_5_95": 174.0,
+  "local_clipped_fraction": 0.022305,
+  "edge_margin_px": 85.92,
+  "quality_rank_within_image": 2,
+  "quality_candidates_in_image": 20,
+  "status": "complete",
+  "polygon": [
+    [
+      596.09,
+      3748.84
+    ],
+    [
+      615.42,
+      3730.1
+    ],
+    [
+      657.59,
+      3732.44
+    ],
+    [
+      692.14,
+      3748.26
+    ],
+    [
+      711.47,
+      3757.04
+    ],
+    [
+      744.85,
+      3836.69
+    ],
+    [
+      649.39,
+      3899.94
+    ]
+  ],
+  "complex_area_px2": 14970.555200000294,
+  "notes": "",
+  "annotation_method": "manual_polygon_outer_stomatal_complex",
+  "reviewer": "lenquanhone",
+  "reviewed_at_utc": "2026-07-29T20:22:56.168740+00:00",
+  "starting_proposal_available": false,
+  "annotation_blinded_to_proposal": true
+}

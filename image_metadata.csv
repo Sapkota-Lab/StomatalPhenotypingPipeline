@@ -1,75 +1,75 @@
-filename,photo_serial,specimen_id,plant_name,treatment,mapping_status,source_sheet,source_row
-IMG_2982.JPG,2982,,,,not_in_workbook,,
-IMG_2983.JPG,2983,,,,not_in_workbook,,
-IMG_2984.JPG,2984,,,,not_in_workbook,,
-IMG_2985.JPG,2985,,,,not_in_workbook,,
-IMG_2986.JPG,2986,,,,not_in_workbook,,
-IMG_2987.JPG,2987,,,,not_in_workbook,,
-IMG_2988.JPG,2988,,,,not_in_workbook,,
-IMG_2989.JPG,2989,,,,not_in_workbook,,
-IMG_2990.JPG,2990,,,,not_in_workbook,,
-IMG_2991.JPG,2991,,,,not_in_workbook,,
-IMG_2992.JPG,2992,,,,not_in_workbook,,
-IMG_2993.JPG,2993,,,,not_in_workbook,,
-IMG_2994.JPG,2994,,,,not_in_workbook,,
-IMG_2995.JPG,2995,,,,not_in_workbook,,
-IMG_2996.JPG,2996,,,,not_in_workbook,,
-IMG_2997.JPG,2997,,,,not_in_workbook,,
-IMG_2998.JPG,2998,,,,not_in_workbook,,
-IMG_2999.JPG,2999,,,,not_in_workbook,,
-IMG_3000.JPG,3000,,,,not_in_workbook,,
-IMG_3001.JPG,3001,,,,not_in_workbook,,
-IMG_3002.JPG,3002,,,,not_in_workbook,,
-IMG_3003.JPG,3003,,,,not_in_workbook,,
-IMG_3004.JPG,3004,,,,not_in_workbook,,
-IMG_3005.JPG,3005,,,,not_in_workbook,,
-IMG_3006.JPG,3006,,,,not_in_workbook,,
-IMG_3007.JPG,3007,,,,not_in_workbook,,
-IMG_3008.JPG,3008,,,,not_in_workbook,,
-IMG_3009.JPG,3009,,,,not_in_workbook,,
-IMG_3010.JPG,3010,,,,not_in_workbook,,
-IMG_3011.JPG,3011,NC264G,NC264G,regular,mapped,Sheet1,6
-IMG_3012.JPG,3012,25203 G,25203 G,regular,mapped,Sheet1,7
-IMG_3013.JPG,3013,25317G,25317G,regular,mapped,Sheet1,8
-IMG_3014.JPG,3014,26-016,26-016,regular,mapped,Sheet1,9
-IMG_3015.JPG,3015,26-018,26-018,regular,mapped,Sheet1,10
-IMG_3016.JPG,3016,25-014,25-014,regular,mapped,Sheet1,11
-IMG_3017.JPG,3017,25-013,25-013,regular,mapped,Sheet1,12
-IMG_3018.JPG,3018,Cherokee Purple,Cherokee Purple,regular,mapped,Sheet1,13
-IMG_3019.JPG,3019,25-12,25-12,regular,mapped,Sheet1,14
-IMG_3020.JPG,3020,Mountain Gem,Mountain Gem,regular,mapped,Sheet1,15
-IMG_3021.JPG,3021,26-037,26-037,regular,mapped,Sheet1,16
-IMG_3022.JPG,3022,,,,not_in_workbook,,
-IMG_3023.JPG,3023,26-033,26-033,regular,mapped,Sheet1,17
-IMG_3024.JPG,3024,Mountain Girl,Mountain Girl,regular,mapped,Sheet1,18
-IMG_3025.JPG,3025,,,,not_in_workbook,,
-IMG_3026.JPG,3026,Ailsa Craig,Ailsa Craig,regular,mapped,Sheet1,19
-IMG_3027.JPG,3027,NC261G,NC261G,regular,mapped,Sheet1,20
-IMG_3028.JPG,3028,Mountain Heritage,Mountain Heritage,regular,mapped,Sheet1,21
-IMG_3029.JPG,3029,,,,not_in_workbook,,
-IMG_3030.JPG,3030,,,,not_in_workbook,,
-IMG_3031.JPG,3031,Mountain Gem,Mountain Gem,control,mapped,Sheet1,15
-IMG_3032.JPG,3032,Cherokee Purple,Cherokee Purple,control,mapped,Sheet1,13
-IMG_3033.JPG,3033,,,,not_in_workbook,,
-IMG_3034.JPG,3034,26-033,26-033,control,mapped,Sheet1,17
-IMG_3035.JPG,3035,,,,not_in_workbook,,
-IMG_3036.JPG,3036,,,,not_in_workbook,,
-IMG_3037.JPG,3037,25203 G,25203 G,control,mapped,Sheet1,7
-IMG_3038.JPG,3038,,,,not_in_workbook,,
-IMG_3039.JPG,3039,26-018,26-018,control,mapped,Sheet1,10
-IMG_3040.JPG,3040,NC264G,NC264G,control,mapped,Sheet1,6
-IMG_3041.JPG,3041,,,,not_in_workbook,,
-IMG_3042.JPG,3042,25-014,25-014,control,mapped,Sheet1,11
-IMG_3043.JPG,3043,NC261G,NC261G,control,mapped,Sheet1,20
-IMG_3044.JPG,3044,25-12,25-12,control,mapped,Sheet1,14
-IMG_3045.JPG,3045,,,,not_in_workbook,,
-IMG_3046.JPG,3046,26-016,26-016,control,mapped,Sheet1,9
-IMG_3047.JPG,3047,Mountain Girl,Mountain Girl,control,mapped,Sheet1,18
-IMG_3048.JPG,3048,,,,not_in_workbook,,
-IMG_3049.JPG,3049,,,,not_in_workbook,,
-IMG_3050.JPG,3050,26-037,26-037,control,mapped,Sheet1,16
-IMG_3051.JPG,3051,25-013,25-013,control,mapped,Sheet1,12
-IMG_3052.JPG,3052,,,,not_in_workbook,,
-IMG_3053.JPG,3053,25317G,25317G,control,mapped,Sheet1,8
-IMG_3054.JPG,3054,Ailsa Craig,Ailsa Craig,control,mapped,Sheet1,19
-IMG_3055.JPG,3055,Mountain Heritage,Mountain Heritage,control,mapped,Sheet1,21
+filename,photo_serial,specimen_id,plant_name,treatment,water_status,water_ml,mapping_status,source_sheet,source_row
+IMG_2982.JPG,2982,,,,,,not_in_workbook,,
+IMG_2983.JPG,2983,,,,,,not_in_workbook,,
+IMG_2984.JPG,2984,,,,,,not_in_workbook,,
+IMG_2985.JPG,2985,,,,,,not_in_workbook,,
+IMG_2986.JPG,2986,,,,,,not_in_workbook,,
+IMG_2987.JPG,2987,,,,,,not_in_workbook,,
+IMG_2988.JPG,2988,,,,,,not_in_workbook,,
+IMG_2989.JPG,2989,,,,,,not_in_workbook,,
+IMG_2990.JPG,2990,,,,,,not_in_workbook,,
+IMG_2991.JPG,2991,,,,,,not_in_workbook,,
+IMG_2992.JPG,2992,,,,,,not_in_workbook,,
+IMG_2993.JPG,2993,,,,,,not_in_workbook,,
+IMG_2994.JPG,2994,,,,,,not_in_workbook,,
+IMG_2995.JPG,2995,,,,,,not_in_workbook,,
+IMG_2996.JPG,2996,,,,,,not_in_workbook,,
+IMG_2997.JPG,2997,,,,,,not_in_workbook,,
+IMG_2998.JPG,2998,,,,,,not_in_workbook,,
+IMG_2999.JPG,2999,,,,,,not_in_workbook,,
+IMG_3000.JPG,3000,,,,,,not_in_workbook,,
+IMG_3001.JPG,3001,,,,,,not_in_workbook,,
+IMG_3002.JPG,3002,,,,,,not_in_workbook,,
+IMG_3003.JPG,3003,,,,,,not_in_workbook,,
+IMG_3004.JPG,3004,,,,,,not_in_workbook,,
+IMG_3005.JPG,3005,,,,,,not_in_workbook,,
+IMG_3006.JPG,3006,,,,,,not_in_workbook,,
+IMG_3007.JPG,3007,,,,,,not_in_workbook,,
+IMG_3008.JPG,3008,,,,,,not_in_workbook,,
+IMG_3009.JPG,3009,,,,,,not_in_workbook,,
+IMG_3010.JPG,3010,,,,,,not_in_workbook,,
+IMG_3022.JPG,3022,,,,,,not_in_workbook,,
+IMG_3025.JPG,3025,,,,,,not_in_workbook,,
+IMG_3029.JPG,3029,,,,,,not_in_workbook,,
+IMG_3030.JPG,3030,,,,,,not_in_workbook,,
+IMG_3033.JPG,3033,,,,,,not_in_workbook,,
+IMG_3035.JPG,3035,,,,,,not_in_workbook,,
+IMG_3036.JPG,3036,,,,,,not_in_workbook,,
+IMG_3038.JPG,3038,,,,,,not_in_workbook,,
+IMG_3041.JPG,3041,,,,,,not_in_workbook,,
+IMG_3045.JPG,3045,,,,,,not_in_workbook,,
+IMG_3048.JPG,3048,,,,,,not_in_workbook,,
+IMG_3049.JPG,3049,,,,,,not_in_workbook,,
+IMG_3052.JPG,3052,,,,,,not_in_workbook,,
+IMG_3011.JPG,3011,NC264G,NC264G,regular,watered,100,mapped,Sheet1,6
+IMG_3012.JPG,3012,25203 G,25203 G,regular,watered,100,mapped,Sheet1,7
+IMG_3013.JPG,3013,25317G,25317G,regular,watered,100,mapped,Sheet1,8
+IMG_3014.JPG,3014,26-016,26-016,regular,watered,100,mapped,Sheet1,9
+IMG_3015.JPG,3015,26-018,26-018,regular,watered,100,mapped,Sheet1,10
+IMG_3016.JPG,3016,25-014,25-014,regular,watered,100,mapped,Sheet1,11
+IMG_3017.JPG,3017,25-013,25-013,regular,watered,100,mapped,Sheet1,12
+IMG_3018.JPG,3018,Cherokee Purple,Cherokee Purple,regular,watered,100,mapped,Sheet1,13
+IMG_3019.JPG,3019,25-12,25-12,regular,watered,100,mapped,Sheet1,14
+IMG_3020.JPG,3020,Mountain Gem,Mountain Gem,regular,watered,100,mapped,Sheet1,15
+IMG_3021.JPG,3021,26-037,26-037,regular,watered,100,mapped,Sheet1,16
+IMG_3023.JPG,3023,26-033,26-033,regular,watered,100,mapped,Sheet1,17
+IMG_3024.JPG,3024,Mountain Girl,Mountain Girl,regular,watered,100,mapped,Sheet1,18
+IMG_3026.JPG,3026,Ailsa Craig,Ailsa Craig,regular,watered,100,mapped,Sheet1,19
+IMG_3027.JPG,3027,NC261G,NC261G,regular,watered,100,mapped,Sheet1,20
+IMG_3028.JPG,3028,Mountain Heritage,Mountain Heritage,regular,watered,100,mapped,Sheet1,21
+IMG_3031.JPG,3031,Mountain Gem,Mountain Gem,control,drought_stressed,0,mapped,Sheet1,15
+IMG_3032.JPG,3032,Cherokee Purple,Cherokee Purple,control,drought_stressed,0,mapped,Sheet1,13
+IMG_3034.JPG,3034,26-033,26-033,control,drought_stressed,0,mapped,Sheet1,17
+IMG_3037.JPG,3037,25203 G,25203 G,control,drought_stressed,0,mapped,Sheet1,7
+IMG_3039.JPG,3039,26-018,26-018,control,drought_stressed,0,mapped,Sheet1,10
+IMG_3040.JPG,3040,NC264G,NC264G,control,drought_stressed,0,mapped,Sheet1,6
+IMG_3042.JPG,3042,25-014,25-014,control,drought_stressed,0,mapped,Sheet1,11
+IMG_3043.JPG,3043,NC261G,NC261G,control,drought_stressed,0,mapped,Sheet1,20
+IMG_3044.JPG,3044,25-12,25-12,control,drought_stressed,0,mapped,Sheet1,14
+IMG_3046.JPG,3046,26-016,26-016,control,drought_stressed,0,mapped,Sheet1,9
+IMG_3047.JPG,3047,Mountain Girl,Mountain Girl,control,drought_stressed,0,mapped,Sheet1,18
+IMG_3050.JPG,3050,26-037,26-037,control,drought_stressed,0,mapped,Sheet1,16
+IMG_3051.JPG,3051,25-013,25-013,control,drought_stressed,0,mapped,Sheet1,12
+IMG_3053.JPG,3053,25317G,25317G,control,drought_stressed,0,mapped,Sheet1,8
+IMG_3054.JPG,3054,Ailsa Craig,Ailsa Craig,control,drought_stressed,0,mapped,Sheet1,19
+IMG_3055.JPG,3055,Mountain Heritage,Mountain Heritage,control,drought_stressed,0,mapped,Sheet1,21

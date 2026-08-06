@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3024:0001",
+  "image": "IMG_3024.JPG",
+  "expert_box_index": 1,
+  "box": {
+    "x1": 564.71,
+    "y1": 4585.79,
+    "x2": 785.69,
+    "y2": 4804.17
+  },
+  "plant_unit_id": "TOM26-V13-W",
+  "genotype_id": "V13",
+  "variety": "Mountain Girl",
+  "water_status": "watered",
+  "status": "proposed",
+  "polygon": [
+    [
+      759.0,
+      4663.0
+    ],
+    [
+      736.0,
+      4776.0
+    ],
+    [
+      660.0,
+      4778.0
+    ],
+    [
+      651.0,
+      4778.0
+    ],
+    [
+      635.0,
+      4777.0
+    ],
+    [
+      630.0,
+      4776.0
+    ],
+    [
+      628.0,
+      4774.0
+    ],
+    [
+      601.0,
+      4739.0
+    ],
+    [
+      598.0,
+      4734.0
+    ],
+    [
+      596.0,
+      4730.0
+    ],
+    [
+      594.0,
+      4716.0
+    ],
+    [
+      594.0,
+      4712.0
+    ],
+    [
+      603.0,
+      4662.0
+    ],
+    [
+      604.0,
+      4661.0
+    ],
+    [
+      612.0,
+      4654.0
+    ],
+    [
+      663.0,
+      4613.0
+    ],
+    [
+      689.0,
+      4607.0
+    ],
+    [
+      716.0,
+      4607.0
+    ],
+    [
+      742.0,
+      4629.0
+    ],
+    [
+      743.0,
+      4630.0
+    ],
+    [
+      753.0,
+      4641.0
+    ]
+  ],
+  "complex_area_px2": 22393.5,
+  "model_confidence": 0.8760687708854675,
+  "box_iou_with_expert": 0.5846745952976319,
+  "center_similarity": 0.9909872777351759,
+  "selection_rank": 0.7533553844614913,
+  "crop": {
+    "x1": 398,
+    "y1": 4422,
+    "x2": 952,
+    "y2": 4968
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}

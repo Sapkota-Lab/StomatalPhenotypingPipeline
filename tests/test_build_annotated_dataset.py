@@ -11,6 +11,8 @@ from build_annotated_dataset import (
     boxes_in_window,
     build_dataset,
     grid_origins,
+    load_annotations,
+    load_metadata,
     yolo_line,
 )
 
@@ -52,6 +54,34 @@ class TileTests(unittest.TestCase):
 
 
 class DatasetIntegrationTests(unittest.TestCase):
+    def test_out_of_scope_metadata_rows_are_excluded(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            annotations = root / "annotations"
+            annotations.mkdir()
+            metadata = root / "metadata.csv"
+            metadata.write_text(
+                "filename,specimen_id,mapping_status\n"
+                "mapped.jpg,plant_a,mapped\n"
+                "extra.jpg,,not_in_workbook\n"
+            )
+            payload = {
+                "width": 100,
+                "height": 100,
+                "status": "complete",
+                "boxes": [{"x1": 10, "y1": 10, "x2": 20, "y2": 20}],
+            }
+            for filename in ("mapped.jpg", "extra.jpg"):
+                (annotations / f"{Path(filename).stem}.json").write_text(
+                    json.dumps(payload | {"image": filename})
+                )
+            rows = load_annotations(
+                annotations,
+                load_metadata(metadata, "specimen_id"),
+                allow_image_groups=False,
+            )
+            self.assertEqual([row.filename for row in rows], ["mapped.jpg"])
+
     def test_builds_non_leaking_three_way_dataset(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

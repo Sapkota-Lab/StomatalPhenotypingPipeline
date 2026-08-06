@@ -1,0 +1,135 @@
+{
+  "schema_version": 2,
+  "object_id": "IMG_3026:0007",
+  "image": "IMG_3026.JPG",
+  "expert_box_index": 7,
+  "box": {
+    "x1": 916.52,
+    "y1": 150.5,
+    "x2": 1190.94,
+    "y2": 375.63
+  },
+  "plant_unit_id": "TOM26-V14-W",
+  "genotype_id": "V14",
+  "variety": "Ailsa Craig",
+  "water_status": "watered",
+  "status": "proposed",
+  "polygon": [
+    [
+      1178.0,
+      239.0
+    ],
+    [
+      1165.0,
+      312.0
+    ],
+    [
+      1164.0,
+      316.0
+    ],
+    [
+      1162.0,
+      320.0
+    ],
+    [
+      1157.0,
+      325.0
+    ],
+    [
+      1122.0,
+      350.0
+    ],
+    [
+      1080.0,
+      373.0
+    ],
+    [
+      1077.0,
+      374.0
+    ],
+    [
+      1076.0,
+      374.0
+    ],
+    [
+      1003.0,
+      372.0
+    ],
+    [
+      992.0,
+      366.0
+    ],
+    [
+      965.0,
+      350.0
+    ],
+    [
+      958.0,
+      345.0
+    ],
+    [
+      958.0,
+      244.0
+    ],
+    [
+      959.0,
+      240.0
+    ],
+    [
+      980.0,
+      196.0
+    ],
+    [
+      981.0,
+      194.0
+    ],
+    [
+      987.0,
+      185.0
+    ],
+    [
+      1002.0,
+      170.0
+    ],
+    [
+      1014.0,
+      163.0
+    ],
+    [
+      1108.0,
+      149.0
+    ],
+    [
+      1119.0,
+      149.0
+    ],
+    [
+      1125.0,
+      150.0
+    ],
+    [
+      1167.0,
+      170.0
+    ],
+    [
+      1178.0,
+      215.0
+    ]
+  ],
+  "complex_area_px2": 41170.5,
+  "model_confidence": 0.8147203326225281,
+  "box_iou_with_expert": 0.7916577326768615,
+  "center_similarity": 0.9595561606316735,
+  "selection_rank": 0.8321561982515238,
+  "crop": {
+    "x1": 710,
+    "y1": 0,
+    "x2": 1397,
+    "y2": 545
+  },
+  "proposal_method": "sam2.1_t_expert_box_prompt",
+  "geometry_method": "convex_hull_of_prompted_mask_clipped_to_110pct_expert_box",
+  "model_path": "models/sam2.1_t.pt",
+  "model_sha256": "3c1e81ca9b037dd39d70a014ddb9a813d6c4c4e12555420db7eaff31689bd4e3",
+  "validated_against_manual_polygon": false
+}
